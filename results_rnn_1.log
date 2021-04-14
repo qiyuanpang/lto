@@ -1,0 +1,167 @@
+WARNING:tensorflow:From /home/student/Documents/Qiyuan/tf2py2/lib/python2.7/site-packages/tensorflow_core/python/compat/v2_compat.py:65: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-11-17 08:06:49.318309: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-17 08:06:49.322674: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:06:49.322817: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:06:49.323830: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:06:49.324849: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:06:49.325057: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:06:49.326375: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:06:49.327652: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:06:49.330580: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:06:49.331349: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:06:49.331611: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-11-17 08:06:49.354742: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3192925000 Hz
+2020-11-17 08:06:49.356650: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x563f82a56690 executing computations on platform Host. Devices:
+2020-11-17 08:06:49.356684: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-11-17 08:06:49.445308: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x563f82ab89c0 executing computations on platform CUDA. Devices:
+2020-11-17 08:06:49.445373: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Quadro P6000, Compute Capability 6.1
+2020-11-17 08:06:49.446264: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:06:49.446327: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:06:49.446351: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:06:49.446370: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:06:49.446388: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:06:49.446407: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:06:49.446426: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:06:49.446446: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:06:49.447833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:06:49.447885: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:06:49.449036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:06:49.449061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:06:49.449073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:06:49.450609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:06:49.847112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:06:49.847161: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:06:49.847172: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:06:49.847181: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:06:49.847189: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:06:49.847197: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:06:49.847204: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:06:49.847213: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:06:49.848075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:06:49.848100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:06:49.848107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:06:49.848112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:06:49.848843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:06:56.022004: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:07:20.273686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:07:20.273787: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:07:20.273806: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:07:20.273819: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:07:20.273832: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:07:20.273844: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:07:20.273856: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:07:20.273869: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:07:20.274521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:07:20.274567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:07:20.274575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:07:20.274580: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:07:20.275289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:08:22.766195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:08:22.766355: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:08:22.766395: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:08:22.766432: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:08:22.766457: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:08:22.766478: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:08:22.766500: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:08:22.766523: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:08:22.767824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:08:22.767906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:08:22.767923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:08:22.767933: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:08:22.769316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:10:53.868547: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:10:53.868649: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:10:53.868667: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:10:53.868680: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:10:53.868693: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:10:53.868704: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:10:53.868716: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:10:53.868730: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:10:53.869380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:10:53.869415: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:10:53.869432: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:10:53.869437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:10:53.870134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:18:14.281782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:18:14.281879: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:18:14.281896: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:18:14.281908: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:18:14.281920: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:18:14.281930: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:18:14.281941: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:18:14.281954: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:18:14.282614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:18:14.282654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:18:14.282662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:18:14.282667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:18:14.283365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-17 08:36:45.505119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-17 08:36:45.505291: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-17 08:36:45.505325: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-17 08:36:45.505350: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-17 08:36:45.505375: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-17 08:36:45.505398: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-17 08:36:45.505421: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-17 08:36:45.505446: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-17 08:36:45.506773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-17 08:36:45.506833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-17 08:36:45.506848: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-17 08:36:45.506858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-17 08:36:45.508238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 690 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+Dataset already exists. Loading from /home/student/Documents/Qiyuan/tf2py2/ltocode/experiments/rnn/trainset_rnn.pkl. 
+Comparation of solving a PDE using different policies starts: 
+Log2(problem size) =  6.9188632372745955
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  1.514e+00 final accuracy:  1.510e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  1.514e+00 final accuracy:  1.420e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  1.514e+00 final accuracy:  1.482e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  1.514e+00 final accuracy:  8.619e-01  iteration_num:  50
+===================================== Done =======================================
+Log2(problem size) =  8.0
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  2.079e+00 final accuracy:  2.073e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  2.079e+00 final accuracy:  1.949e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  2.079e+00 final accuracy:  2.035e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  2.079e+00 final accuracy:  1.652e+00  iteration_num:  50
+===================================== Done =======================================
+Log2(problem size) =  8.918863237274595
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  3.454e+00 final accuracy:  3.445e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  3.454e+00 final accuracy:  3.250e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  3.454e+00 final accuracy:  3.385e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  3.454e+00 final accuracy:  3.022e+00  iteration_num:  50
+===================================== Done =======================================
+Log2(problem size) =  10.0
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  2.832e+00 final accuracy:  2.829e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  2.832e+00 final accuracy:  2.776e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  2.832e+00 final accuracy:  2.813e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  2.832e+00 final accuracy:  2.260e+00  iteration_num:  50
+===================================== Done =======================================
+Log2(problem size) =  10.98370619265935
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  5.735e+00 final accuracy:  5.729e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  5.735e+00 final accuracy:  5.591e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  5.735e+00 final accuracy:  5.688e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  5.735e+00 final accuracy:  5.247e+00  iteration_num:  50
+===================================== Done =======================================
+Log2(problem size) =  12.0
+Your PDE has been solved using GradientDescentPolicy,   initial accuray:  8.730e+00 final accuracy:  8.723e+00  iteration_num:  50
+Your PDE has been solved using ConjugateGradientPolicy, initial accuray:  8.730e+00 final accuracy:  8.550e+00  iteration_num:  50
+Your PDE has been solved using MomentumPolicy,          initial accuray:  8.730e+00 final accuracy:  8.671e+00  iteration_num:  50
+Your PDE has been solved using Learned Policy 0,        initial accuray:  8.730e+00 final accuracy:  8.249e+00  iteration_num:  50
+===================================== Done =======================================
+results saved as ./results.npy !

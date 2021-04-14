@@ -1,0 +1,37 @@
+WARNING:tensorflow:From /home/student/Documents/Qiyuan/tf-v0.12-env/lib/python2.7/site-packages/tensorflow_core/python/compat/v2_compat.py:68: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-08-28 08:31:18.231951: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-08-28 08:31:18.250218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:03:00.0
+2020-08-28 08:31:18.250322: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcudart.so.10.0'; dlerror: libcudart.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.250374: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcublas.so.10.0'; dlerror: libcublas.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.250422: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcufft.so.10.0'; dlerror: libcufft.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.250469: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcurand.so.10.0'; dlerror: libcurand.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.250515: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusolver.so.10.0'; dlerror: libcusolver.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.250560: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusparse.so.10.0'; dlerror: libcusparse.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.1/lib64
+2020-08-28 08:31:18.253473: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-08-28 08:31:18.253490: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1641] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2020-08-28 08:31:18.253995: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-08-28 08:31:18.281145: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3192790000 Hz
+2020-08-28 08:31:18.283569: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ef41183bd0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-28 08:31:18.283614: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-08-28 08:31:18.407454: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ef40cdbd50 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-08-28 08:31:18.407533: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Quadro P6000, Compute Capability 6.1
+2020-08-28 08:31:18.407722: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-08-28 08:31:18.407743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      
+[[2507.69560554 2508.94758069 2481.34889251 ... 2527.73013237
+  2512.33541931 2517.16447796]
+ [2510.19308847 2514.02651235 2472.10037793 ... 2520.51179615
+  2483.42092152 2515.88437462]
+ [2518.99949484 2527.87882718 2477.05656309 ... 2529.38308381
+  2500.76572293 2518.83621817]
+ ...
+ [2538.87702211 2534.59102407 2487.19760331 ... 2528.81201142
+  2500.45173519 2534.63772579]
+ [2504.28115729 2500.71070918 2470.5285359  ... 2517.93973098
+  2473.15545146 2513.88444698]
+ [2493.19956481 2496.71109473 2467.31867202 ... 2519.20644362
+  2473.09451446 2506.59412162]]

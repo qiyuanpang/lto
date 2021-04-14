@@ -1,0 +1,1201 @@
+WARNING:From /home/student/Documents/Qiyuan/tf2py2/lib/python2.7/site-packages/tensorflow_core/python/compat/v2_compat.py:65: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-11-09 11:26:37.724682: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-09 11:26:37.772372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:03:00.0
+2020-11-09 11:26:37.773630: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-09 11:26:37.773829: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-09 11:26:37.774938: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-09 11:26:37.775910: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-09 11:26:37.776123: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-09 11:26:37.777412: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-09 11:26:37.778364: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-09 11:26:37.781197: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 11:26:37.786063: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2020-11-09 11:26:37.786432: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-11-09 11:26:37.810986: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3192925000 Hz
+2020-11-09 11:26:37.813204: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558d4e9f29c0 executing computations on platform Host. Devices:
+2020-11-09 11:26:37.813245: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-11-09 11:26:38.018706: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558d4ea54da0 executing computations on platform CUDA. Devices:
+2020-11-09 11:26:38.018747: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Quadro P6000, Compute Capability 6.1
+2020-11-09 11:26:38.018753: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (1): Quadro P6000, Compute Capability 6.1
+2020-11-09 11:26:38.022220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:03:00.0
+2020-11-09 11:26:38.023425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-09 11:26:38.023475: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-09 11:26:38.023492: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-09 11:26:38.023505: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-09 11:26:38.023518: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-09 11:26:38.023530: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-09 11:26:38.023562: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-09 11:26:38.023580: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 11:26:38.028803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2020-11-09 11:26:38.028845: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-09 11:26:38.031864: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 11:26:38.031885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 1 
+2020-11-09 11:26:38.031893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N Y 
+2020-11-09 11:26:38.031899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 1:   Y N 
+2020-11-09 11:26:38.035800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 23067 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2020-11-09 11:26:38.037420: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 22882 MB memory) -> physical GPU (device: 1, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-09 11:26:40.391917: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-09 11:28:59.695383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:03:00.0
+2020-11-09 11:28:59.696659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-09 11:28:59.696725: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-09 11:28:59.696741: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-09 11:28:59.696754: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-09 11:28:59.696767: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-09 11:28:59.696778: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-09 11:28:59.696791: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-09 11:28:59.696804: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-09 11:28:59.700246: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2020-11-09 11:28:59.700318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-09 11:28:59.700328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 1 
+2020-11-09 11:28:59.700333: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N Y 
+2020-11-09 11:28:59.700338: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 1:   Y N 
+2020-11-09 11:28:59.702803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 23067 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2020-11-09 11:28:59.704010: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 22882 MB memory) -> physical GPU (device: 1, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+Generating new dataset.
+Saved to /home/student/Documents/Qiyuan/tf2py2/ltocode/experiments/rnn/trainset_rnn.pkl. 
+Initial Trajectories
+[Condition 0] Cumulative Costs: [137.31243228872214, 146.10058271436145, 142.7540228074219, 147.2033220650135, 130.05833691508016], Mean Cumulative Cost: 140.6857
+[Condition 1] Cumulative Costs: [217.5468183031862, 218.87696161681973, 232.91215565153436, 224.49135627693215, 209.49502694894457], Mean Cumulative Cost: 220.6645
+[Condition 2] Cumulative Costs: [125.56373460075423, 135.65458433716586, 132.81819757209868, 148.8028691863962, 130.97507037499264], Mean Cumulative Cost: 134.7629
+[Condition 3] Cumulative Costs: [111.32679779794475, 118.71388732355449, 119.52654199472498, 123.554182423652, 113.63871596594623], Mean Cumulative Cost: 117.3520
+[Condition 4] Cumulative Costs: [52.771684593693436, 48.70994082602863, 51.58467273456395, 52.248944848092414, 51.96172606110875], Mean Cumulative Cost: 51.4554
+[Condition 5] Cumulative Costs: [94.60289042992441, 92.95951928859745, 89.03182769099492, 96.53704957070175, 91.3846867250342], Mean Cumulative Cost: 92.9032
+[Condition 6] Cumulative Costs: [92.64145999752937, 91.72913454713161, 89.70734222482388, 91.3299898683016, 90.49374337686781], Mean Cumulative Cost: 91.1803
+[Condition 7] Cumulative Costs: [74.49821653977389, 75.17896742657224, 77.916494328162, 79.35287657732536, 83.16805924509325], Mean Cumulative Cost: 78.0229
+[Condition 8] Cumulative Costs: [201.34447576367498, 214.73589003023943, 215.9987390575399, 209.01028954975683, 228.23051156085026], Mean Cumulative Cost: 213.8640
+[Condition 9] Cumulative Costs: [191.4603251704383, 195.3871700273757, 176.65841691807768, 160.9070083981504, 165.74404733353694], Mean Cumulative Cost: 178.0314
+New Trajectories
+[Condition 0] Cumulative Costs: [127.34346815404623, 125.7361641088343, 138.5579015463435, 139.7769511894509, 139.76280582401068], Mean Cumulative Cost: 134.2355
+[Condition 1] Cumulative Costs: [185.77240464442588, 178.32082582841525, 197.38468571396604, 186.2465223267949, 173.87487916664858], Mean Cumulative Cost: 184.3199
+[Condition 2] Cumulative Costs: [126.80525121716565, 125.02264140961901, 118.40370134753444, 112.19560106430944, 115.155938048349], Mean Cumulative Cost: 119.5166
+[Condition 3] Cumulative Costs: [104.0151774337903, 102.38975648667049, 107.53681105392478, 99.51221572869673, 107.31990843285787], Mean Cumulative Cost: 104.1548
+[Condition 4] Cumulative Costs: [42.60002502851668, 51.14893583732871, 42.730515095311084, 46.03514498084223, 46.76532113659089], Mean Cumulative Cost: 45.8560
+[Condition 5] Cumulative Costs: [86.70401569209427, 83.35202804031358, 87.29396477282457, 86.44918357603518, 98.07084958302566], Mean Cumulative Cost: 88.3740
+[Condition 6] Cumulative Costs: [70.74160745393169, 71.18923019444196, 71.40992600086739, 71.92816642915594, 79.77085290522668], Mean Cumulative Cost: 73.0080
+[Condition 7] Cumulative Costs: [70.45432879095212, 66.88606866484822, 67.2169545652643, 74.36402217964647, 71.67640777996002], Mean Cumulative Cost: 70.1196
+[Condition 8] Cumulative Costs: [182.93216732871392, 175.73243754271692, 172.5517255040082, 181.95535539785627, 177.65912858995412], Mean Cumulative Cost: 178.1662
+[Condition 9] Cumulative Costs: [142.20593591281863, 158.81012787845157, 151.62231399584408, 152.57708397777316, 135.86372614522926], Mean Cumulative Cost: 148.2158
+New Trajectories
+[Condition 0] Cumulative Costs: [135.17158055854784, 129.59768025850119, 134.9597739506576, 135.2773848043333, 137.44801482012085], Mean Cumulative Cost: 134.4909
+[Condition 1] Cumulative Costs: [190.20520328336244, 203.24959111155795, 184.4508621457576, 191.37849337149686, 185.9018180429245], Mean Cumulative Cost: 191.0372
+[Condition 2] Cumulative Costs: [114.89750833736599, 120.04338510422926, 121.18410565838204, 125.90001065505768, 118.17160821822561], Mean Cumulative Cost: 120.0393
+[Condition 3] Cumulative Costs: [106.5347342734131, 102.26806651250457, 101.94223978979977, 100.16009783525405, 103.56929199193482], Mean Cumulative Cost: 102.8949
+[Condition 4] Cumulative Costs: [40.23857661749434, 45.10511967820482, 46.02816964390093, 41.009676148588255, 43.873682847887956], Mean Cumulative Cost: 43.2510
+[Condition 5] Cumulative Costs: [79.00914246072197, 85.98541668006078, 82.89012103934269, 84.65329312709945, 89.29898133206271], Mean Cumulative Cost: 84.3674
+[Condition 6] Cumulative Costs: [80.5749122136418, 74.86699324439228, 79.14313998483401, 72.384396139756, 79.1377890199359], Mean Cumulative Cost: 77.2214
+[Condition 7] Cumulative Costs: [68.10764508348488, 68.69046573129333, 73.56871067273741, 69.75414460192718, 71.51427602133724], Mean Cumulative Cost: 70.3270
+[Condition 8] Cumulative Costs: [176.14721929146322, 179.28049002881852, 175.935697138678, 182.8557666688672, 178.57346278243398], Mean Cumulative Cost: 178.5585
+[Condition 9] Cumulative Costs: [137.27089669278388, 129.4268497543163, 142.8151515158287, 164.26808374071126, 160.26533607947843], Mean Cumulative Cost: 146.8093
+New Trajectories
+[Condition 0] Cumulative Costs: [130.381241516024, 136.02621211095436, 143.22857442871353, 131.1143569773035, 130.25054650123676], Mean Cumulative Cost: 134.2002
+[Condition 1] Cumulative Costs: [193.42131129360382, 198.8948998954242, 204.79268123527947, 181.21741368856283, 179.51917384521965], Mean Cumulative Cost: 191.5691
+[Condition 2] Cumulative Costs: [114.62496614520698, 117.46669075760046, 117.39123811206052, 112.95488028811978, 123.79558164743976], Mean Cumulative Cost: 117.2467
+[Condition 3] Cumulative Costs: [106.9059262292208, 98.89903732250485, 105.4106715192652, 107.9284497068443, 95.67685797544549], Mean Cumulative Cost: 102.9642
+[Condition 4] Cumulative Costs: [40.85147800233422, 45.33202334422885, 43.924914001959216, 44.552928574820264, 42.8680666111805], Mean Cumulative Cost: 43.5059
+[Condition 5] Cumulative Costs: [86.92683287144621, 76.26287819414448, 81.38957324499142, 81.64720284136361, 92.02277804839684], Mean Cumulative Cost: 83.6499
+[Condition 6] Cumulative Costs: [78.66015422898674, 77.11451449807157, 79.10354775067269, 75.23743137929185, 74.96178790387175], Mean Cumulative Cost: 77.0155
+[Condition 7] Cumulative Costs: [68.31989181391958, 66.03513593196237, 70.32747764182822, 71.86950175738833, 68.63750764015604], Mean Cumulative Cost: 69.0379
+[Condition 8] Cumulative Costs: [179.63004292005292, 168.3572546782821, 176.97935694562912, 169.44490561214263, 184.47596614279684], Mean Cumulative Cost: 175.7775
+[Condition 9] Cumulative Costs: [152.70808373963317, 162.83410573881255, 152.44908038832935, 149.56947868425743, 142.16381342213583], Mean Cumulative Cost: 151.9449
+New Trajectories
+[Condition 0] Cumulative Costs: [138.8409180031799, 130.35526546753724, 140.0325421963131, 133.39767082855133, 137.76283196588847], Mean Cumulative Cost: 136.0778
+[Condition 1] Cumulative Costs: [180.72764502514997, 170.00332935971463, 166.47448362721852, 182.7786013807599, 179.20803914009014], Mean Cumulative Cost: 175.8384
+[Condition 2] Cumulative Costs: [117.54061253104042, 126.94640177805142, 115.6710897027057, 123.80595844267323, 118.12935637307187], Mean Cumulative Cost: 120.4187
+[Condition 3] Cumulative Costs: [106.81558171893484, 104.69893809454004, 96.24135920768269, 101.06086186166166, 98.33733995934737], Mean Cumulative Cost: 101.4308
+[Condition 4] Cumulative Costs: [42.28538752012022, 43.79428218215406, 44.66256623021089, 47.15230209706987, 43.462140865968756], Mean Cumulative Cost: 44.2713
+[Condition 5] Cumulative Costs: [78.03447407253445, 85.10511927562203, 83.51002125138135, 79.77798731306049, 85.0766656118223], Mean Cumulative Cost: 82.3009
+[Condition 6] Cumulative Costs: [75.46913391680303, 72.46551923494926, 75.0457278825023, 78.877484323161, 76.00715845668705], Mean Cumulative Cost: 75.5730
+[Condition 7] Cumulative Costs: [70.89278129487931, 67.33649730856034, 70.4108700899828, 68.08475736553928, 67.93994644290446], Mean Cumulative Cost: 68.9330
+[Condition 8] Cumulative Costs: [171.34704894184526, 172.3194709967311, 177.26210852906402, 173.64515415479627, 175.61871688815694], Mean Cumulative Cost: 174.0385
+[Condition 9] Cumulative Costs: [160.73234350215367, 142.4426501025695, 165.04870203287342, 139.68259263135334, 149.98127433688515], Mean Cumulative Cost: 151.5775
+New Trajectories
+[Condition 0] Cumulative Costs: [127.09437212397023, 127.16111999752961, 137.3056985036018, 135.11403269020036, 132.92459500750982], Mean Cumulative Cost: 131.9200
+[Condition 1] Cumulative Costs: [173.3491297423141, 185.33000874169105, 188.26519231671176, 191.53318902657344, 179.35430446563984], Mean Cumulative Cost: 183.5664
+[Condition 2] Cumulative Costs: [118.84422548446425, 118.43723969411161, 120.31236265807779, 120.86309731419631, 113.64498668962165], Mean Cumulative Cost: 118.4204
+[Condition 3] Cumulative Costs: [98.5995398021482, 106.95316524513494, 104.7552854056629, 110.14168371209445, 103.06148807949927], Mean Cumulative Cost: 104.7022
+[Condition 4] Cumulative Costs: [47.105711489038036, 42.401934072628436, 46.39804626276293, 49.489084877913406, 43.16661771125743], Mean Cumulative Cost: 45.7123
+[Condition 5] Cumulative Costs: [82.06369328404357, 87.62278804126196, 78.58367731623692, 81.76134509224241, 84.37178320842786], Mean Cumulative Cost: 82.8807
+[Condition 6] Cumulative Costs: [80.90149678253438, 77.79783013414054, 69.68481466149203, 82.5626951739222, 75.63145462791732], Mean Cumulative Cost: 77.3157
+[Condition 7] Cumulative Costs: [70.15795592762692, 71.70871382966045, 66.75300570036664, 66.62858025286968, 67.48792256662487], Mean Cumulative Cost: 68.5472
+[Condition 8] Cumulative Costs: [176.2084451914954, 185.8879297897667, 165.2849751076878, 176.33198460898444, 171.53416866999044], Mean Cumulative Cost: 175.0495
+[Condition 9] Cumulative Costs: [146.77518762455225, 149.57609176126743, 143.90634856225665, 134.28169955013252, 157.91485098268024], Mean Cumulative Cost: 146.4908
+New Trajectories
+[Condition 0] Cumulative Costs: [135.7555557085778, 133.23832142561608, 132.23168439240663, 128.5162071010854, 123.11335070796204], Mean Cumulative Cost: 130.5710
+[Condition 1] Cumulative Costs: [175.3726970639101, 182.31830473551148, 202.72427901580951, 190.26321043071536, 176.24678344976437], Mean Cumulative Cost: 185.3851
+[Condition 2] Cumulative Costs: [122.90433021079392, 125.63947500988225, 112.95120923794315, 111.60116470690164, 114.47432822777736], Mean Cumulative Cost: 117.5141
+[Condition 3] Cumulative Costs: [96.15340103699276, 99.48561857962028, 110.09625152615462, 100.18211742820351, 106.49317449787608], Mean Cumulative Cost: 102.4821
+[Condition 4] Cumulative Costs: [43.827742780449455, 46.9427791453285, 46.05782062865219, 46.90245767828021, 43.69447152154113], Mean Cumulative Cost: 45.4851
+[Condition 5] Cumulative Costs: [79.38398778282519, 79.9182239338436, 81.45356587116541, 88.34946067449351, 86.21958148849858], Mean Cumulative Cost: 83.0650
+[Condition 6] Cumulative Costs: [74.61841484558774, 73.51032081149673, 73.35347998293672, 73.16271686301937, 81.00283415757313], Mean Cumulative Cost: 75.1296
+[Condition 7] Cumulative Costs: [66.80264929360102, 69.28525945710705, 68.38279180511088, 68.0439692700236, 69.97420736195413], Mean Cumulative Cost: 68.4978
+[Condition 8] Cumulative Costs: [189.3863796413421, 179.39147250891335, 168.0513245381748, 171.2669736117899, 175.3702858726728], Mean Cumulative Cost: 176.6933
+[Condition 9] Cumulative Costs: [159.2571212524086, 159.92466644954735, 144.98912864253964, 148.21448694553936, 153.7689536050964], Mean Cumulative Cost: 153.2309
+New Trajectories
+[Condition 0] Cumulative Costs: [131.3304513293108, 127.68781779104485, 132.71979756430636, 129.3069358833751, 133.54403527234467], Mean Cumulative Cost: 130.9178
+[Condition 1] Cumulative Costs: [179.76609828940659, 180.34707102784705, 190.67731341956915, 199.77287355441726, 188.152667835366], Mean Cumulative Cost: 187.7432
+[Condition 2] Cumulative Costs: [125.26636782950615, 118.31267495852963, 116.20740921496467, 117.66712246428783, 117.79707696574704], Mean Cumulative Cost: 119.0501
+[Condition 3] Cumulative Costs: [108.00385703047853, 96.7062282300411, 107.975522331615, 112.8307165568926, 108.50435468958975], Mean Cumulative Cost: 106.8041
+[Condition 4] Cumulative Costs: [45.598876693826284, 47.05871221192758, 45.24022700211337, 42.96702968628864, 47.39668657029522], Mean Cumulative Cost: 45.6523
+[Condition 5] Cumulative Costs: [80.13629962229619, 81.2116967115331, 90.60210306816744, 85.48314345648551, 87.46924853436902], Mean Cumulative Cost: 84.9805
+[Condition 6] Cumulative Costs: [76.61257729589555, 71.79664506389311, 74.04388957810761, 79.78297609716981, 74.66533030584756], Mean Cumulative Cost: 75.3803
+[Condition 7] Cumulative Costs: [69.75167780527335, 66.03121185779702, 68.99183595360783, 68.24912417157184, 70.70729029263921], Mean Cumulative Cost: 68.7462
+[Condition 8] Cumulative Costs: [169.07179612263027, 156.42792979908174, 184.38005873890467, 196.2763511243543, 183.22312249079482], Mean Cumulative Cost: 177.8759
+[Condition 9] Cumulative Costs: [140.55192877637964, 143.134724316042, 145.85548249422308, 146.91163855184945, 162.55833055132996], Mean Cumulative Cost: 147.8024
+New Trajectories
+[Condition 0] Cumulative Costs: [133.2037736989517, 128.42344358768915, 124.88975450655964, 138.47315900598156, 129.44884922446988], Mean Cumulative Cost: 130.8878
+[Condition 1] Cumulative Costs: [197.525329222767, 186.95446811301792, 202.86175670291914, 180.51103399927976, 172.87207614700654], Mean Cumulative Cost: 188.1449
+[Condition 2] Cumulative Costs: [117.95670075716936, 133.66705772975277, 116.78496197177493, 104.54588276844542, 110.95680326009447], Mean Cumulative Cost: 116.7823
+[Condition 3] Cumulative Costs: [97.5747180481595, 100.91643391090611, 102.48405740238117, 108.30106322352232, 105.79359847376602], Mean Cumulative Cost: 103.0140
+[Condition 4] Cumulative Costs: [43.72926033597513, 43.88776029749392, 42.10147644039543, 42.34358902989738, 45.79584743979107], Mean Cumulative Cost: 43.5716
+[Condition 5] Cumulative Costs: [86.49991362696166, 89.14670019732566, 85.64058186731917, 84.27010304526091, 85.79975896191173], Mean Cumulative Cost: 86.2714
+[Condition 6] Cumulative Costs: [69.82952589174799, 69.81853060394421, 72.06225998860839, 77.78784228553882, 82.8982410220054], Mean Cumulative Cost: 74.4793
+[Condition 7] Cumulative Costs: [66.796435358503, 71.76335724005993, 67.13838038972314, 68.45253029081084, 75.29306858300737], Mean Cumulative Cost: 69.8888
+[Condition 8] Cumulative Costs: [174.86566095115722, 185.86802754583994, 186.1848219807507, 173.25150404351388, 176.97611608514492], Mean Cumulative Cost: 179.4292
+[Condition 9] Cumulative Costs: [140.71779283840505, 142.4155572409872, 147.38331880895063, 157.79262789132048, 144.04385163212757], Mean Cumulative Cost: 146.4706
+New Trajectories
+[Condition 0] Cumulative Costs: [120.41742251869536, 136.34353987222283, 143.84583101339996, 136.6519732828302, 140.6310102596778], Mean Cumulative Cost: 135.5780
+[Condition 1] Cumulative Costs: [182.14801518160056, 184.8315108219645, 203.48006285448292, 195.51978995702387, 194.1739921648686], Mean Cumulative Cost: 192.0307
+[Condition 2] Cumulative Costs: [120.14160639074346, 115.010783920946, 121.79975084248355, 111.43802668070039, 115.63831769441602], Mean Cumulative Cost: 116.8057
+[Condition 3] Cumulative Costs: [103.28004736388385, 107.67008787918817, 97.0465518743338, 99.1357088343851, 108.89063471817177], Mean Cumulative Cost: 103.2046
+[Condition 4] Cumulative Costs: [44.08775863599334, 42.19693712624121, 45.5709922904653, 49.30906704103063, 45.220541004808304], Mean Cumulative Cost: 45.2771
+[Condition 5] Cumulative Costs: [82.20645420828221, 85.99689186851359, 88.68526509574266, 83.1324007394894, 84.6696845825606], Mean Cumulative Cost: 84.9381
+[Condition 6] Cumulative Costs: [80.18380155500127, 74.75013863749966, 77.15625123332288, 73.51857572240695, 75.74740186184962], Mean Cumulative Cost: 76.2712
+[Condition 7] Cumulative Costs: [72.017943076807, 68.56076488976879, 69.98567815586456, 65.9688715837203, 74.99075971844816], Mean Cumulative Cost: 70.3048
+[Condition 8] Cumulative Costs: [180.90787690673608, 154.96651579880088, 176.46092534112748, 180.5533607290386, 183.09316651295623], Mean Cumulative Cost: 175.1964
+[Condition 9] Cumulative Costs: [150.54387528964062, 168.2122484304079, 163.43619815817095, 158.86958037702493, 157.65019728063552], Mean Cumulative Cost: 159.7424
+New Trajectories
+[Condition 0] Cumulative Costs: [135.08977564796731, 134.94571188882617, 128.21135416743402, 133.98902283923115, 119.41041690641882], Mean Cumulative Cost: 130.3293
+[Condition 1] Cumulative Costs: [188.89099536266465, 198.17185370803807, 183.64828340128946, 189.50485769799144, 194.9944297141683], Mean Cumulative Cost: 191.0421
+[Condition 2] Cumulative Costs: [135.16398992477136, 119.65809058409805, 115.30107714882864, 129.81612105638635, 127.82549132113657], Mean Cumulative Cost: 125.5530
+[Condition 3] Cumulative Costs: [97.17536059859661, 108.05931729048339, 95.44456737804619, 107.70907367483022, 98.58802006207523], Mean Cumulative Cost: 101.3953
+[Condition 4] Cumulative Costs: [47.12421941276154, 43.502606620922506, 45.04144872296499, 46.05369171360193, 48.278809662320526], Mean Cumulative Cost: 46.0002
+[Condition 5] Cumulative Costs: [80.24095421061551, 78.23260005647066, 83.32326987216076, 80.96734416690984, 80.83433738031826], Mean Cumulative Cost: 80.7197
+[Condition 6] Cumulative Costs: [76.2915415343862, 81.68610254766942, 73.84263171486292, 72.04931530340819, 73.21561890412526], Mean Cumulative Cost: 75.4170
+[Condition 7] Cumulative Costs: [65.38373462850849, 72.35034361105532, 64.91629728725474, 67.38759373788018, 64.23835042111212], Mean Cumulative Cost: 66.8553
+[Condition 8] Cumulative Costs: [184.3550323311539, 181.06131730461016, 176.81826203604206, 172.89265817349212, 166.02028061673315], Mean Cumulative Cost: 176.2295
+[Condition 9] Cumulative Costs: [150.73947525810678, 154.42384753617037, 151.21606100486397, 141.84254627514994, 162.54387380894485], Mean Cumulative Cost: 152.1532
+    |                       |          condition 0                                  |          condition 1                                  |          condition 2                                  |          condition 3                                  |          condition 4                                  |          condition 5                                  |          condition 6                                  |          condition 7                                  |          condition 8                                  |          condition 9                                 
+itr | avg_cost avg_pol_cost |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f |   cost     step   entropy  pol_cost kl_div_i kl_div_f
+  0 |   133.58       716.69 |   149.43   0.2000 -5756.46   609.71   237.08   236.48 |   220.13   0.2000 -5756.46  1387.03    43.92    44.18 |   135.60   0.2000 -5756.46   530.83   226.36   225.79 |   120.55   0.2000 -5756.46   801.08    21.46    21.49 |    50.59   0.2000 -5756.46   296.91    75.53    74.51 |    97.03   0.2000 -5756.46   639.25    36.13    35.96 |    88.60   0.2000 -5756.46   562.16    31.88    31.78 |    77.14   0.2000 -5756.46   388.95   118.02   116.93 |   207.57   0.2000 -5756.46   874.63   167.69   167.86 |   189.17   0.2000 -5756.46  1076.33     8.18     8.53
+New Trajectories
+[Condition 0] Cumulative Costs: [109.25162739904546, 111.92761342628012, 110.9458132572445, 107.40388341467089, 109.49667702375314], Mean Cumulative Cost: 109.8051
+[Condition 1] Cumulative Costs: [145.83213279508817, 140.39468151719842, 143.14052674595808, 142.551396098179, 140.98400374227555], Mean Cumulative Cost: 142.5805
+[Condition 2] Cumulative Costs: [95.99394470716973, 95.88635165929999, 100.35913912725698, 95.96693694451295, 93.5072067139878], Mean Cumulative Cost: 96.3427
+[Condition 3] Cumulative Costs: [79.54984387115552, 76.57831230395796, 81.58008609224274, 75.52119874982657, 80.75791117840785], Mean Cumulative Cost: 78.7975
+[Condition 4] Cumulative Costs: [36.811632547451914, 35.22302556989718, 38.049319861421225, 35.36168479453633, 37.124224795476124], Mean Cumulative Cost: 36.5140
+[Condition 5] Cumulative Costs: [67.45118524770803, 68.01313043646209, 68.58386930550415, 63.168733685919356, 66.22052019495808], Mean Cumulative Cost: 66.6875
+[Condition 6] Cumulative Costs: [55.5937413771528, 59.942265076052685, 57.109576995095246, 54.337180840325196, 62.144733356824375], Mean Cumulative Cost: 57.8255
+[Condition 7] Cumulative Costs: [57.32984852685637, 59.46994099303767, 55.800997295100416, 57.135331918716744, 58.39145778967705], Mean Cumulative Cost: 57.6255
+[Condition 8] Cumulative Costs: [145.99020979934878, 129.0605848288369, 144.61081948003212, 138.29867007375125, 133.52111103574788], Mean Cumulative Cost: 138.2963
+[Condition 9] Cumulative Costs: [111.53274887736613, 104.2103830325291, 102.8450235213801, 98.98990458697864, 98.21171198074789], Mean Cumulative Cost: 103.1580
+New Trajectories
+[Condition 0] Cumulative Costs: [112.72048537520642, 104.29038706129708, 103.76028046665533, 101.39692107295005, 108.00276923271912], Mean Cumulative Cost: 106.0342
+[Condition 1] Cumulative Costs: [138.59573033068008, 150.2405312058205, 147.65932520193724, 143.45469685078555, 138.5782365671667], Mean Cumulative Cost: 143.7057
+[Condition 2] Cumulative Costs: [103.01304651091316, 104.6884049384024, 99.15523373080661, 96.53493197005065, 90.87646422260569], Mean Cumulative Cost: 98.8536
+[Condition 3] Cumulative Costs: [77.2474103734372, 79.2245804517727, 76.19815590998144, 79.05376558880224, 74.63969200265403], Mean Cumulative Cost: 77.2727
+[Condition 4] Cumulative Costs: [39.75958243852485, 36.64142911985742, 36.76827737520581, 36.18318149957573, 37.17821071687383], Mean Cumulative Cost: 37.3061
+[Condition 5] Cumulative Costs: [69.50943875585371, 68.10746683180614, 65.65813881809365, 70.74920389636583, 66.88069604018752], Mean Cumulative Cost: 68.1810
+[Condition 6] Cumulative Costs: [54.97458918016023, 60.08763880798333, 58.0521120712188, 58.57047080123119, 58.90330480911866], Mean Cumulative Cost: 58.1176
+[Condition 7] Cumulative Costs: [61.071814322664764, 59.19092643779352, 59.77447121419061, 57.990068459798565, 58.40350270029619], Mean Cumulative Cost: 59.2862
+[Condition 8] Cumulative Costs: [140.7247892585805, 139.83658158360853, 143.59900538630123, 142.26869166089506, 143.93074039686155], Mean Cumulative Cost: 142.0720
+[Condition 9] Cumulative Costs: [109.0009740445555, 113.27617237383492, 111.89138145281707, 115.5161555448133, 108.46157750915158], Mean Cumulative Cost: 111.6293
+New Trajectories
+[Condition 0] Cumulative Costs: [107.74797818942001, 112.55645757548987, 107.37322219826878, 113.38644756979237, 110.182359310684], Mean Cumulative Cost: 110.2493
+[Condition 1] Cumulative Costs: [144.7219864722616, 135.06695269084835, 142.0565290496257, 138.61923507200956, 147.77233042523773], Mean Cumulative Cost: 141.6474
+[Condition 2] Cumulative Costs: [99.91283453994342, 97.1674184060554, 103.12016353455334, 99.03093488315515, 97.60537872367142], Mean Cumulative Cost: 99.3673
+[Condition 3] Cumulative Costs: [77.03462652048277, 76.39485076563045, 77.07877432405172, 73.72681843657838, 82.16919843588747], Mean Cumulative Cost: 77.2809
+[Condition 4] Cumulative Costs: [38.088518075056086, 37.4677660885345, 35.94623802220618, 36.42323714488499, 38.97712037256016], Mean Cumulative Cost: 37.3806
+[Condition 5] Cumulative Costs: [68.55376760933729, 68.66226797586542, 72.02833060337564, 67.75491910291603, 67.84024701530755], Mean Cumulative Cost: 68.9679
+[Condition 6] Cumulative Costs: [56.44452498710301, 63.06498402846996, 62.49192936057374, 59.528072138718485, 57.03269974328729], Mean Cumulative Cost: 59.7124
+[Condition 7] Cumulative Costs: [57.78413053200425, 59.45858844975034, 58.14359441337777, 59.91302209906104, 55.561136607270406], Mean Cumulative Cost: 58.1721
+[Condition 8] Cumulative Costs: [142.76475948069876, 152.27509166618148, 128.42097308875623, 136.3809883828603, 152.73178002712882], Mean Cumulative Cost: 142.5147
+[Condition 9] Cumulative Costs: [97.86098261419217, 105.27263510033028, 103.73774063130068, 107.57670619107692, 111.48033626688058], Mean Cumulative Cost: 105.1857
+New Trajectories
+[Condition 0] Cumulative Costs: [105.59301490932009, 111.41279260515248, 114.60508815302076, 116.80037929940595, 106.84102618986226], Mean Cumulative Cost: 111.0505
+[Condition 1] Cumulative Costs: [142.70934492650272, 143.74420588778915, 142.57035007687546, 153.1195584614652, 149.15834126109905], Mean Cumulative Cost: 146.2604
+[Condition 2] Cumulative Costs: [90.94190158454822, 102.86916062578663, 99.43328667487276, 102.37489506706791, 97.98179581886443], Mean Cumulative Cost: 98.7202
+[Condition 3] Cumulative Costs: [77.82144498897344, 74.3183716816482, 77.27456262008533, 77.87800088226497, 76.6772886881404], Mean Cumulative Cost: 76.7939
+[Condition 4] Cumulative Costs: [38.29649730616877, 38.806645092633, 37.47035415892038, 37.06631405260633, 36.61710165739017], Mean Cumulative Cost: 37.6514
+[Condition 5] Cumulative Costs: [65.19153418826602, 69.31013775433487, 66.92314757030809, 70.29832782310085, 67.13948746520089], Mean Cumulative Cost: 67.7725
+[Condition 6] Cumulative Costs: [62.0025001549131, 61.60582712485558, 61.43598184293219, 58.346889242459994, 59.78576018718183], Mean Cumulative Cost: 60.6354
+[Condition 7] Cumulative Costs: [58.3790795752226, 55.82194376034139, 57.145440213233165, 58.142859111701306, 54.61717989846357], Mean Cumulative Cost: 56.8213
+[Condition 8] Cumulative Costs: [141.92281890457042, 137.96083550437373, 136.5840180077653, 133.04152142304096, 136.38250019453645], Mean Cumulative Cost: 137.1783
+[Condition 9] Cumulative Costs: [109.32074839396529, 109.31139225648288, 102.00656884733137, 106.01661440773773, 97.75573656295218], Mean Cumulative Cost: 104.8822
+New Trajectories
+[Condition 0] Cumulative Costs: [110.05613891716038, 114.1108492623193, 108.2580681081993, 116.16139027560355, 105.50679407707447], Mean Cumulative Cost: 110.8186
+[Condition 1] Cumulative Costs: [144.50046302452526, 150.91255067686137, 149.8821922950068, 146.60561289193018, 144.39332231899587], Mean Cumulative Cost: 147.2588
+[Condition 2] Cumulative Costs: [95.2932641196948, 103.36224503822062, 92.38827383131036, 99.72628011236641, 96.24020045322136], Mean Cumulative Cost: 97.4021
+[Condition 3] Cumulative Costs: [76.25694307473228, 83.05932862591798, 73.65945474677764, 70.13746106764097, 76.07724216263894], Mean Cumulative Cost: 75.8381
+[Condition 4] Cumulative Costs: [37.087251102343046, 38.26996185116781, 40.261918882296314, 40.233646674498495, 37.00228845560834], Mean Cumulative Cost: 38.5710
+[Condition 5] Cumulative Costs: [65.30544470811554, 67.5471856140989, 65.86417220917433, 66.11109630923517, 68.02061190695743], Mean Cumulative Cost: 66.5697
+[Condition 6] Cumulative Costs: [59.501496783610854, 58.8529828352527, 58.296613650053125, 63.37674604562499, 58.935415012040394], Mean Cumulative Cost: 59.7927
+[Condition 7] Cumulative Costs: [57.741770115790075, 60.45805752330746, 58.55635703497147, 55.96005545729368, 56.59789302279587], Mean Cumulative Cost: 57.8628
+[Condition 8] Cumulative Costs: [137.47454062810587, 126.99916527896654, 157.1593395017983, 138.73712530239646, 140.95696143852769], Mean Cumulative Cost: 140.2654
+[Condition 9] Cumulative Costs: [115.81789910799155, 112.09112220963304, 105.96961188416905, 107.34381409666057, 106.39985354565806], Mean Cumulative Cost: 109.5245
+New Trajectories
+[Condition 0] Cumulative Costs: [105.05555205079553, 114.29064533576184, 110.69457115843245, 108.67861197184322, 114.59923670185098], Mean Cumulative Cost: 110.6637
+[Condition 1] Cumulative Costs: [147.03928559398094, 146.68452684127286, 133.09443369441667, 168.1329231913435, 152.1615864994784], Mean Cumulative Cost: 149.4226
+[Condition 2] Cumulative Costs: [98.02712762812162, 96.50590468538451, 101.86468613381786, 103.50696666892208, 97.63092960596734], Mean Cumulative Cost: 99.5071
+[Condition 3] Cumulative Costs: [71.50724426826632, 76.2973196746843, 78.33253294547488, 81.79147923331281, 77.66098920179712], Mean Cumulative Cost: 77.1179
+[Condition 4] Cumulative Costs: [39.73614487429163, 37.31456482139278, 40.115078167807226, 37.71735456665436, 39.68661722521661], Mean Cumulative Cost: 38.9140
+[Condition 5] Cumulative Costs: [72.35746270920578, 66.80287121197252, 65.2002185692066, 66.87151905452198, 68.93772827343267], Mean Cumulative Cost: 68.0340
+[Condition 6] Cumulative Costs: [57.71615212274667, 62.23728192651746, 60.277359524505904, 60.846136514253296, 59.5771966059062], Mean Cumulative Cost: 60.1308
+[Condition 7] Cumulative Costs: [59.59645356162962, 55.887802161810505, 56.310381738513875, 59.331905334556566, 58.5426294118131], Mean Cumulative Cost: 57.9338
+[Condition 8] Cumulative Costs: [144.10407361689101, 139.65458816103853, 144.8072144442518, 147.73259299778513, 146.68932079996685], Mean Cumulative Cost: 144.5976
+[Condition 9] Cumulative Costs: [112.597218254869, 110.65932103751086, 104.56195447835748, 104.94458452091874, 115.52569843227258], Mean Cumulative Cost: 109.6578
+New Trajectories
+[Condition 0] Cumulative Costs: [112.58421967559919, 108.89603208843782, 107.65408757358789, 108.76372520295588, 115.74561617784659], Mean Cumulative Cost: 110.7287
+[Condition 1] Cumulative Costs: [138.9942283573644, 151.6933339200545, 132.56088353614481, 138.46109803111904, 140.9677227847909], Mean Cumulative Cost: 140.5355
+[Condition 2] Cumulative Costs: [96.19748079708471, 100.17510156108267, 94.57834860142086, 96.3120931576159, 96.02596663530645], Mean Cumulative Cost: 96.6578
+[Condition 3] Cumulative Costs: [72.77410860874788, 79.75355772502365, 77.02757015047024, 75.02546977487674, 81.36928529944024], Mean Cumulative Cost: 77.1900
+[Condition 4] Cumulative Costs: [37.40581349494804, 38.266027052458476, 39.18436355143378, 37.2205279304147, 39.35793221600763], Mean Cumulative Cost: 38.2869
+[Condition 5] Cumulative Costs: [64.50451453480723, 68.9102739655513, 67.08152102404482, 68.69626849389176, 66.03576352123014], Mean Cumulative Cost: 67.0457
+[Condition 6] Cumulative Costs: [59.56559419738715, 58.81035370918966, 59.17258005014414, 59.7096406523191, 57.263771976954], Mean Cumulative Cost: 58.9044
+[Condition 7] Cumulative Costs: [57.63400615220685, 53.75152053254002, 55.469549891258794, 55.01657841906837, 58.05585062299867], Mean Cumulative Cost: 55.9855
+[Condition 8] Cumulative Costs: [137.0413169006389, 149.23124986375532, 138.11238999534058, 140.09253449401012, 141.17552268159497], Mean Cumulative Cost: 141.1306
+[Condition 9] Cumulative Costs: [108.32062895496537, 118.43208376711989, 112.54894492764723, 106.50428423260988, 110.21939764857592], Mean Cumulative Cost: 111.2051
+New Trajectories
+[Condition 0] Cumulative Costs: [118.16185274810626, 112.80392737961542, 113.90026417883001, 115.11117228327244, 110.4752413311128], Mean Cumulative Cost: 114.0905
+[Condition 1] Cumulative Costs: [156.50396808198096, 135.2912571006095, 134.6897879800889, 147.9373954342874, 149.28757475847854], Mean Cumulative Cost: 144.7420
+[Condition 2] Cumulative Costs: [97.71482887392867, 93.64879482934893, 95.66591168951949, 99.32475755170587, 99.01016727153728], Mean Cumulative Cost: 97.0729
+[Condition 3] Cumulative Costs: [78.51333233999112, 79.97318649982539, 77.68705469560648, 80.5619199498213, 78.81593236601505], Mean Cumulative Cost: 79.1103
+[Condition 4] Cumulative Costs: [37.83406138210499, 36.874993902078366, 37.52627178425721, 40.51137430584571, 35.110584034163715], Mean Cumulative Cost: 37.5715
+[Condition 5] Cumulative Costs: [68.78701972084794, 73.1782944754625, 67.93943328624368, 64.26562556692355, 66.5518527307119], Mean Cumulative Cost: 68.1444
+[Condition 6] Cumulative Costs: [59.00733728077487, 63.17300479562834, 63.606902846006626, 63.270408167062534, 58.92083978793017], Mean Cumulative Cost: 61.5957
+[Condition 7] Cumulative Costs: [57.43544150897229, 53.489895420977334, 60.059007854017615, 56.53097579011529, 53.99502573525957], Mean Cumulative Cost: 56.3021
+[Condition 8] Cumulative Costs: [136.1304695796172, 136.70770639667427, 145.17741417144794, 143.40179567184526, 128.6887500423976], Mean Cumulative Cost: 138.0212
+[Condition 9] Cumulative Costs: [105.5343995976314, 99.72660708962063, 105.72553876690404, 104.26220171885315, 97.71479514460198], Mean Cumulative Cost: 102.5927
+New Trajectories
+[Condition 0] Cumulative Costs: [112.35414721920121, 110.53135545750192, 113.34704120095746, 107.80681766617712, 106.2081684017221], Mean Cumulative Cost: 110.0495
+[Condition 1] Cumulative Costs: [146.4439666984464, 140.66643917266964, 141.64042934755736, 141.61854840188246, 135.14388720867592], Mean Cumulative Cost: 141.1027
+[Condition 2] Cumulative Costs: [102.45696484800179, 99.99998037672124, 91.18493780878872, 96.58959057788003, 95.74780670449599], Mean Cumulative Cost: 97.1959
+[Condition 3] Cumulative Costs: [82.46412360212823, 76.16555320725064, 75.4260113349542, 73.33547149569476, 80.33926998151819], Mean Cumulative Cost: 77.5461
+[Condition 4] Cumulative Costs: [37.532821138208924, 38.52082290221843, 35.483738826211976, 38.58548198478714, 37.41940145420577], Mean Cumulative Cost: 37.5085
+[Condition 5] Cumulative Costs: [70.0045766770756, 66.84377965705467, 67.78948119700154, 66.2405662617477, 68.61453833533565], Mean Cumulative Cost: 67.8986
+[Condition 6] Cumulative Costs: [59.08548215092052, 60.570461934205134, 56.9219987537197, 62.0794717890421, 59.62169243855286], Mean Cumulative Cost: 59.6558
+[Condition 7] Cumulative Costs: [57.608203023496586, 61.5228353198938, 58.95225747660715, 59.45875748699083, 61.443184262847694], Mean Cumulative Cost: 59.7970
+[Condition 8] Cumulative Costs: [146.9994507433998, 139.51119004707616, 133.71362328810147, 134.53768685727525, 135.1746267498699], Mean Cumulative Cost: 137.9873
+[Condition 9] Cumulative Costs: [100.25441174013957, 104.3516831686734, 103.72215569788536, 102.30394041766425, 103.45462946770043], Mean Cumulative Cost: 102.8174
+New Trajectories
+[Condition 0] Cumulative Costs: [119.36980149272088, 114.53914579526841, 110.44376633687844, 106.0439313277302, 111.53626070338186], Mean Cumulative Cost: 112.3866
+[Condition 1] Cumulative Costs: [150.57437973642294, 136.46654658918334, 142.8039703777728, 138.8486956046118, 137.7824599989855], Mean Cumulative Cost: 141.2952
+[Condition 2] Cumulative Costs: [92.24838588371476, 94.08737990157192, 97.43550573396558, 91.56024999981173, 95.64957992182546], Mean Cumulative Cost: 94.1962
+[Condition 3] Cumulative Costs: [74.78215272102862, 79.73850803141855, 77.25903968208786, 76.09594100394992, 78.40240529686878], Mean Cumulative Cost: 77.2556
+[Condition 4] Cumulative Costs: [39.43800167577053, 36.81914047344114, 40.08203554012878, 37.95065814530825, 37.78595370466681], Mean Cumulative Cost: 38.4152
+[Condition 5] Cumulative Costs: [70.07556590647303, 69.3590903010959, 65.85691969699153, 66.18130223531278, 64.60251636579663], Mean Cumulative Cost: 67.2151
+[Condition 6] Cumulative Costs: [64.20235437665106, 59.0408850507607, 57.44647643289679, 59.189953921027765, 62.146311012719195], Mean Cumulative Cost: 60.4052
+[Condition 7] Cumulative Costs: [57.654362205411914, 56.743281984521296, 60.322041419312384, 62.349834897037006, 58.82300292131748], Mean Cumulative Cost: 59.1785
+[Condition 8] Cumulative Costs: [144.1015611318795, 142.09595804945218, 137.7201436172164, 139.47982775630396, 144.6461259851877], Mean Cumulative Cost: 141.6087
+[Condition 9] Cumulative Costs: [111.13808485552867, 102.07479281348768, 112.01875568297652, 112.5306179780411, 111.73457553490469], Mean Cumulative Cost: 109.8994
+  1 |   115.06       724.00 |   133.66   1.0000 -5760.27   577.67   206.41   210.41 |   189.50   1.0000 -5761.80  1443.57    37.33    38.14 |   119.29   1.0000 -5759.08   525.88   192.61   196.36 |   102.99   1.0000 -5762.51   751.01    18.49    18.91 |    44.36   1.0000 -5764.48   305.21    62.18    63.36 |    84.47   1.0000 -5765.51   621.41    30.16    30.77 |    74.84   1.0000 -5761.21   581.48    26.41    26.96 |    68.81   1.0000 -5760.99   372.60   100.47   102.37 |   180.59   1.0000 -5762.32   925.64   142.71   145.52 |   152.04   1.0000 -5761.05  1135.55     7.16     7.39
+New Trajectories
+[Condition 0] Cumulative Costs: [92.64958147115293, 96.18916481978665, 93.50132136077883, 91.47231469617792, 88.51640935618998], Mean Cumulative Cost: 92.4658
+[Condition 1] Cumulative Costs: [108.63397050288222, 110.16609205426094, 103.26858069964972, 107.02925102508796, 108.46470649277784], Mean Cumulative Cost: 107.5125
+[Condition 2] Cumulative Costs: [84.32525147554988, 79.0950731341945, 73.3004756247404, 76.2579901666158, 84.30534161822075], Mean Cumulative Cost: 79.4568
+[Condition 3] Cumulative Costs: [50.4328618612046, 47.59748547528441, 49.69318513484407, 52.9034341185247, 50.13549010902294], Mean Cumulative Cost: 50.1525
+[Condition 4] Cumulative Costs: [34.681237398492186, 34.65289907920269, 33.54052355947752, 34.38979831405107, 33.37715482823825], Mean Cumulative Cost: 34.1283
+[Condition 5] Cumulative Costs: [52.81173841743216, 52.21951177272409, 53.08942754886621, 50.55638692598707, 53.27964048325149], Mean Cumulative Cost: 52.3913
+[Condition 6] Cumulative Costs: [44.08764201476631, 42.96793391888064, 45.023026529441985, 42.90349311365732, 44.72112271130832], Mean Cumulative Cost: 43.9406
+[Condition 7] Cumulative Costs: [49.86964712668197, 50.526839430057194, 46.97275935177554, 50.0160948246134, 51.13083367203005], Mean Cumulative Cost: 49.7032
+[Condition 8] Cumulative Costs: [105.20910215461696, 104.43517160400577, 106.86233465603405, 102.84583392246041, 100.16893826367875], Mean Cumulative Cost: 103.9043
+[Condition 9] Cumulative Costs: [72.9381086443541, 72.60216903341446, 70.32051105358907, 77.78484687338549, 72.09900880001958], Mean Cumulative Cost: 73.1489
+New Trajectories
+[Condition 0] Cumulative Costs: [93.6194917212889, 95.49971523181415, 94.71816878691251, 89.99827468824469, 92.93097738992644], Mean Cumulative Cost: 93.3533
+[Condition 1] Cumulative Costs: [111.44312282021632, 105.66886036458921, 110.01392400818894, 108.9480242120039, 104.46976311330192], Mean Cumulative Cost: 108.1087
+[Condition 2] Cumulative Costs: [77.01745857448277, 78.64046267082283, 79.86587867094228, 82.81046233706041, 79.40054052999331], Mean Cumulative Cost: 79.5470
+[Condition 3] Cumulative Costs: [51.69012503028195, 51.05103215895593, 50.59631787204932, 51.79106580516965, 51.90054907827908], Mean Cumulative Cost: 51.4058
+[Condition 4] Cumulative Costs: [32.82230121248534, 32.64540244936088, 33.696814998371345, 33.07385254042481, 33.274630689548886], Mean Cumulative Cost: 33.1026
+[Condition 5] Cumulative Costs: [51.32189284209492, 54.70478053758717, 53.188428738428044, 53.45064253077859, 51.816673680404946], Mean Cumulative Cost: 52.8965
+[Condition 6] Cumulative Costs: [45.11124010812618, 41.875678032300854, 45.08534231131123, 45.86913303749171, 46.55604393087092], Mean Cumulative Cost: 44.8995
+[Condition 7] Cumulative Costs: [48.47308508344422, 49.32333637596949, 49.78765244504404, 51.28935449125473, 49.035299391699795], Mean Cumulative Cost: 49.5817
+[Condition 8] Cumulative Costs: [106.1620778930421, 105.90587256600527, 104.53774784643547, 104.52317337443995, 103.52572548674928], Mean Cumulative Cost: 104.9309
+[Condition 9] Cumulative Costs: [71.57476118947127, 72.51146338607191, 73.05740165430976, 69.74885217940806, 72.85800971820186], Mean Cumulative Cost: 71.9501
+New Trajectories
+[Condition 0] Cumulative Costs: [89.4169768476525, 94.11161536706565, 95.89704981513206, 91.02947204433676, 97.67405549237259], Mean Cumulative Cost: 93.6258
+[Condition 1] Cumulative Costs: [106.5321253256149, 105.64018657364521, 108.14143124397398, 106.43120776141322, 107.03962018339689], Mean Cumulative Cost: 106.7569
+[Condition 2] Cumulative Costs: [84.16927435646433, 82.14642026060751, 81.24138689911797, 81.35869507650187, 73.20936412134087], Mean Cumulative Cost: 80.4250
+[Condition 3] Cumulative Costs: [53.683497685925616, 52.37603345580616, 49.755906033508765, 52.819404063061384, 51.08294173057057], Mean Cumulative Cost: 51.9436
+[Condition 4] Cumulative Costs: [35.996553038294415, 35.636101624561846, 32.956643385444146, 33.65573681130238, 34.77764839329614], Mean Cumulative Cost: 34.6045
+[Condition 5] Cumulative Costs: [51.23386906922038, 56.751172998024494, 55.518645238004716, 54.58247728230141, 53.35763199992499], Mean Cumulative Cost: 54.2888
+[Condition 6] Cumulative Costs: [45.13316587268683, 43.087721608898285, 45.56135493391274, 44.41410802408751, 44.335270597502515], Mean Cumulative Cost: 44.5063
+[Condition 7] Cumulative Costs: [49.35750758288033, 48.8955428570082, 51.091686523749914, 53.48870487004951, 54.10002110803179], Mean Cumulative Cost: 51.3867
+[Condition 8] Cumulative Costs: [103.26789042033728, 109.63509601123036, 112.05279617706711, 104.60017692080713, 99.484007980473], Mean Cumulative Cost: 105.8080
+[Condition 9] Cumulative Costs: [75.60080177308318, 72.71235518799912, 67.81098946726117, 71.83918747796262, 73.17864992715742], Mean Cumulative Cost: 72.2284
+New Trajectories
+[Condition 0] Cumulative Costs: [92.59047155828442, 89.09804524144586, 92.40299515945004, 99.11667785743887, 95.23660733506613], Mean Cumulative Cost: 93.6890
+[Condition 1] Cumulative Costs: [105.89892279776063, 114.76391198790922, 103.52973131820035, 108.02026372567423, 108.52459556866984], Mean Cumulative Cost: 108.1475
+[Condition 2] Cumulative Costs: [77.86035326399067, 77.1955066051173, 76.13037165221992, 78.82734079069824, 82.96522653582323], Mean Cumulative Cost: 78.5958
+[Condition 3] Cumulative Costs: [50.382271977558354, 49.02726770668643, 52.87503833141167, 51.713431488176575, 52.02611716836078], Mean Cumulative Cost: 51.2048
+[Condition 4] Cumulative Costs: [32.625059366842876, 33.449682291357, 34.69590420256985, 34.44025773977073, 33.54742535202976], Mean Cumulative Cost: 33.7517
+[Condition 5] Cumulative Costs: [51.85395043376687, 53.618819929348696, 54.45325814850691, 54.17172668941517, 55.173815330603226], Mean Cumulative Cost: 53.8543
+[Condition 6] Cumulative Costs: [43.59200457191151, 42.64292800815792, 44.655607282064125, 45.16084238529121, 44.19080096895135], Mean Cumulative Cost: 44.0484
+[Condition 7] Cumulative Costs: [49.064207595294604, 49.08040378665962, 52.64615238448145, 51.809356288031644, 52.76339646219638], Mean Cumulative Cost: 51.0727
+[Condition 8] Cumulative Costs: [104.11203051487965, 100.13070632060368, 100.79879796056564, 110.12585896903583, 100.93051160671585], Mean Cumulative Cost: 103.2196
+[Condition 9] Cumulative Costs: [79.95641367935217, 74.79515578563874, 72.90653723006177, 70.97118940513002, 65.87047508455214], Mean Cumulative Cost: 72.9000
+New Trajectories
+[Condition 0] Cumulative Costs: [93.83568912776556, 95.27991619425657, 96.54719106872176, 89.45134178843448, 95.78567827154369], Mean Cumulative Cost: 94.1800
+[Condition 1] Cumulative Costs: [106.65639589021237, 108.82062060128135, 105.30777560718555, 110.67677538527248, 104.72814588196026], Mean Cumulative Cost: 107.2379
+[Condition 2] Cumulative Costs: [72.00602884812395, 76.49409185007845, 77.17803911201368, 78.67443357694368, 77.5814987624393], Mean Cumulative Cost: 76.3868
+[Condition 3] Cumulative Costs: [50.12826333848217, 50.34823297932239, 53.537469277442355, 52.637113562990635, 51.86751842620376], Mean Cumulative Cost: 51.7037
+[Condition 4] Cumulative Costs: [34.992225608300394, 34.312847622245066, 35.21925710102596, 35.74583266624813, 32.91054681261848], Mean Cumulative Cost: 34.6361
+[Condition 5] Cumulative Costs: [53.159776189225354, 53.12250106072708, 52.52300553517308, 53.03102204999889, 53.79907043914734], Mean Cumulative Cost: 53.1271
+[Condition 6] Cumulative Costs: [44.077187570187355, 42.62944589461359, 44.95123067092533, 43.44021055628277, 46.92120230464018], Mean Cumulative Cost: 44.4039
+[Condition 7] Cumulative Costs: [53.08507186092059, 50.244064957827774, 52.859667396639416, 54.562661269414235, 53.62059739205644], Mean Cumulative Cost: 52.8744
+[Condition 8] Cumulative Costs: [105.83094671837823, 105.89006432239981, 103.58768141086097, 114.26067323138582, 103.54423332690334], Mean Cumulative Cost: 106.6227
+[Condition 9] Cumulative Costs: [70.5799903016621, 76.14897411070172, 74.24065548242609, 71.98116994292232, 74.38604931740419], Mean Cumulative Cost: 73.4674
+New Trajectories
+[Condition 0] Cumulative Costs: [94.0773909832554, 95.66570267992267, 97.45979363867166, 93.16243423265449, 90.05047146972927], Mean Cumulative Cost: 94.0832
+[Condition 1] Cumulative Costs: [108.21288724588236, 106.75279815347794, 104.88689998515153, 111.32348544190152, 109.844939380191], Mean Cumulative Cost: 108.2042
+[Condition 2] Cumulative Costs: [81.1563312586144, 75.60831973998069, 78.82411702591767, 79.583748835981, 75.70773695449742], Mean Cumulative Cost: 78.1761
+[Condition 3] Cumulative Costs: [49.65142762695853, 51.966858220474286, 49.06369859018832, 52.07643446770053, 49.68504712991703], Mean Cumulative Cost: 50.4887
+[Condition 4] Cumulative Costs: [33.09723046582091, 35.510778587727984, 34.45172458469982, 34.27455309946043, 34.412496195121875], Mean Cumulative Cost: 34.3494
+[Condition 5] Cumulative Costs: [51.736605130478296, 53.7946864054946, 54.29540429661026, 52.06487256554704, 53.17035908040238], Mean Cumulative Cost: 53.0124
+[Condition 6] Cumulative Costs: [46.02360034390112, 44.33852276983457, 43.435895094240095, 45.49725632950298, 45.37680019790183], Mean Cumulative Cost: 44.9344
+[Condition 7] Cumulative Costs: [51.65151400116375, 50.90929750936127, 49.90288644779459, 51.98953906456411, 48.55804520267005], Mean Cumulative Cost: 50.6023
+[Condition 8] Cumulative Costs: [106.18621598708351, 104.05484323819238, 106.08917884522478, 105.66636211235128, 103.65462950481168], Mean Cumulative Cost: 105.1302
+[Condition 9] Cumulative Costs: [75.61391069733409, 75.09099867747835, 74.12840763971847, 66.74147001760038, 70.71110483950477], Mean Cumulative Cost: 72.4572
+New Trajectories
+[Condition 0] Cumulative Costs: [92.9130418168595, 94.5656310431438, 102.89200978260156, 97.55113256968794, 94.65933236993602], Mean Cumulative Cost: 96.5162
+[Condition 1] Cumulative Costs: [107.42582368379061, 111.84022551691402, 106.40290761853784, 105.14266403064312, 101.62386545182807], Mean Cumulative Cost: 106.4871
+[Condition 2] Cumulative Costs: [77.8423611753478, 79.90100188065495, 76.37557025774973, 79.22722788001747, 80.5491860212898], Mean Cumulative Cost: 78.7791
+[Condition 3] Cumulative Costs: [52.0261122161081, 53.39704776220801, 51.73823954801178, 50.94590133340469, 53.18647832653464], Mean Cumulative Cost: 52.2588
+[Condition 4] Cumulative Costs: [35.7222160101256, 32.82762468064305, 33.438036659831525, 33.10425253651959, 35.183636514641925], Mean Cumulative Cost: 34.0552
+[Condition 5] Cumulative Costs: [54.400651483707115, 54.30420520886941, 51.50901268355236, 53.44881759087684, 55.53072462282627], Mean Cumulative Cost: 53.8387
+[Condition 6] Cumulative Costs: [44.521261290049466, 46.69876713542622, 44.95298652693586, 44.68918716330038, 45.15876206554078], Mean Cumulative Cost: 45.2042
+[Condition 7] Cumulative Costs: [48.87863113768768, 51.09195981375866, 49.605984427627384, 50.836426671593436, 50.28828035961438], Mean Cumulative Cost: 50.1403
+[Condition 8] Cumulative Costs: [106.49655400320538, 106.44659132449912, 105.13131126984075, 105.01601521424385, 106.99844563473361], Mean Cumulative Cost: 106.0178
+[Condition 9] Cumulative Costs: [71.98771800932151, 74.0816270860237, 76.97816433599438, 74.42417395781371, 73.68050803350867], Mean Cumulative Cost: 74.2304
+New Trajectories
+[Condition 0] Cumulative Costs: [92.65062681526916, 100.66308031265318, 92.1420076429095, 90.06858751401352, 90.94019874686023], Mean Cumulative Cost: 93.2929
+[Condition 1] Cumulative Costs: [104.13179509841781, 114.80677423293511, 108.03602875840585, 107.91069131376356, 106.92404133516524], Mean Cumulative Cost: 108.3619
+[Condition 2] Cumulative Costs: [79.77089950549924, 83.07391406792851, 77.65454046653186, 79.44890407406231, 78.57563532736845], Mean Cumulative Cost: 79.7048
+[Condition 3] Cumulative Costs: [52.01491956607256, 51.28654830492411, 47.4808758888093, 51.08228094055922, 50.07614269580682], Mean Cumulative Cost: 50.3882
+[Condition 4] Cumulative Costs: [33.55219092944588, 35.9043133098381, 35.258026579416224, 32.85635255897123, 33.55771590090283], Mean Cumulative Cost: 34.2257
+[Condition 5] Cumulative Costs: [51.3469989733736, 54.7388190826949, 52.12415289673256, 53.55612149786848, 55.50507772925129], Mean Cumulative Cost: 53.4542
+[Condition 6] Cumulative Costs: [45.947012831792684, 44.747809322462594, 45.322647172385686, 43.797487387474725, 47.3566696093576], Mean Cumulative Cost: 45.4343
+[Condition 7] Cumulative Costs: [54.5500966274726, 52.883050617880045, 53.77630398126191, 50.685299882147056, 48.78856248990473], Mean Cumulative Cost: 52.1367
+[Condition 8] Cumulative Costs: [109.9527537875547, 109.00860790696058, 110.19833187127932, 108.29062951308978, 108.36813804106049], Mean Cumulative Cost: 109.1637
+[Condition 9] Cumulative Costs: [73.95196107829887, 71.92955728834598, 76.91201362117549, 69.354760047199, 72.33184224769647], Mean Cumulative Cost: 72.8960
+New Trajectories
+[Condition 0] Cumulative Costs: [95.84544728911334, 92.74601470315733, 89.44479139814628, 93.9018752300343, 98.85438821528486], Mean Cumulative Cost: 94.1585
+[Condition 1] Cumulative Costs: [107.25063489929131, 114.57009821885306, 110.32829026355655, 105.85685505136716, 110.4557800783315], Mean Cumulative Cost: 109.6923
+[Condition 2] Cumulative Costs: [80.96765708044808, 83.4989439017651, 82.41115638985444, 81.74751779927622, 79.57058536081], Mean Cumulative Cost: 81.6392
+[Condition 3] Cumulative Costs: [51.61776373658788, 48.70883205165432, 50.113916263479574, 54.618017317274145, 51.264298793196424], Mean Cumulative Cost: 51.2646
+[Condition 4] Cumulative Costs: [33.158470038097846, 35.947861785239226, 34.01151904990356, 34.953823674980086, 36.643308443427486], Mean Cumulative Cost: 34.9430
+[Condition 5] Cumulative Costs: [54.64113751856243, 50.943703069704874, 56.49168957684518, 53.99585423581049, 54.69342791095276], Mean Cumulative Cost: 54.1532
+[Condition 6] Cumulative Costs: [44.19064910432786, 45.399894218597915, 45.12479623598548, 46.487239273839755, 47.73707018748785], Mean Cumulative Cost: 45.7879
+[Condition 7] Cumulative Costs: [53.54244420277881, 51.48876708660618, 52.52783177177884, 53.60648445997309, 50.73394323398537], Mean Cumulative Cost: 52.3799
+[Condition 8] Cumulative Costs: [104.94749809927242, 104.82429857589544, 105.07307956361994, 106.43290839296907, 103.2898484917405], Mean Cumulative Cost: 104.9135
+[Condition 9] Cumulative Costs: [64.74152853338651, 70.07977968112444, 70.15471534364612, 77.07513627173545, 72.13239481599594], Mean Cumulative Cost: 70.8367
+New Trajectories
+[Condition 0] Cumulative Costs: [95.75111575733229, 99.17235841086843, 92.5848537820552, 97.79393310737665, 92.3843052966064], Mean Cumulative Cost: 95.5373
+[Condition 1] Cumulative Costs: [103.5772434317868, 106.53246424865097, 107.09703166571273, 105.11084804229101, 105.45555109536964], Mean Cumulative Cost: 105.5546
+[Condition 2] Cumulative Costs: [79.69859339366491, 81.12159860956173, 80.74565220917171, 82.23497444094487, 81.95418660257947], Mean Cumulative Cost: 81.1510
+[Condition 3] Cumulative Costs: [51.42221371758648, 53.01480957297826, 51.79587394724018, 53.04550191542023, 49.19198179972656], Mean Cumulative Cost: 51.6941
+[Condition 4] Cumulative Costs: [33.55323190879832, 35.64637511419151, 34.26654491927268, 33.223958944618914, 35.95982103722853], Mean Cumulative Cost: 34.5300
+[Condition 5] Cumulative Costs: [55.39177556915705, 51.75327953984676, 55.024286550256924, 58.88937750863635, 57.07103262129286], Mean Cumulative Cost: 55.6260
+[Condition 6] Cumulative Costs: [48.428447176388985, 44.07187459157807, 45.158748562494424, 47.70341775378068, 44.66038306088375], Mean Cumulative Cost: 46.0046
+[Condition 7] Cumulative Costs: [51.87856633198684, 51.7864671347625, 52.58383045867545, 51.508143978917396, 55.767831232000454], Mean Cumulative Cost: 52.7050
+[Condition 8] Cumulative Costs: [111.95952554236187, 108.1397527434899, 108.6438044426986, 113.96346933501076, 107.83642119041346], Mean Cumulative Cost: 110.1086
+[Condition 9] Cumulative Costs: [70.95284858059082, 73.31506873293965, 77.04674945401153, 73.70704474918134, 72.00682693307706], Mean Cumulative Cost: 73.4057
+  2 |    90.34       711.35 |   111.70   2.0000 -5767.90   573.09   166.25   171.36 |   144.64   2.0000 -5779.23  1374.33    29.15    30.32 |    96.78   2.0000 -5764.98   565.74   148.26   152.84 |    78.88   2.0000 -5785.19   782.76    15.20    15.86 |    38.62   2.0000 -5782.16   294.05    50.50    51.98 |    66.69   2.0000 -5792.95   647.53    23.18    24.03 |    60.07   2.0000 -5774.89   583.34    20.94    21.75 |    58.33   2.0000 -5773.00   366.20    80.04    82.40 |   138.73   2.0000 -5777.23   840.04   105.01   108.43 |   109.00   2.0000 -5778.01  1086.45     7.10     7.61
+New Trajectories
+[Condition 0] Cumulative Costs: [86.39447535476, 84.68163408021299, 85.00261993710832, 86.49776670486281, 87.34492497427655], Mean Cumulative Cost: 85.9843
+[Condition 1] Cumulative Costs: [85.94708386526227, 85.4932547978443, 85.49443505274664, 84.4113944178867, 85.89075194497747], Mean Cumulative Cost: 85.4474
+[Condition 2] Cumulative Costs: [72.80115485055961, 76.32467022067398, 73.37298185243736, 73.4628213187222, 72.63074190985672], Mean Cumulative Cost: 73.7185
+[Condition 3] Cumulative Costs: [39.539629969519375, 40.450881903142324, 38.70326760696879, 41.74885856753589, 38.47920660963393], Mean Cumulative Cost: 39.7844
+[Condition 4] Cumulative Costs: [33.05450889407863, 35.54940989489277, 34.17981609396544, 33.01365361131132, 33.53133377610387], Mean Cumulative Cost: 33.8657
+[Condition 5] Cumulative Costs: [45.266267849921874, 44.86365874342559, 46.68464460745145, 46.85128562995868, 42.738141120313834], Mean Cumulative Cost: 45.2808
+[Condition 6] Cumulative Costs: [39.723189252712224, 39.0676046895099, 37.16959296917357, 37.60997813552118, 36.61044499631993], Mean Cumulative Cost: 38.0362
+[Condition 7] Cumulative Costs: [47.352613364239446, 51.148535225201286, 46.81423396162642, 48.991657785579875, 50.64031847179229], Mean Cumulative Cost: 48.9895
+[Condition 8] Cumulative Costs: [90.05833546634601, 92.77234820420077, 96.35807277799661, 95.70394569252994, 91.60020846764262], Mean Cumulative Cost: 93.2986
+[Condition 9] Cumulative Costs: [53.130754306388596, 52.957832071232694, 54.601941015461016, 52.00524478851975, 52.310047147011495], Mean Cumulative Cost: 53.0012
+New Trajectories
+[Condition 0] Cumulative Costs: [81.43604172267456, 85.02512042460938, 83.10506630268654, 83.22912748430261, 91.86703358012679], Mean Cumulative Cost: 84.9325
+[Condition 1] Cumulative Costs: [81.22014084140389, 87.24858847103799, 79.41121392608588, 83.64288554937515, 82.65384010001696], Mean Cumulative Cost: 82.8353
+[Condition 2] Cumulative Costs: [73.38504417131114, 79.11131000113355, 76.11921189077643, 73.71616947206995, 72.15532755401395], Mean Cumulative Cost: 74.8974
+[Condition 3] Cumulative Costs: [38.90440971778851, 40.01279662018806, 41.11547308062571, 39.8366322867517, 41.68507030609733], Mean Cumulative Cost: 40.3109
+[Condition 4] Cumulative Costs: [35.89055144157425, 33.849781791231656, 33.92653143342237, 34.23798800434202, 33.365385717577105], Mean Cumulative Cost: 34.2540
+[Condition 5] Cumulative Costs: [46.38303695672137, 46.056096935600934, 46.14912909046176, 47.852102872578534, 45.99605307552142], Mean Cumulative Cost: 46.4873
+[Condition 6] Cumulative Costs: [38.546203906975215, 39.20650129081948, 38.66102461606193, 39.06177488561395, 38.519202035474095], Mean Cumulative Cost: 38.7989
+[Condition 7] Cumulative Costs: [47.928975236543344, 49.6455409299924, 48.588093025140395, 47.56741057770181, 50.616388434824955], Mean Cumulative Cost: 48.8693
+[Condition 8] Cumulative Costs: [91.7293575121908, 93.27463484715629, 89.0475041119839, 93.62592235756907, 90.97247612794881], Mean Cumulative Cost: 91.7300
+[Condition 9] Cumulative Costs: [53.78906212337147, 52.836675801064814, 54.31580008006616, 56.68144283075864, 54.68985850621461], Mean Cumulative Cost: 54.4626
+New Trajectories
+[Condition 0] Cumulative Costs: [88.54476800207752, 84.3666050239514, 84.04168233609373, 86.13500139437741, 82.61494898796789], Mean Cumulative Cost: 85.1406
+[Condition 1] Cumulative Costs: [86.69387537857756, 84.88329820839573, 82.23268180534932, 82.36978894906053, 88.78779924043748], Mean Cumulative Cost: 84.9935
+[Condition 2] Cumulative Costs: [74.73880706789386, 74.75260569676612, 70.98096062769761, 75.41717856235257, 74.27847534607312], Mean Cumulative Cost: 74.0336
+[Condition 3] Cumulative Costs: [42.20384382092093, 39.82084907573786, 41.111112631197294, 41.960331564591186, 40.95850367438456], Mean Cumulative Cost: 41.2109
+[Condition 4] Cumulative Costs: [35.57750698450813, 36.49131921064318, 33.28233675671892, 33.52308380332875, 32.263510216240135], Mean Cumulative Cost: 34.2276
+[Condition 5] Cumulative Costs: [46.68740402935838, 47.49343448080018, 45.02287496549354, 45.99036718654106, 49.018177088639426], Mean Cumulative Cost: 46.8425
+[Condition 6] Cumulative Costs: [39.16466892707136, 38.48965648978221, 41.440104336713006, 39.79078586225503, 40.21167486848675], Mean Cumulative Cost: 39.8194
+[Condition 7] Cumulative Costs: [48.500267547335916, 51.369190661855995, 51.23299267600444, 49.31922623151579, 50.30908717129676], Mean Cumulative Cost: 50.1462
+[Condition 8] Cumulative Costs: [97.62527545124891, 93.50179120815677, 98.14165099952606, 89.75071886996577, 94.65665775168513], Mean Cumulative Cost: 94.7352
+[Condition 9] Cumulative Costs: [55.67437009521913, 54.64315677831702, 53.19807194916275, 56.07958477763827, 57.01312916678573], Mean Cumulative Cost: 55.3217
+New Trajectories
+[Condition 0] Cumulative Costs: [87.80587834086309, 82.76142178572196, 86.6213579960359, 89.12286422884043, 88.93834075957783], Mean Cumulative Cost: 87.0500
+[Condition 1] Cumulative Costs: [85.82084164898232, 88.82558808220396, 85.4372210169577, 83.27815206902675, 84.61070755887974], Mean Cumulative Cost: 85.5945
+[Condition 2] Cumulative Costs: [70.5519714744563, 75.68304097106986, 76.92020715424661, 72.7873071663599, 78.83421302433062], Mean Cumulative Cost: 74.9553
+[Condition 3] Cumulative Costs: [40.74251423189279, 40.7708868004266, 40.81593646353664, 43.29313797375872, 40.582646427844274], Mean Cumulative Cost: 41.2410
+[Condition 4] Cumulative Costs: [35.19334111628237, 34.09095174168537, 34.54423891272091, 33.680074842625224, 32.67379983354597], Mean Cumulative Cost: 34.0365
+[Condition 5] Cumulative Costs: [46.306834265751554, 47.21871660304713, 47.07102969678065, 46.30562413358953, 46.79869752433319], Mean Cumulative Cost: 46.7402
+[Condition 6] Cumulative Costs: [39.34664604496055, 40.97631184467712, 36.22132364790652, 38.694692511653464, 40.310796778341306], Mean Cumulative Cost: 39.1100
+[Condition 7] Cumulative Costs: [49.18764432100356, 50.07941176282335, 51.36608266345668, 51.46158664532503, 47.71149080241612], Mean Cumulative Cost: 49.9612
+[Condition 8] Cumulative Costs: [87.6180954684502, 90.7962517346775, 92.36488458161557, 88.68848444749538, 94.80995008311521], Mean Cumulative Cost: 90.8555
+[Condition 9] Cumulative Costs: [52.250066606953, 51.20822726969606, 55.15667005861865, 52.67068517469063, 50.6907892685515], Mean Cumulative Cost: 52.3953
+New Trajectories
+[Condition 0] Cumulative Costs: [84.3870762606435, 87.71296811458201, 84.34666980587035, 82.73576430420616, 86.4047036393473], Mean Cumulative Cost: 85.1174
+[Condition 1] Cumulative Costs: [85.63320189855743, 85.98060419607614, 86.68271770193708, 84.49228839256082, 82.66661564177781], Mean Cumulative Cost: 85.0911
+[Condition 2] Cumulative Costs: [75.5837412099043, 76.27069076103967, 75.14056535187171, 75.98676154311042, 75.22205704667074], Mean Cumulative Cost: 75.6408
+[Condition 3] Cumulative Costs: [40.98926117276368, 42.0559551654734, 42.23940010222053, 41.56129788348569, 42.09451296291533], Mean Cumulative Cost: 41.7881
+[Condition 4] Cumulative Costs: [32.64030044747037, 33.675173810027175, 35.34347967404405, 36.19515242920846, 33.8787897804237], Mean Cumulative Cost: 34.3466
+[Condition 5] Cumulative Costs: [46.451627275296225, 48.00182300379747, 48.2898665663856, 48.65159840080696, 47.892904662559296], Mean Cumulative Cost: 47.8576
+[Condition 6] Cumulative Costs: [38.38534763226515, 40.475132318330964, 41.64734228826949, 41.00037185946178, 40.2377938536752], Mean Cumulative Cost: 40.3492
+[Condition 7] Cumulative Costs: [54.42186194968927, 50.883154794260534, 50.78539861742129, 50.86211756971932, 49.91151056607184], Mean Cumulative Cost: 51.3728
+[Condition 8] Cumulative Costs: [95.67918894874455, 94.83817709364239, 89.90537572200368, 92.57871896602019, 91.44769989314815], Mean Cumulative Cost: 92.8898
+[Condition 9] Cumulative Costs: [52.83895404211162, 55.58665489125429, 52.23127185809039, 51.93173895821616, 53.005896871714576], Mean Cumulative Cost: 53.1189
+New Trajectories
+[Condition 0] Cumulative Costs: [90.12153658439627, 82.78455764464805, 84.68817769132116, 81.57292273838375, 86.11583286003483], Mean Cumulative Cost: 85.0566
+[Condition 1] Cumulative Costs: [91.26099426039303, 83.61309812884869, 87.37802670014175, 83.85960699734964, 85.62486136773414], Mean Cumulative Cost: 86.3473
+[Condition 2] Cumulative Costs: [74.41137007840001, 72.22532918737613, 72.37523327103372, 70.64370831439291, 74.73727824686043], Mean Cumulative Cost: 72.8786
+[Condition 3] Cumulative Costs: [38.20188743062837, 42.41778703029754, 42.543126791343816, 42.38596789790311, 41.58695918714578], Mean Cumulative Cost: 41.4271
+[Condition 4] Cumulative Costs: [37.037663648091964, 36.9799042228603, 33.51850776107876, 36.21537132688736, 34.60501026873673], Mean Cumulative Cost: 35.6713
+[Condition 5] Cumulative Costs: [47.23146018154527, 50.33954542678395, 46.53640069789927, 50.779145262415156, 47.71535516856205], Mean Cumulative Cost: 48.5204
+[Condition 6] Cumulative Costs: [40.63698954868747, 40.70880424761276, 38.395267036149505, 40.57284728484696, 39.988422551311416], Mean Cumulative Cost: 40.0605
+[Condition 7] Cumulative Costs: [49.39402289171512, 52.81221908950638, 49.897038391842806, 47.82740079271874, 51.71230862404201], Mean Cumulative Cost: 50.3286
+[Condition 8] Cumulative Costs: [91.64984826049619, 91.4646071442563, 95.67095090892246, 93.4866368278642, 95.56587323681333], Mean Cumulative Cost: 93.5676
+[Condition 9] Cumulative Costs: [54.04237819244449, 54.47796582464901, 55.08570572974272, 53.78672181633348, 55.744524312093795], Mean Cumulative Cost: 54.6275
+New Trajectories
+[Condition 0] Cumulative Costs: [84.98572339737213, 87.95011848525418, 88.59909444059413, 89.63179905905993, 84.84377328470424], Mean Cumulative Cost: 87.2021
+[Condition 1] Cumulative Costs: [84.5377688011111, 86.28624270555243, 81.29070913321051, 83.44413617426132, 82.15828056197186], Mean Cumulative Cost: 83.5434
+[Condition 2] Cumulative Costs: [79.97401806626861, 78.576621610407, 71.8233588228015, 78.04266836335523, 76.39209895832832], Mean Cumulative Cost: 76.9618
+[Condition 3] Cumulative Costs: [43.682780624077125, 42.910829273110636, 41.796457823246826, 41.32166269323013, 43.31086232836942], Mean Cumulative Cost: 42.6045
+[Condition 4] Cumulative Costs: [34.524444252304434, 33.1914573674267, 33.63824947927905, 34.9030200247208, 32.751881896820905], Mean Cumulative Cost: 33.8018
+[Condition 5] Cumulative Costs: [50.86051319768191, 47.824606316956036, 46.408042034707556, 49.529574129300364, 50.307511936441415], Mean Cumulative Cost: 48.9860
+[Condition 6] Cumulative Costs: [41.60655645751473, 40.90551346548028, 40.50449889755434, 42.65023112938934, 41.182756134513134], Mean Cumulative Cost: 41.3699
+[Condition 7] Cumulative Costs: [51.54026714664374, 50.6618489378722, 48.72899702644525, 50.1081642653589, 51.93499896435826], Mean Cumulative Cost: 50.5949
+[Condition 8] Cumulative Costs: [90.56117978812, 91.23476205611635, 89.69377212955062, 94.60033868072352, 96.70259035235235], Mean Cumulative Cost: 92.5585
+[Condition 9] Cumulative Costs: [52.79133915161856, 54.923459037767635, 52.61897214637294, 54.58020341996843, 54.52696084316217], Mean Cumulative Cost: 53.8882
+New Trajectories
+[Condition 0] Cumulative Costs: [85.79975623888632, 85.21910705745303, 86.20987451843395, 85.4192097428631, 83.04954697540764], Mean Cumulative Cost: 85.1395
+[Condition 1] Cumulative Costs: [83.77928832841955, 83.06017148374374, 90.29961980371252, 84.1471736095812, 85.1470898443171], Mean Cumulative Cost: 85.2867
+[Condition 2] Cumulative Costs: [75.94500370897194, 73.9698186233154, 79.32911884983537, 76.0669010496575, 74.21895837829742], Mean Cumulative Cost: 75.9060
+[Condition 3] Cumulative Costs: [42.9838315621131, 41.25966487600151, 42.09700305553278, 43.28201956574165, 43.36767728258275], Mean Cumulative Cost: 42.5980
+[Condition 4] Cumulative Costs: [36.02579571055005, 34.12723091941176, 35.737328484993064, 34.996225268670486, 35.62432799662707], Mean Cumulative Cost: 35.3022
+[Condition 5] Cumulative Costs: [47.75974681617988, 48.23189057210385, 49.18179959497771, 47.758329937155665, 47.60695813625469], Mean Cumulative Cost: 48.1077
+[Condition 6] Cumulative Costs: [41.411498031970154, 38.77340551141091, 39.32469339655015, 39.023986709182154, 42.11892262098085], Mean Cumulative Cost: 40.1305
+[Condition 7] Cumulative Costs: [50.46548194950917, 48.510175807969, 48.70550458892725, 49.01743409222829, 51.22755643234569], Mean Cumulative Cost: 49.5852
+[Condition 8] Cumulative Costs: [93.04846056172707, 88.93115868461652, 101.99746851364796, 90.96495895020256, 95.8534157856593], Mean Cumulative Cost: 94.1591
+[Condition 9] Cumulative Costs: [55.99560195767567, 54.38604937456608, 54.312704508043176, 55.63308282313278, 52.79730599056717], Mean Cumulative Cost: 54.6249
+New Trajectories
+[Condition 0] Cumulative Costs: [83.34231691620509, 83.2657330588973, 87.79174476566166, 86.89655539852966, 87.81059129645378], Mean Cumulative Cost: 85.8214
+[Condition 1] Cumulative Costs: [86.14398868231245, 82.97525391789597, 85.2128020464335, 84.21614533943817, 87.59720812242682], Mean Cumulative Cost: 85.2291
+[Condition 2] Cumulative Costs: [75.98290612305587, 75.62604714792775, 79.50963329940056, 74.32912807309158, 81.58149887591124], Mean Cumulative Cost: 77.4058
+[Condition 3] Cumulative Costs: [44.16817181775956, 45.6720314262889, 42.6004335335612, 42.8207826855679, 41.19831790800857], Mean Cumulative Cost: 43.2919
+[Condition 4] Cumulative Costs: [35.33859358568837, 35.59337172269383, 34.10762795410609, 34.61313032749809, 34.17695324825566], Mean Cumulative Cost: 34.7659
+[Condition 5] Cumulative Costs: [50.83584040091291, 48.58685098345693, 47.79140862039449, 50.77744214839742, 49.77107950895215], Mean Cumulative Cost: 49.5525
+[Condition 6] Cumulative Costs: [41.39515979315817, 42.250139887911686, 41.61349938015455, 40.85259129994178, 42.36255640759913], Mean Cumulative Cost: 41.6948
+[Condition 7] Cumulative Costs: [51.21736519305971, 51.101137011694334, 51.199977630505906, 48.72292516702115, 52.08476592585154], Mean Cumulative Cost: 50.8652
+[Condition 8] Cumulative Costs: [95.29169995654043, 94.3695301383745, 92.25421031132426, 93.46536581399596, 93.08311482417103], Mean Cumulative Cost: 93.6928
+[Condition 9] Cumulative Costs: [57.083878200722715, 57.885312811022004, 55.485271023560244, 53.19506018077853, 52.126487807981874], Mean Cumulative Cost: 55.1552
+New Trajectories
+[Condition 0] Cumulative Costs: [90.32405141074169, 83.96879152883987, 91.07775685754456, 87.4731231527729, 83.9848043847551], Mean Cumulative Cost: 87.3657
+[Condition 1] Cumulative Costs: [85.94663033803772, 85.26162693386118, 88.41737614925253, 94.17236918882676, 87.3251685214632], Mean Cumulative Cost: 88.2246
+[Condition 2] Cumulative Costs: [79.50018969446619, 77.85036022143103, 70.83863851019828, 74.78772358406987, 80.3434344494551], Mean Cumulative Cost: 76.6641
+[Condition 3] Cumulative Costs: [44.05760373308349, 42.359298792503665, 46.64984243214606, 45.74507054850519, 44.74238821407632], Mean Cumulative Cost: 44.7108
+[Condition 4] Cumulative Costs: [37.093090250020566, 34.72841517793956, 36.18001310251396, 34.147290334809284, 35.90802230085707], Mean Cumulative Cost: 35.6114
+[Condition 5] Cumulative Costs: [50.30958323481374, 49.59400489664838, 50.02952895372625, 49.467796571847735, 51.88963228829429], Mean Cumulative Cost: 50.2581
+[Condition 6] Cumulative Costs: [43.37920272923017, 41.69455896288448, 43.181415082244804, 45.24079336507077, 43.80484739193662], Mean Cumulative Cost: 43.4602
+[Condition 7] Cumulative Costs: [50.55007575642212, 49.491499275981376, 51.38360377226739, 53.0200620205749, 51.266224436651505], Mean Cumulative Cost: 51.1423
+[Condition 8] Cumulative Costs: [96.11280292126398, 94.95611237287497, 93.89922113419993, 92.15638534407886, 87.68964593971374], Mean Cumulative Cost: 92.9628
+[Condition 9] Cumulative Costs: [52.99696796750092, 54.24834738405793, 57.742703034609384, 57.8504956361195, 56.4388142564605], Mean Cumulative Cost: 55.8555
+  3 |    70.90       703.25 |    95.31   2.0000 -5779.98   592.11   132.80   136.58 |   109.98   2.0000 -5810.80  1392.88    24.49    25.50 |    81.11   2.0000 -5775.71   543.23   115.89   119.26 |    52.61   2.0000 -5826.03   771.36    13.00    13.56 |    34.72   2.0000 -5805.40   290.28    40.65    41.79 |    54.92   2.0000 -5835.85   654.05    18.99    19.68 |    46.66   2.0000 -5802.70   535.26    17.13    17.79 |    52.36   2.0000 -5787.04   357.68    65.55    67.41 |   109.15   2.0000 -5802.55   846.37    77.17    79.63 |    72.16   2.0000 -5815.31  1049.24     8.60     9.15
+New Trajectories
+[Condition 0] Cumulative Costs: [89.74870393670979, 84.2311040730267, 85.56827847544004, 88.5014903907675, 88.71849673474658], Mean Cumulative Cost: 87.3536
+[Condition 1] Cumulative Costs: [78.38259435528428, 78.28005119538399, 79.46290602821982, 75.19354686575755, 79.29679725712099], Mean Cumulative Cost: 78.1232
+[Condition 2] Cumulative Costs: [79.03364309226576, 76.36482609922699, 73.54847931985756, 74.5663709941766, 73.37886773013838], Mean Cumulative Cost: 75.3784
+[Condition 3] Cumulative Costs: [43.94130879672255, 43.17618717077974, 43.04414884354239, 42.482780722560015, 41.73766676242017], Mean Cumulative Cost: 42.8764
+[Condition 4] Cumulative Costs: [37.3328850398152, 36.136721520968976, 34.84961006936475, 35.14970838724763, 37.12110994245453], Mean Cumulative Cost: 36.1180
+[Condition 5] Cumulative Costs: [51.239145946165706, 50.47350090359966, 47.40538356372354, 48.56222229696425, 46.07489769535885], Mean Cumulative Cost: 48.7510
+[Condition 6] Cumulative Costs: [43.303617831134616, 45.57393016301321, 43.44206595628414, 44.21507887268334, 47.305419792573225], Mean Cumulative Cost: 44.7680
+[Condition 7] Cumulative Costs: [48.811596417360334, 50.390195428437465, 51.86272720243529, 50.43616268740828, 53.675979670285805], Mean Cumulative Cost: 51.0353
+[Condition 8] Cumulative Costs: [91.70959358262755, 84.6895166393481, 83.16327246809746, 91.64508972187201, 86.27856315385269], Mean Cumulative Cost: 87.4972
+[Condition 9] Cumulative Costs: [50.691067142540405, 46.914480859708725, 51.99123722887207, 50.644485610118004, 51.279822476913644], Mean Cumulative Cost: 50.3042
+New Trajectories
+[Condition 0] Cumulative Costs: [87.9177263518455, 89.83989953422908, 90.56337346148398, 83.4312614806733, 88.92792862815797], Mean Cumulative Cost: 88.1360
+[Condition 1] Cumulative Costs: [78.36737150428785, 85.04139906720224, 80.90779066277051, 77.72043362530802, 77.72516723271903], Mean Cumulative Cost: 79.9524
+[Condition 2] Cumulative Costs: [76.41602068914274, 72.72263961343907, 72.53813507174605, 74.70398964847006, 76.01737040778171], Mean Cumulative Cost: 74.4796
+[Condition 3] Cumulative Costs: [44.03790741342052, 44.020856267135855, 44.78907325748368, 43.696835892244756, 42.27284001168762], Mean Cumulative Cost: 43.7635
+[Condition 4] Cumulative Costs: [33.87218802227795, 37.74260044838054, 34.94260069043109, 38.29079677926953, 37.72704043209371], Mean Cumulative Cost: 36.5150
+[Condition 5] Cumulative Costs: [47.38137547905367, 49.08036977847882, 50.52027473589157, 49.642366498631205, 50.59175600922732], Mean Cumulative Cost: 49.4432
+[Condition 6] Cumulative Costs: [45.26468074013277, 45.75985717290027, 44.406021086741454, 46.183906742399074, 44.96308531913964], Mean Cumulative Cost: 45.3155
+[Condition 7] Cumulative Costs: [49.78924721430248, 54.354169870071686, 52.80248120671311, 53.213092324505304, 52.315269156404064], Mean Cumulative Cost: 52.4949
+[Condition 8] Cumulative Costs: [86.98946644555465, 87.47872088627678, 87.20858320335732, 88.21450568868588, 85.7957121079857], Mean Cumulative Cost: 87.1374
+[Condition 9] Cumulative Costs: [50.04272569179326, 49.37462535858076, 52.626741190584895, 52.61931877228411, 51.45245466436158], Mean Cumulative Cost: 51.2232
+New Trajectories
+[Condition 0] Cumulative Costs: [88.31610260761384, 88.24306980478696, 90.59423578679726, 92.60488672478449, 83.9876296214342], Mean Cumulative Cost: 88.7492
+[Condition 1] Cumulative Costs: [81.397016448972, 77.16766846458106, 84.33845542287754, 79.73005989374252, 82.59782950142794], Mean Cumulative Cost: 81.0462
+[Condition 2] Cumulative Costs: [74.34597403045085, 73.49474115692311, 75.87461223709164, 77.71576095065342, 73.2700752234156], Mean Cumulative Cost: 74.9402
+[Condition 3] Cumulative Costs: [45.18424639264028, 43.34744881227294, 43.62301938044698, 43.82760934528688, 42.98267569964634], Mean Cumulative Cost: 43.7930
+[Condition 4] Cumulative Costs: [35.87526319809405, 37.50346362513757, 35.65300309753777, 37.880533019683305, 36.1889895499396], Mean Cumulative Cost: 36.6203
+[Condition 5] Cumulative Costs: [47.132023683729365, 48.14785067179396, 50.29738289266425, 48.95066621430417, 51.13480962476122], Mean Cumulative Cost: 49.1325
+[Condition 6] Cumulative Costs: [48.00251814337825, 46.35852448311711, 46.27466175192917, 45.20247213017491, 45.08476553829388], Mean Cumulative Cost: 46.1846
+[Condition 7] Cumulative Costs: [51.9728468044433, 53.50500825287009, 51.44696850825602, 50.54189489210525, 51.98243883385189], Mean Cumulative Cost: 51.8898
+[Condition 8] Cumulative Costs: [88.73547051826093, 89.64870999517026, 93.29154505208389, 92.70466185640431, 88.32764047300256], Mean Cumulative Cost: 90.5416
+[Condition 9] Cumulative Costs: [52.14470983539333, 54.35037294090817, 51.41649597595211, 52.27016345807353, 53.87933268872974], Mean Cumulative Cost: 52.8122
+New Trajectories
+[Condition 0] Cumulative Costs: [88.58190065374173, 86.37485712926073, 92.53524594628419, 84.63379302381175, 89.72707578351178], Mean Cumulative Cost: 88.3706
+[Condition 1] Cumulative Costs: [83.24210765100793, 79.94184949770278, 79.53597487172122, 77.60129360325027, 80.24964783719527], Mean Cumulative Cost: 80.1142
+[Condition 2] Cumulative Costs: [72.25070604268963, 76.94504171641545, 77.41343490535027, 77.64045007232576, 75.67582492064123], Mean Cumulative Cost: 75.9851
+[Condition 3] Cumulative Costs: [45.85370886735394, 44.52312387386887, 43.28761656087024, 42.36121460834368, 43.79115689649711], Mean Cumulative Cost: 43.9634
+[Condition 4] Cumulative Costs: [35.690151179073254, 36.70661537066264, 34.766793965840336, 35.292955319935736, 37.15480867331622], Mean Cumulative Cost: 35.9223
+[Condition 5] Cumulative Costs: [51.253700514241174, 47.93708182488841, 51.58100432110477, 51.1731185609427, 49.5302943159267], Mean Cumulative Cost: 50.2950
+[Condition 6] Cumulative Costs: [44.89679294079639, 45.785887204655964, 45.23002045614439, 45.29767122576204, 46.593187471416805], Mean Cumulative Cost: 45.5607
+[Condition 7] Cumulative Costs: [50.22323146300578, 50.305627937255686, 50.02961644039872, 51.25156363924473, 51.10851601996154], Mean Cumulative Cost: 50.5837
+[Condition 8] Cumulative Costs: [91.37513142526952, 89.57376134113791, 82.380235182157, 83.19929243210342, 89.69091478640513], Mean Cumulative Cost: 87.2439
+[Condition 9] Cumulative Costs: [54.477811719258774, 51.01750961225513, 55.48146754629198, 53.19611721135409, 54.72450153638639], Mean Cumulative Cost: 53.7795
+New Trajectories
+[Condition 0] Cumulative Costs: [94.82951601145358, 89.39225862347031, 88.40895821587323, 88.90873470641424, 88.70747045504385], Mean Cumulative Cost: 90.0494
+[Condition 1] Cumulative Costs: [80.55836593926512, 83.99165436354238, 82.46663040783127, 79.19850457276763, 77.84051259030738], Mean Cumulative Cost: 80.8111
+[Condition 2] Cumulative Costs: [76.68511771787917, 77.03147638879187, 73.66125828326845, 73.73508503142746, 77.84972465645913], Mean Cumulative Cost: 75.7925
+[Condition 3] Cumulative Costs: [45.60021470633401, 44.28897865218536, 44.52044766120868, 46.35403497004588, 46.59695546704798], Mean Cumulative Cost: 45.4721
+[Condition 4] Cumulative Costs: [35.87326167273382, 36.82263629371315, 37.154277769683446, 38.204474745996045, 37.01983691150956], Mean Cumulative Cost: 37.0149
+[Condition 5] Cumulative Costs: [50.923718068636326, 48.133130197011326, 50.20475180652511, 49.32648011865392, 49.93540764185081], Mean Cumulative Cost: 49.7047
+[Condition 6] Cumulative Costs: [43.35352157256776, 44.46581732730332, 46.518319809436896, 49.305815049574136, 46.96811918315747], Mean Cumulative Cost: 46.1223
+[Condition 7] Cumulative Costs: [50.86609911899638, 49.9468557903178, 51.693777117381735, 52.002096629496336, 55.72773683975616], Mean Cumulative Cost: 52.0473
+[Condition 8] Cumulative Costs: [87.0100117163036, 88.05101240934962, 88.76922490682628, 91.66486040270186, 91.84140127364715], Mean Cumulative Cost: 89.4673
+[Condition 9] Cumulative Costs: [50.03935988432746, 53.126098576808594, 53.291240180008344, 54.29358874792578, 52.8104550171074], Mean Cumulative Cost: 52.7121
+New Trajectories
+[Condition 0] Cumulative Costs: [88.94171775077649, 89.23813124703574, 87.04014621821908, 87.9441934803961, 90.73457558579979], Mean Cumulative Cost: 88.7798
+[Condition 1] Cumulative Costs: [80.29207175252239, 83.09463861660906, 80.89279544561354, 80.55414831078593, 79.89478948843616], Mean Cumulative Cost: 80.9457
+[Condition 2] Cumulative Costs: [69.6747567914985, 78.15337689844611, 76.36483912920266, 78.76049119694017, 75.86665304151816], Mean Cumulative Cost: 75.7640
+[Condition 3] Cumulative Costs: [45.09083360221145, 46.31509532348328, 45.189927658371985, 45.88931986796921, 45.666795586779024], Mean Cumulative Cost: 45.6304
+[Condition 4] Cumulative Costs: [34.838217800082234, 36.353440099460734, 37.553329023302915, 38.39092405806257, 36.03280637992035], Mean Cumulative Cost: 36.6337
+[Condition 5] Cumulative Costs: [50.55113045483835, 48.88876314998332, 51.602684401024405, 48.761920161960624, 51.15760439620407], Mean Cumulative Cost: 50.1924
+[Condition 6] Cumulative Costs: [48.22063158307275, 47.24437211362113, 47.248742363998886, 44.591698041983655, 44.08639418164798], Mean Cumulative Cost: 46.2784
+[Condition 7] Cumulative Costs: [52.06103354645079, 52.025482194885825, 50.39928105093079, 51.44278607079329, 50.05203809746961], Mean Cumulative Cost: 51.1961
+[Condition 8] Cumulative Costs: [87.62093065117664, 88.11909536588301, 92.44789883146092, 90.94643468113635, 88.00901689373893], Mean Cumulative Cost: 89.4287
+[Condition 9] Cumulative Costs: [53.761882832630256, 53.48327065241572, 53.904175462299314, 52.56758145324679, 53.338449160700705], Mean Cumulative Cost: 53.4111
+New Trajectories
+[Condition 0] Cumulative Costs: [87.57948625767328, 88.91847742639784, 89.29518993117495, 90.34041646499729, 86.57272737644794], Mean Cumulative Cost: 88.5413
+[Condition 1] Cumulative Costs: [85.16961363422662, 86.05086111142789, 84.10161501325875, 84.71908203174178, 83.01996828768], Mean Cumulative Cost: 84.6122
+[Condition 2] Cumulative Costs: [78.4143617084344, 73.09343988109774, 77.5705056466706, 75.80551096733832, 75.01695851230535], Mean Cumulative Cost: 75.9802
+[Condition 3] Cumulative Costs: [47.1125475100292, 44.305214903565215, 47.1420230679151, 46.764905119324936, 44.8871602807736], Mean Cumulative Cost: 46.0424
+[Condition 4] Cumulative Costs: [36.59967795886505, 37.52101165172413, 36.56879432576171, 37.28100128138903, 35.26307804970838], Mean Cumulative Cost: 36.6467
+[Condition 5] Cumulative Costs: [49.19449243772575, 52.30009968329075, 50.9355444448496, 51.34316453867549, 53.21336566900553], Mean Cumulative Cost: 51.3973
+[Condition 6] Cumulative Costs: [46.371371950701274, 47.641311953519455, 46.308025416203265, 45.90752640362446, 46.246364914793894], Mean Cumulative Cost: 46.4949
+[Condition 7] Cumulative Costs: [51.12338755757961, 50.977261586061054, 52.29285562140294, 52.61433302851692, 54.03397123460757], Mean Cumulative Cost: 52.2084
+[Condition 8] Cumulative Costs: [89.13799366222571, 87.26430118021675, 90.2757498520208, 90.89702009185531, 89.87377094630989], Mean Cumulative Cost: 89.4898
+[Condition 9] Cumulative Costs: [53.77427570259637, 54.57103219095218, 52.75098266444172, 56.782193689820495, 58.644244322531264], Mean Cumulative Cost: 55.3045
+New Trajectories
+[Condition 0] Cumulative Costs: [87.04553065125984, 87.93440325852252, 92.37299929323368, 89.24319090203723, 92.55302751784241], Mean Cumulative Cost: 89.8298
+[Condition 1] Cumulative Costs: [87.70265309017712, 80.6842337630763, 78.6785232168656, 82.00039345713805, 85.617661994557], Mean Cumulative Cost: 82.9367
+[Condition 2] Cumulative Costs: [71.55123517995818, 77.11756050404475, 83.18824252073779, 75.18554124657663, 73.66208418229691], Mean Cumulative Cost: 76.1409
+[Condition 3] Cumulative Costs: [47.1104736999617, 46.902091617163556, 47.46176341030009, 45.70001491187393, 47.35978385164885], Mean Cumulative Cost: 46.9068
+[Condition 4] Cumulative Costs: [36.63308839240556, 37.87206593562229, 37.735608160527406, 38.27717684583054, 35.72977888817964], Mean Cumulative Cost: 37.2495
+[Condition 5] Cumulative Costs: [52.963053267942136, 52.02877637527006, 49.22804164486094, 52.74394301581217, 50.77165598740153], Mean Cumulative Cost: 51.5471
+[Condition 6] Cumulative Costs: [45.93647273300942, 46.84517028580839, 46.735522066447714, 47.80218703013396, 47.3130834635055], Mean Cumulative Cost: 46.9265
+[Condition 7] Cumulative Costs: [50.97064007539495, 53.2518713572364, 50.972741722464434, 51.93190883151392, 51.58570715039297], Mean Cumulative Cost: 51.7426
+[Condition 8] Cumulative Costs: [89.68996144275177, 89.77172762092306, 86.83587464934082, 86.64190286149633, 93.31478614690543], Mean Cumulative Cost: 89.2509
+[Condition 9] Cumulative Costs: [54.54306453783769, 56.803529696548644, 53.23185117662405, 53.96071819951517, 56.266111404236106], Mean Cumulative Cost: 54.9611
+New Trajectories
+[Condition 0] Cumulative Costs: [94.06289317662153, 85.97983448328388, 91.76457132080664, 92.36786390989744, 88.80283158482507], Mean Cumulative Cost: 90.5956
+[Condition 1] Cumulative Costs: [80.05330791550199, 84.03202759484998, 83.59172094818771, 81.31374062524301, 83.85500990454852], Mean Cumulative Cost: 82.5692
+[Condition 2] Cumulative Costs: [78.7187208159456, 82.84542095496187, 76.30787521077879, 78.75902247600327, 77.78461218663712], Mean Cumulative Cost: 78.8831
+[Condition 3] Cumulative Costs: [48.95243385064772, 45.29582491601116, 46.845897221571285, 46.57343325722203, 46.307092317232495], Mean Cumulative Cost: 46.7949
+[Condition 4] Cumulative Costs: [34.39017187417029, 36.31405196064833, 37.1123609337123, 35.41038298053011, 34.24257762926549], Mean Cumulative Cost: 35.4939
+[Condition 5] Cumulative Costs: [50.570294381043794, 53.93692070209871, 50.40392360988961, 51.327711834535876, 51.07538422476769], Mean Cumulative Cost: 51.4628
+[Condition 6] Cumulative Costs: [49.36888062097961, 46.56774771917776, 45.96455425269585, 48.63759362444762, 48.31216482010631], Mean Cumulative Cost: 47.7702
+[Condition 7] Cumulative Costs: [53.05526357525451, 53.81766205790012, 51.19099897451083, 52.17949932576785, 50.47551858958553], Mean Cumulative Cost: 52.1438
+[Condition 8] Cumulative Costs: [92.15316195670886, 91.32979470296767, 90.88314614598332, 90.88631052982731, 91.51663657623284], Mean Cumulative Cost: 91.3538
+[Condition 9] Cumulative Costs: [55.046928926953186, 56.60103334665308, 55.6344940953488, 53.82831051820061, 57.50996792646402], Mean Cumulative Cost: 55.7241
+New Trajectories
+[Condition 0] Cumulative Costs: [91.8934706122621, 93.7041841829571, 87.141616829149, 89.37773884948793, 86.18239663177403], Mean Cumulative Cost: 89.6599
+[Condition 1] Cumulative Costs: [82.40842523300283, 83.30578288980186, 85.22612037118613, 86.61446567002513, 85.0677405348035], Mean Cumulative Cost: 84.5245
+[Condition 2] Cumulative Costs: [78.2718471689855, 78.01534633794554, 75.71222486713975, 76.11925349834955, 75.73901622711746], Mean Cumulative Cost: 76.7715
+[Condition 3] Cumulative Costs: [48.440719977812456, 48.124373142410185, 47.337387327820295, 48.658864738716474, 46.85952672445254], Mean Cumulative Cost: 47.8842
+[Condition 4] Cumulative Costs: [36.4835201352384, 37.40824896691217, 37.072130687675084, 37.81004691689775, 35.47271080095642], Mean Cumulative Cost: 36.8493
+[Condition 5] Cumulative Costs: [52.37279500154902, 51.26933835819888, 53.07128855178337, 49.383370765647946, 52.751309102666916], Mean Cumulative Cost: 51.7696
+[Condition 6] Cumulative Costs: [49.425226964489596, 49.205353179940296, 50.504456390739236, 49.12003374971478, 44.95772413386859], Mean Cumulative Cost: 48.6426
+[Condition 7] Cumulative Costs: [53.33547744371387, 54.43653734974372, 52.82237670946817, 51.1940484888566, 52.35331325291904], Mean Cumulative Cost: 52.8284
+[Condition 8] Cumulative Costs: [91.63783614879704, 90.50998532085615, 88.38659820128434, 90.85705672055722, 90.0460962476665], Mean Cumulative Cost: 90.2875
+[Condition 9] Cumulative Costs: [56.250949691295375, 57.75509112689078, 55.67825443625422, 52.29463648711035, 56.0041881422271], Mean Cumulative Cost: 55.5966
+  4 |    62.44       712.47 |    87.61   2.0000 -5790.42   575.24   114.90   117.01 |    87.21   2.0000 -5840.88  1349.78    20.18    20.33 |    76.42   1.7715 -5785.13   564.42   102.43   104.34 |    44.69   2.0000 -5871.23   781.25    11.72    11.82 |    35.31   1.1388 -5823.33   284.30    38.39    39.13 |    50.06   2.0000 -5867.92   657.13    16.48    16.67 |    42.64   2.0000 -5829.55   571.71    14.84    15.00 |    50.68   1.5490 -5799.61   383.27    57.94    59.04 |    94.60   2.0000 -5821.17   901.00    61.66    62.61 |    55.14   2.0000 -5861.59  1056.60    10.61    10.60
+New Trajectories
+[Condition 0] Cumulative Costs: [91.66980215950416, 94.87420722952801, 91.57713403994194, 99.88428916509034, 92.04700157365703], Mean Cumulative Cost: 94.0105
+[Condition 1] Cumulative Costs: [83.21592912848446, 82.66947622192522, 85.99578983292618, 84.90333910315914, 85.95804456923318], Mean Cumulative Cost: 84.5485
+[Condition 2] Cumulative Costs: [78.44859746480492, 81.96295519745506, 79.62243092929751, 76.90047462559178, 76.64102331474044], Mean Cumulative Cost: 78.7151
+[Condition 3] Cumulative Costs: [48.38081057605279, 50.51966356663752, 48.1438139329423, 49.659196154454726, 49.8970400506844], Mean Cumulative Cost: 49.3201
+[Condition 4] Cumulative Costs: [38.85287640717171, 37.42711081204522, 37.95017031395895, 37.28540135829538, 36.52012328756676], Mean Cumulative Cost: 37.6071
+[Condition 5] Cumulative Costs: [56.17013765008914, 55.951259956076626, 54.79969989328455, 53.598762929854274, 53.47099291613482], Mean Cumulative Cost: 54.7982
+[Condition 6] Cumulative Costs: [51.73470503949552, 49.99757399248212, 50.36701865303365, 50.432079186196624, 49.90078251768722], Mean Cumulative Cost: 50.4864
+[Condition 7] Cumulative Costs: [55.5672636619453, 54.44488501851064, 54.08775596565816, 54.33217146131705, 56.942305892409735], Mean Cumulative Cost: 55.0749
+[Condition 8] Cumulative Costs: [97.45575389313767, 96.89202430998952, 93.67291048369452, 88.55712960172593, 91.14258098031047], Mean Cumulative Cost: 93.5441
+[Condition 9] Cumulative Costs: [55.02961859521527, 58.2806776266484, 57.042256801259796, 56.72827332264207, 57.7775683688136], Mean Cumulative Cost: 56.9717
+New Trajectories
+[Condition 0] Cumulative Costs: [86.7609531593794, 93.32607034590445, 92.77247655501128, 95.27465213567471, 93.14456410996355], Mean Cumulative Cost: 92.2557
+[Condition 1] Cumulative Costs: [87.23256079058157, 86.61797411565811, 84.3061814368099, 81.95473381160338, 80.18885362530845], Mean Cumulative Cost: 84.0601
+[Condition 2] Cumulative Costs: [79.46943178177672, 81.33932454942968, 74.90297956888541, 79.25393888097081, 79.65250415661528], Mean Cumulative Cost: 78.9236
+[Condition 3] Cumulative Costs: [49.368070663846986, 50.42962376598817, 50.21687909147896, 49.2303180198642, 51.03842310095033], Mean Cumulative Cost: 50.0567
+[Condition 4] Cumulative Costs: [35.550446078676096, 34.82687008795318, 37.0123214993755, 36.33452915635837, 39.21302941278474], Mean Cumulative Cost: 36.5874
+[Condition 5] Cumulative Costs: [57.18988052640507, 56.15831987207525, 55.933955242858126, 54.74575170408335, 55.59267399125273], Mean Cumulative Cost: 55.9241
+[Condition 6] Cumulative Costs: [50.98450617652451, 51.47162291298299, 50.809663819565856, 50.632580514864486, 48.74629922181382], Mean Cumulative Cost: 50.5289
+[Condition 7] Cumulative Costs: [56.582846127623476, 56.38606160826836, 58.008024542500145, 55.705314460607354, 54.052825330318434], Mean Cumulative Cost: 56.1470
+[Condition 8] Cumulative Costs: [90.51615715254529, 92.36766793192224, 91.20564390701934, 90.19363506739666, 95.26963347830869], Mean Cumulative Cost: 91.9105
+[Condition 9] Cumulative Costs: [55.964320621519725, 58.16076434864677, 56.782693831474205, 57.77994366789164, 59.15601180844676], Mean Cumulative Cost: 57.5687
+New Trajectories
+[Condition 0] Cumulative Costs: [91.68975120530996, 93.83819003128286, 95.65839355289258, 92.77341146381747, 89.4503627080701], Mean Cumulative Cost: 92.6820
+[Condition 1] Cumulative Costs: [88.65373622458985, 87.73920760862687, 81.36841062014993, 85.68291735258248, 82.9778076751837], Mean Cumulative Cost: 85.2844
+[Condition 2] Cumulative Costs: [80.57095356907165, 80.99027600170433, 76.77327222451703, 78.50360878542955, 81.41065246708997], Mean Cumulative Cost: 79.6498
+[Condition 3] Cumulative Costs: [50.93808810370584, 51.47849542017154, 50.13482122185903, 49.22991506386479, 51.04154745773573], Mean Cumulative Cost: 50.5646
+[Condition 4] Cumulative Costs: [35.852843346638025, 38.18889855201763, 37.911032069788604, 38.253610139748666, 37.087311347095905], Mean Cumulative Cost: 37.4587
+[Condition 5] Cumulative Costs: [54.40331378381055, 56.1273818997819, 54.91567187055012, 57.032002872457326, 56.59399859139811], Mean Cumulative Cost: 55.8145
+[Condition 6] Cumulative Costs: [50.32636850457367, 49.54565641744046, 48.80837901229968, 47.84012725298606, 53.299608292801146], Mean Cumulative Cost: 49.9640
+[Condition 7] Cumulative Costs: [54.54480246300338, 56.03091636442331, 54.573504888627596, 52.77831960000623, 54.26986008450612], Mean Cumulative Cost: 54.4395
+[Condition 8] Cumulative Costs: [97.37810847293143, 94.49218975252647, 97.17832915111994, 93.91606484600499, 93.2301141380005], Mean Cumulative Cost: 95.2390
+[Condition 9] Cumulative Costs: [53.877362625596014, 56.0195700540193, 55.713909703241015, 59.14033407413286, 56.26068851451397], Mean Cumulative Cost: 56.2024
+New Trajectories
+[Condition 0] Cumulative Costs: [96.39836622816327, 90.93312341854907, 91.02848870515321, 89.08031688497069, 89.77999708765518], Mean Cumulative Cost: 91.4441
+[Condition 1] Cumulative Costs: [87.32631940114925, 87.2543000616715, 82.68906633590868, 87.89991447058706, 85.1758911156705], Mean Cumulative Cost: 86.0691
+[Condition 2] Cumulative Costs: [84.06716744796275, 86.69177940532647, 81.03591809503605, 75.41729255481104, 79.99017547958023], Mean Cumulative Cost: 81.4405
+[Condition 3] Cumulative Costs: [48.014261642355315, 52.64713839473668, 51.508998878433935, 52.954636788592616, 51.543792592839836], Mean Cumulative Cost: 51.3338
+[Condition 4] Cumulative Costs: [37.47711400391522, 39.092616717060395, 37.67848072311668, 39.0776871440554, 37.63165439420257], Mean Cumulative Cost: 38.1915
+[Condition 5] Cumulative Costs: [58.550348782393044, 57.90055897676367, 57.70213259512076, 57.09502377678876, 54.483681586473885], Mean Cumulative Cost: 57.1463
+[Condition 6] Cumulative Costs: [52.57564944416582, 52.4662957259076, 52.17483509660806, 49.49348986288662, 49.58253466598606], Mean Cumulative Cost: 51.2586
+[Condition 7] Cumulative Costs: [57.97621578206325, 55.093684516287105, 56.985364176663204, 56.78820909075457, 55.63961278480297], Mean Cumulative Cost: 56.4966
+[Condition 8] Cumulative Costs: [96.11273749941911, 93.21222467413993, 90.15942030573424, 94.70300725224115, 94.27694744428045], Mean Cumulative Cost: 93.6929
+[Condition 9] Cumulative Costs: [57.56419831424139, 60.17898554410279, 58.11452673407806, 58.295160476113246, 59.53579784535449], Mean Cumulative Cost: 58.7377
+New Trajectories
+[Condition 0] Cumulative Costs: [92.77047630169085, 94.14426255557206, 94.918634547179, 89.85055861624824, 98.52231152527806], Mean Cumulative Cost: 94.0412
+[Condition 1] Cumulative Costs: [86.52883523424667, 85.06423780519998, 85.988028889963, 87.75317235202645, 86.90049012849238], Mean Cumulative Cost: 86.4470
+[Condition 2] Cumulative Costs: [80.10151482863063, 83.44966643220239, 81.99975510691411, 85.0146589413109, 80.58606716040245], Mean Cumulative Cost: 82.2303
+[Condition 3] Cumulative Costs: [49.05735282284527, 50.15810668613824, 49.78545828596368, 50.66413209095878, 51.383417529168334], Mean Cumulative Cost: 50.2097
+[Condition 4] Cumulative Costs: [37.27837746236174, 36.711258469828486, 37.704430383979435, 37.05576998066123, 38.13563953447498], Mean Cumulative Cost: 37.3771
+[Condition 5] Cumulative Costs: [58.99860448648058, 58.25119302362873, 58.64094523410688, 58.49557415319503, 56.343374837665344], Mean Cumulative Cost: 58.1459
+[Condition 6] Cumulative Costs: [50.01404444682677, 50.98859136715043, 52.23024936044792, 50.800643571701585, 51.471720474436566], Mean Cumulative Cost: 51.1010
+[Condition 7] Cumulative Costs: [53.799746583993056, 57.2105119960973, 56.486779474025376, 56.92124572003902, 53.97321936559164], Mean Cumulative Cost: 55.6783
+[Condition 8] Cumulative Costs: [91.13025815693763, 89.86394155223655, 94.8479029014873, 90.39753602996545, 99.05338587940196], Mean Cumulative Cost: 93.0586
+[Condition 9] Cumulative Costs: [57.950246662983446, 58.614095469501265, 60.45078385213883, 60.3169121192842, 59.82825750149036], Mean Cumulative Cost: 59.4321
+New Trajectories
+[Condition 0] Cumulative Costs: [93.74168479230643, 92.45831672671713, 94.35600754718222, 93.22125536213487, 93.46008273458433], Mean Cumulative Cost: 93.4475
+[Condition 1] Cumulative Costs: [87.33353888260872, 89.14432155714171, 87.20690349072491, 85.38539316640603, 87.12437112660092], Mean Cumulative Cost: 87.2389
+[Condition 2] Cumulative Costs: [76.63855196904005, 78.66160532726583, 75.93009613338529, 76.36981552156557, 78.7108376377117], Mean Cumulative Cost: 77.2622
+[Condition 3] Cumulative Costs: [52.203794457008954, 49.942837548418304, 52.141696448156935, 51.215999603998746, 51.634037916334606], Mean Cumulative Cost: 51.4277
+[Condition 4] Cumulative Costs: [38.51570471926816, 36.96260649970065, 37.6394153779215, 37.42546114981444, 37.27879349181876], Mean Cumulative Cost: 37.5644
+[Condition 5] Cumulative Costs: [59.28414125847302, 54.35286307005636, 56.75299131463351, 57.32249918468175, 55.70278214708422], Mean Cumulative Cost: 56.6831
+[Condition 6] Cumulative Costs: [52.62995698667104, 49.542458381080344, 51.487213471471264, 51.63392280306544, 52.29183852027588], Mean Cumulative Cost: 51.5171
+[Condition 7] Cumulative Costs: [51.520383740800916, 57.368636611648654, 56.69344462265878, 53.44386455608495, 57.313359811783], Mean Cumulative Cost: 55.2679
+[Condition 8] Cumulative Costs: [90.53412235297009, 89.6754852199085, 90.76858462785556, 93.44751919247251, 100.18214472323484], Mean Cumulative Cost: 92.9216
+[Condition 9] Cumulative Costs: [56.789278824447315, 57.94242052254491, 57.09020276530371, 57.88155887370253, 57.51230610904471], Mean Cumulative Cost: 57.4432
+New Trajectories
+[Condition 0] Cumulative Costs: [99.68764455570462, 96.17258112046997, 96.10122249366148, 96.60208390956784, 95.4993430295254], Mean Cumulative Cost: 96.8126
+[Condition 1] Cumulative Costs: [87.5867097963292, 85.84176916715506, 85.60189401548807, 87.17399572479576, 88.35643710356686], Mean Cumulative Cost: 86.9122
+[Condition 2] Cumulative Costs: [81.06608320258654, 84.5077287561878, 82.19195109727654, 76.24436199140945, 77.00941609053808], Mean Cumulative Cost: 80.2039
+[Condition 3] Cumulative Costs: [51.22026293223746, 49.76933265997741, 51.93674877098347, 51.169376284821475, 50.97691365809402], Mean Cumulative Cost: 51.0145
+[Condition 4] Cumulative Costs: [37.02567143786909, 36.17437182379747, 38.29132336156427, 39.60704831497412, 37.21312595075831], Mean Cumulative Cost: 37.6623
+[Condition 5] Cumulative Costs: [58.46432038661391, 56.77595421227904, 57.754405146848704, 57.15534831336921, 59.30890397957263], Mean Cumulative Cost: 57.8918
+[Condition 6] Cumulative Costs: [49.5948552903874, 52.99103995074667, 52.51808304355426, 50.097616604000955, 52.45873361073377], Mean Cumulative Cost: 51.5321
+[Condition 7] Cumulative Costs: [53.958572930132775, 53.865395679431664, 56.314431605688085, 53.39533123016996, 54.206891381538135], Mean Cumulative Cost: 54.3481
+[Condition 8] Cumulative Costs: [93.35678063877495, 90.30301974054451, 93.19606527243585, 92.06302951608255, 90.60331497340711], Mean Cumulative Cost: 91.9044
+[Condition 9] Cumulative Costs: [60.992674730379434, 58.20161913650949, 58.44244631591675, 57.41897973680511, 58.59256237603301], Mean Cumulative Cost: 58.7297
+New Trajectories
+[Condition 0] Cumulative Costs: [95.78541481086182, 92.4000391616341, 91.71131488002028, 94.23983690358462, 94.58737580361372], Mean Cumulative Cost: 93.7448
+[Condition 1] Cumulative Costs: [87.3625763677134, 86.08236788694738, 85.92443694526231, 86.77944872564053, 87.54388632889984], Mean Cumulative Cost: 86.7385
+[Condition 2] Cumulative Costs: [82.0886009139404, 82.08542063836694, 81.97271792305273, 84.9743109332281, 81.10592877711404], Mean Cumulative Cost: 82.4454
+[Condition 3] Cumulative Costs: [50.78470760621737, 52.089341442173534, 50.868517720303615, 52.31722094108581, 49.24304668777736], Mean Cumulative Cost: 51.0606
+[Condition 4] Cumulative Costs: [39.942771259673016, 38.770742618014346, 36.683482907281466, 37.02244747256573, 38.84939664441793], Mean Cumulative Cost: 38.2538
+[Condition 5] Cumulative Costs: [54.90533590340684, 57.25093862698475, 57.05379257349306, 57.74509214237777, 56.890835604002675], Mean Cumulative Cost: 56.7692
+[Condition 6] Cumulative Costs: [53.290101348704965, 53.14540733768764, 50.22431571714002, 51.86956891868718, 52.62449719894607], Mean Cumulative Cost: 52.2308
+[Condition 7] Cumulative Costs: [56.78076413772038, 53.68082877409724, 55.18516021828969, 54.116340791315814, 53.96706851850624], Mean Cumulative Cost: 54.7460
+[Condition 8] Cumulative Costs: [95.8481197933521, 93.15585681236514, 93.97727110795476, 90.721037170049, 91.13532504975277], Mean Cumulative Cost: 92.9675
+[Condition 9] Cumulative Costs: [59.82595925896925, 58.97078264603393, 63.55739208672657, 58.454991843683935, 57.04511452869213], Mean Cumulative Cost: 59.5708
+New Trajectories
+[Condition 0] Cumulative Costs: [95.15421008936406, 94.83024552343952, 99.75181909279287, 95.29456611420567, 95.99805044157294], Mean Cumulative Cost: 96.2058
+[Condition 1] Cumulative Costs: [92.56553011540244, 86.73369513131107, 88.41156391408524, 85.4880934823431, 87.52722147474606], Mean Cumulative Cost: 88.1452
+[Condition 2] Cumulative Costs: [85.01957684802694, 81.59822135310829, 85.51409159529972, 83.1462215124565, 78.46585171115358], Mean Cumulative Cost: 82.7488
+[Condition 3] Cumulative Costs: [50.9175543747028, 50.19738277810851, 50.29945377394465, 49.94021740254398, 53.16454334213269], Mean Cumulative Cost: 50.9038
+[Condition 4] Cumulative Costs: [38.40904073781697, 36.82049337367721, 37.49640722495693, 36.69506918773729, 38.373639670028], Mean Cumulative Cost: 37.5589
+[Condition 5] Cumulative Costs: [57.410069745678605, 56.65399111220698, 56.73952190314808, 60.20836225323112, 57.55728571480962], Mean Cumulative Cost: 57.7138
+[Condition 6] Cumulative Costs: [50.72960420889263, 53.688570650314816, 52.819582704158655, 54.74858074012279, 51.82393414540012], Mean Cumulative Cost: 52.7621
+[Condition 7] Cumulative Costs: [57.29352596443388, 55.42366328662045, 57.520606150189245, 55.430419273678986, 59.195578210055146], Mean Cumulative Cost: 56.9728
+[Condition 8] Cumulative Costs: [92.92452696258566, 94.53966289303844, 97.83032304792228, 92.77669767395051, 95.26623346179635], Mean Cumulative Cost: 94.6675
+[Condition 9] Cumulative Costs: [58.560307461301655, 62.1786082918629, 58.328525719758105, 58.305941100133666, 60.96999194136369], Mean Cumulative Cost: 59.6687
+New Trajectories
+[Condition 0] Cumulative Costs: [91.45397990847516, 92.14519265097206, 97.0138191903589, 102.13806117044001, 92.70769895306115], Mean Cumulative Cost: 95.0918
+[Condition 1] Cumulative Costs: [88.24604612661733, 88.5606403074796, 90.43607682008209, 87.25737598954774, 92.42852551227645], Mean Cumulative Cost: 89.3857
+[Condition 2] Cumulative Costs: [81.50936938819372, 79.62884106235123, 81.07968501241685, 80.8177702887726, 80.55366262832185], Mean Cumulative Cost: 80.7179
+[Condition 3] Cumulative Costs: [50.45178862198789, 51.15278150781411, 52.180221972185564, 51.75779096469022, 49.81678826427589], Mean Cumulative Cost: 51.0719
+[Condition 4] Cumulative Costs: [37.945411914501, 38.9363475502708, 40.407538371895654, 38.3606932783735, 36.94989300041742], Mean Cumulative Cost: 38.5200
+[Condition 5] Cumulative Costs: [56.775753049192694, 57.93524338447676, 57.706122266996, 58.821933752470635, 58.799297321148096], Mean Cumulative Cost: 58.0077
+[Condition 6] Cumulative Costs: [53.40290499903231, 51.321515983039674, 53.74105823608479, 53.560349383697364, 53.42923273110217], Mean Cumulative Cost: 53.0910
+[Condition 7] Cumulative Costs: [53.39923866578932, 55.06124309077182, 56.89632193031535, 57.142903497986325, 54.76006119902603], Mean Cumulative Cost: 55.4520
+[Condition 8] Cumulative Costs: [92.86797833718867, 91.9730076066085, 96.60881257746809, 92.03998336430179, 95.33429018999212], Mean Cumulative Cost: 93.7648
+[Condition 9] Cumulative Costs: [56.32586082955786, 61.11493828855845, 62.74598958985423, 56.51133851757521, 61.39890032247871], Mean Cumulative Cost: 59.6194
+  5 |    63.93       701.17 |    89.62   1.3797 -5798.07   594.51   111.43   111.73 |    84.86   2.0000 -5863.97  1271.99    17.10    17.68 |    78.78   1.1314 -5791.76   542.22   100.94   101.24 |    47.89   0.3078 -5898.71   762.12     9.49     9.80 |    36.79   0.5861 -5832.28   278.29    38.26    38.39 |    53.20   0.6646 -5888.33   688.11    15.33    15.68 |    48.63   0.4573 -5844.84   566.03    13.56    13.89 |    51.96   0.9185 -5806.84   364.70    56.73    56.85 |    90.80   2.0000 -5834.18   888.60    53.69    54.26 |    56.81   0.6281 -5896.94  1055.15     9.24     9.74
+New Trajectories
+[Condition 0] Cumulative Costs: [98.12808941537895, 98.00353122516442, 99.89598085790486, 99.32522172265598, 99.99138736249792], Mean Cumulative Cost: 99.0688
+[Condition 1] Cumulative Costs: [95.18125215314579, 93.53657578502875, 95.82094970423542, 96.38603620880797, 95.85238861112525], Mean Cumulative Cost: 95.3554
+[Condition 2] Cumulative Costs: [85.78160757388466, 85.51370456601612, 78.79963027266425, 83.580808835113, 84.83045482712441], Mean Cumulative Cost: 83.7012
+[Condition 3] Cumulative Costs: [52.89697883426375, 49.98821726468127, 54.140622536870474, 51.45075481972223, 51.488006551838254], Mean Cumulative Cost: 51.9929
+[Condition 4] Cumulative Costs: [39.43536478022092, 38.60845809015832, 40.873975527999264, 41.10686545406999, 39.05171922211266], Mean Cumulative Cost: 39.8153
+[Condition 5] Cumulative Costs: [60.23081001195061, 59.96030245243265, 57.564965258090396, 58.92043452012131, 61.33465297245864], Mean Cumulative Cost: 59.6022
+[Condition 6] Cumulative Costs: [56.143181509331534, 55.0136871671716, 51.98274756128279, 55.79750271282315, 54.883370254067934], Mean Cumulative Cost: 54.7641
+[Condition 7] Cumulative Costs: [57.640462970165736, 55.07404492990298, 57.48337531416265, 56.15777282856004, 57.09381050736858], Mean Cumulative Cost: 56.6899
+[Condition 8] Cumulative Costs: [97.18928877070684, 95.8743828377071, 103.85652904403767, 98.55660337973623, 102.36632377180293], Mean Cumulative Cost: 99.5686
+[Condition 9] Cumulative Costs: [60.503604632179574, 61.87125832443273, 58.71967436570436, 62.048114130619474, 59.91613887879352], Mean Cumulative Cost: 60.6118
+New Trajectories
+[Condition 0] Cumulative Costs: [97.43273415975234, 105.26714515167724, 100.1932604659012, 100.3954956277416, 96.70462724935811], Mean Cumulative Cost: 99.9987
+[Condition 1] Cumulative Costs: [93.67663386528723, 98.17714250030481, 94.01458515679984, 91.8363264107439, 100.5167619372858], Mean Cumulative Cost: 95.6443
+[Condition 2] Cumulative Costs: [82.26750927265041, 84.97408611945433, 86.9065915653096, 85.28896757521223, 89.5931111799662], Mean Cumulative Cost: 85.8061
+[Condition 3] Cumulative Costs: [52.42770286071623, 54.39870000473832, 53.984006222607725, 51.85778009696791, 53.17274135465267], Mean Cumulative Cost: 53.1682
+[Condition 4] Cumulative Costs: [39.14200730389435, 38.55841713914146, 39.561473084563715, 38.150473472453164, 39.11101302374016], Mean Cumulative Cost: 38.9047
+[Condition 5] Cumulative Costs: [56.91227193654215, 59.3290985651461, 59.92115897910449, 59.499785238181715, 58.311398795137436], Mean Cumulative Cost: 58.7947
+[Condition 6] Cumulative Costs: [54.85972620572036, 52.653780273614, 54.18277530190058, 53.33352600082127, 57.33944599141342], Mean Cumulative Cost: 54.4739
+[Condition 7] Cumulative Costs: [56.91756046707016, 57.475716346116876, 57.42297040162684, 55.68598243201947, 55.93647368293984], Mean Cumulative Cost: 56.6877
+[Condition 8] Cumulative Costs: [94.60285169866795, 101.4210621758361, 97.40209311180949, 95.31857181607893, 96.94019184022777], Mean Cumulative Cost: 97.1370
+[Condition 9] Cumulative Costs: [62.45576050950702, 60.39117411530936, 63.93370852263768, 61.51211265839057, 61.060337585360166], Mean Cumulative Cost: 61.8706
+New Trajectories
+[Condition 0] Cumulative Costs: [98.76820722586, 100.74485179484067, 103.01227947800125, 100.27477167083173, 97.54930851775029], Mean Cumulative Cost: 100.0699
+[Condition 1] Cumulative Costs: [101.05841157681293, 94.2156988114425, 92.21183967324833, 95.78149397788496, 96.03454910729609], Mean Cumulative Cost: 95.8604
+[Condition 2] Cumulative Costs: [83.88808535566066, 86.03643023682838, 83.56302166366447, 85.1558742399628, 82.73528471673197], Mean Cumulative Cost: 84.2757
+[Condition 3] Cumulative Costs: [51.852370182422185, 52.88232749219286, 51.91698546559581, 53.11411953706214, 52.676853622878156], Mean Cumulative Cost: 52.4885
+[Condition 4] Cumulative Costs: [40.3696445445067, 41.362436334312925, 39.91012252003115, 36.895728759124964, 38.43831765788999], Mean Cumulative Cost: 39.3952
+[Condition 5] Cumulative Costs: [59.213647788690665, 60.908698603486975, 62.03841854505647, 61.3966843789049, 58.549197275946895], Mean Cumulative Cost: 60.4213
+[Condition 6] Cumulative Costs: [54.16616036821136, 57.132381564358816, 52.05281644969693, 55.34483972719015, 57.27428107630749], Mean Cumulative Cost: 55.1941
+[Condition 7] Cumulative Costs: [58.59430920862878, 55.94365880058738, 53.92299561865471, 57.689248367958605, 56.36352520135551], Mean Cumulative Cost: 56.5027
+[Condition 8] Cumulative Costs: [98.66081529090134, 98.79072946412808, 97.87895109801337, 96.56473965842252, 100.47327961687756], Mean Cumulative Cost: 98.4737
+[Condition 9] Cumulative Costs: [61.00999737718628, 60.19583046794168, 60.72986954424255, 58.731340266990244, 63.94224803758634], Mean Cumulative Cost: 60.9219
+New Trajectories
+[Condition 0] Cumulative Costs: [98.55805648173065, 98.87308714703981, 96.52658508731676, 98.29936265913562, 98.14836722997055], Mean Cumulative Cost: 98.0811
+[Condition 1] Cumulative Costs: [97.60726192402504, 96.20251845345692, 91.17852167021184, 91.76546246791217, 97.56170038714457], Mean Cumulative Cost: 94.8631
+[Condition 2] Cumulative Costs: [83.64315839167107, 83.64987953570618, 86.1055513199428, 81.84458770906633, 85.93606823119437], Mean Cumulative Cost: 84.2358
+[Condition 3] Cumulative Costs: [51.79370049385567, 51.46691438861388, 54.4365493134723, 53.070531573040185, 52.09442337289237], Mean Cumulative Cost: 52.5724
+[Condition 4] Cumulative Costs: [39.98442943294755, 37.88191338656096, 37.9850810655769, 38.55109368212416, 41.57228443073212], Mean Cumulative Cost: 39.1950
+[Condition 5] Cumulative Costs: [63.108285471888486, 56.9158746797594, 59.6816492312825, 57.92302908819009, 60.92442532974429], Mean Cumulative Cost: 59.7107
+[Condition 6] Cumulative Costs: [56.07071281745142, 53.92612622869464, 55.1173547639362, 54.37645358606389, 55.27163321896697], Mean Cumulative Cost: 54.9525
+[Condition 7] Cumulative Costs: [57.045252763396995, 56.072918556098784, 58.718639242834705, 55.1824073000574, 58.06897523531176], Mean Cumulative Cost: 57.0176
+[Condition 8] Cumulative Costs: [97.35700537630315, 97.92475474511495, 98.41308959093068, 98.38567509459904, 97.23058748544544], Mean Cumulative Cost: 97.8622
+[Condition 9] Cumulative Costs: [63.038344743128675, 63.249366470068686, 60.6409251019056, 58.95021423938632, 64.15284649062437], Mean Cumulative Cost: 62.0063
+New Trajectories
+[Condition 0] Cumulative Costs: [92.54620098354007, 103.65188987985755, 95.03595470507125, 99.98843934605922, 98.59515950303958], Mean Cumulative Cost: 97.9635
+[Condition 1] Cumulative Costs: [96.22616137847609, 89.84514717065652, 96.14211830551167, 96.63417522743958, 95.97054361172773], Mean Cumulative Cost: 94.9636
+[Condition 2] Cumulative Costs: [86.64477415890767, 86.89446124428358, 87.73632025374756, 83.83313675293805, 86.06477867200778], Mean Cumulative Cost: 86.2347
+[Condition 3] Cumulative Costs: [51.75847246539239, 52.94080028231615, 54.23777410919535, 55.58649767096578, 52.500731355356365], Mean Cumulative Cost: 53.4049
+[Condition 4] Cumulative Costs: [41.119062666270715, 37.93602258575743, 38.70241931975594, 40.6341967952605, 38.57330151704524], Mean Cumulative Cost: 39.3930
+[Condition 5] Cumulative Costs: [59.546838356559924, 61.07724428664543, 62.20785426123066, 62.588301152931706, 63.179365341565166], Mean Cumulative Cost: 61.7199
+[Condition 6] Cumulative Costs: [55.0815035325918, 53.76290691789786, 55.2592291642292, 55.6404276300075, 57.89012120546834], Mean Cumulative Cost: 55.5268
+[Condition 7] Cumulative Costs: [56.39438890296999, 57.99416138724038, 57.700418685345625, 58.78076281685148, 56.50926075029508], Mean Cumulative Cost: 57.4758
+[Condition 8] Cumulative Costs: [98.23958528561393, 102.74263818140714, 100.27647794150216, 100.57420213369728, 98.97321931684674], Mean Cumulative Cost: 100.1612
+[Condition 9] Cumulative Costs: [63.344498246839706, 62.31242348689263, 59.228474192812456, 59.46141427410411, 60.05433122795542], Mean Cumulative Cost: 60.8802
+New Trajectories
+[Condition 0] Cumulative Costs: [96.50525071883284, 100.73924088701737, 101.48695760569744, 100.20762601011401, 100.72321326464031], Mean Cumulative Cost: 99.9325
+[Condition 1] Cumulative Costs: [96.62861191411348, 90.98475702495425, 96.61116454284317, 97.8449512585954, 94.02195180413717], Mean Cumulative Cost: 95.2183
+[Condition 2] Cumulative Costs: [80.22119777923605, 82.34126122365662, 93.52709562229207, 89.23848382646999, 83.40670820620183], Mean Cumulative Cost: 85.7469
+[Condition 3] Cumulative Costs: [54.36401499343412, 54.34506549734175, 53.22126339009479, 54.42698858321955, 52.270614524703035], Mean Cumulative Cost: 53.7256
+[Condition 4] Cumulative Costs: [38.58382076068903, 37.422087258840996, 39.560919687143645, 40.71792052815314, 38.259444296834076], Mean Cumulative Cost: 38.9088
+[Condition 5] Cumulative Costs: [59.49594974011335, 60.0460301180558, 57.768063844224166, 58.67197754863147, 59.80619869729663], Mean Cumulative Cost: 59.1576
+[Condition 6] Cumulative Costs: [55.23758061601514, 54.420045904889335, 56.998101078899566, 54.84956920194824, 52.93538972182846], Mean Cumulative Cost: 54.8881
+[Condition 7] Cumulative Costs: [56.213132308990716, 60.95024001590484, 56.23903606830416, 58.12843786493798, 58.87694344914316], Mean Cumulative Cost: 58.0816
+[Condition 8] Cumulative Costs: [97.9330258764893, 101.12208440360718, 97.73383523300096, 98.00714129670915, 95.77507362588258], Mean Cumulative Cost: 98.1142
+[Condition 9] Cumulative Costs: [60.86958838565546, 60.64429142736593, 62.406235710303, 61.62865277477917, 59.967857789319766], Mean Cumulative Cost: 61.1033
+New Trajectories
+[Condition 0] Cumulative Costs: [95.20869713279977, 100.09084914448474, 95.5997997723522, 103.07435782550225, 96.44728298379745], Mean Cumulative Cost: 98.0842
+[Condition 1] Cumulative Costs: [93.23954813909106, 95.28168593301984, 96.65724221649467, 100.41364395401399, 93.03215987314525], Mean Cumulative Cost: 95.7249
+[Condition 2] Cumulative Costs: [87.68710916335834, 87.40024628663744, 88.67434098683846, 84.66621776516065, 87.07663076722739], Mean Cumulative Cost: 87.1009
+[Condition 3] Cumulative Costs: [52.9431048911728, 51.49133794986877, 51.41061225250027, 50.71468436562706, 50.62130163533573], Mean Cumulative Cost: 51.4362
+[Condition 4] Cumulative Costs: [38.27807967176958, 39.16630888770844, 40.53764854915908, 40.99491298816886, 37.94105379091208], Mean Cumulative Cost: 39.3836
+[Condition 5] Cumulative Costs: [61.350324124170896, 61.32864776495182, 60.64485874506251, 62.36841381239382, 59.66082462159469], Mean Cumulative Cost: 61.0706
+[Condition 6] Cumulative Costs: [56.61044622920408, 52.144171532932475, 55.96443779105662, 56.24368882768312, 55.97536419391079], Mean Cumulative Cost: 55.3876
+[Condition 7] Cumulative Costs: [57.19546655455653, 56.99017126385132, 57.85674316545858, 56.86694941738138, 58.99085735473058], Mean Cumulative Cost: 57.5800
+[Condition 8] Cumulative Costs: [99.52694379203568, 102.0552479838931, 98.59502290529355, 97.90303757376479, 94.96323416333261], Mean Cumulative Cost: 98.6087
+[Condition 9] Cumulative Costs: [60.9326030899796, 60.73017876348974, 62.565652131645045, 60.99058178807652, 62.457220140797915], Mean Cumulative Cost: 61.5352
+New Trajectories
+[Condition 0] Cumulative Costs: [100.89048414522216, 96.6610279607543, 103.02912852101711, 99.04858482377273, 99.58921314704357], Mean Cumulative Cost: 99.8437
+[Condition 1] Cumulative Costs: [98.15794913664288, 98.09194384836175, 92.8501631109704, 93.67139786257344, 97.26537721538206], Mean Cumulative Cost: 96.0074
+[Condition 2] Cumulative Costs: [90.64124673646455, 86.41925755322127, 85.21619518997188, 85.64217521122269, 81.29076960957535], Mean Cumulative Cost: 85.8419
+[Condition 3] Cumulative Costs: [52.12197835528873, 52.62779076583261, 52.855480243738064, 52.763270534291884, 53.933182592166574], Mean Cumulative Cost: 52.8603
+[Condition 4] Cumulative Costs: [39.60273378370064, 37.66324337277011, 39.97712653780171, 40.492127882602986, 39.204181774920315], Mean Cumulative Cost: 39.3879
+[Condition 5] Cumulative Costs: [62.13187954952897, 58.57218018531068, 60.10270511845002, 62.86333764698981, 58.280590985716856], Mean Cumulative Cost: 60.3901
+[Condition 6] Cumulative Costs: [53.246956361350506, 56.13633968566212, 52.1848791781761, 54.73888661728014, 53.41951720232076], Mean Cumulative Cost: 53.9453
+[Condition 7] Cumulative Costs: [58.42340578564977, 59.82804451832828, 59.22482682706393, 55.21360229302226, 56.89424294005874], Mean Cumulative Cost: 57.9168
+[Condition 8] Cumulative Costs: [97.39150777538258, 100.36501635572262, 96.25626763928946, 98.57047122795039, 93.25753483983029], Mean Cumulative Cost: 97.1682
+[Condition 9] Cumulative Costs: [61.74264461946099, 62.00903543922504, 60.44956893785821, 62.31216911476966, 60.43977464681371], Mean Cumulative Cost: 61.3906
+New Trajectories
+[Condition 0] Cumulative Costs: [97.7391419722691, 101.0598376464364, 97.82695473264586, 93.509616965925, 98.00556318779888], Mean Cumulative Cost: 97.6282
+[Condition 1] Cumulative Costs: [95.14874271072898, 95.41747108299685, 94.5697162850354, 94.68915146526815, 100.58989116174294], Mean Cumulative Cost: 96.0830
+[Condition 2] Cumulative Costs: [81.49898052098534, 86.39586987204761, 85.79803407281948, 85.8287837850176, 87.59892916562274], Mean Cumulative Cost: 85.4241
+[Condition 3] Cumulative Costs: [54.826331140963376, 53.242280271454504, 52.66787342559857, 54.44967963351928, 52.034635092937634], Mean Cumulative Cost: 53.4442
+[Condition 4] Cumulative Costs: [39.66332486327332, 41.40805974850223, 40.33432690654965, 38.47628460235771, 40.67048879119831], Mean Cumulative Cost: 40.1105
+[Condition 5] Cumulative Costs: [63.85551626977016, 62.07494152923172, 59.37320484753392, 60.501823243803194, 62.64554775966049], Mean Cumulative Cost: 61.6902
+[Condition 6] Cumulative Costs: [54.577567700051766, 56.54611166234469, 56.775506663481565, 55.0837219445002, 53.00758634331444], Mean Cumulative Cost: 55.1981
+[Condition 7] Cumulative Costs: [54.99815947785314, 55.59312779953851, 56.951310293932735, 58.311935121034324, 58.965594248246404], Mean Cumulative Cost: 56.9640
+[Condition 8] Cumulative Costs: [96.61804537311801, 98.14814277512741, 98.34854939603008, 96.74639545982593, 97.09267699821285], Mean Cumulative Cost: 97.3908
+[Condition 9] Cumulative Costs: [65.17040477874062, 61.25937764158526, 64.33368732238027, 63.55496947832421, 61.78204843676653], Mean Cumulative Cost: 63.2201
+New Trajectories
+[Condition 0] Cumulative Costs: [97.6970018537252, 99.90803980913319, 97.63987633381478, 101.41368336464528, 99.97308032216951], Mean Cumulative Cost: 99.3263
+[Condition 1] Cumulative Costs: [96.01931154093657, 98.01949069821562, 94.8102395719594, 98.59005488227574, 97.55450954184835], Mean Cumulative Cost: 96.9987
+[Condition 2] Cumulative Costs: [85.06652429560302, 82.47146803811523, 87.01393195133097, 84.75021081682345, 82.23196806925058], Mean Cumulative Cost: 84.3068
+[Condition 3] Cumulative Costs: [53.36756117060692, 53.72232051549829, 53.94958393324797, 53.96650888867202, 54.024103199630005], Mean Cumulative Cost: 53.8060
+[Condition 4] Cumulative Costs: [38.253104166595115, 40.1114204291974, 39.421778201547646, 38.05000701143829, 41.02434044068592], Mean Cumulative Cost: 39.3721
+[Condition 5] Cumulative Costs: [63.34731205642721, 61.772926940629524, 62.318632989495995, 60.627590251821864, 61.88801289667467], Mean Cumulative Cost: 61.9909
+[Condition 6] Cumulative Costs: [56.70992829838143, 59.01952705249627, 55.54139367935446, 56.212040591096304, 54.62094449381639], Mean Cumulative Cost: 56.4208
+[Condition 7] Cumulative Costs: [56.681628655271425, 57.3618717998772, 57.193995832672805, 58.36053660093766, 55.50726200086455], Mean Cumulative Cost: 57.0211
+[Condition 8] Cumulative Costs: [96.60817819672548, 98.52225080958989, 95.51253063591322, 95.98903482731427, 98.1339656007005], Mean Cumulative Cost: 96.9532
+[Condition 9] Cumulative Costs: [65.2753799480709, 59.9953905063607, 62.144428280368665, 63.672012563612, 61.36212998822348], Mean Cumulative Cost: 62.4899
+  6 |    67.37       723.12 |    93.25   0.9611 -5802.18   598.57   112.72   112.63 |    89.66   0.7670 -5875.82  1403.01    15.75    15.71 |    80.55   0.7734 -5795.64   560.62    98.20    98.12 |    51.73   0.0308 -5903.12   726.02     9.20     9.17 |    37.70   0.3507 -5836.23   304.14    37.52    37.48 |    58.61   0.1087 -5894.42   661.45    15.80    15.77 |    52.48   0.0821 -5849.26   579.15    13.51    13.49 |    55.58   0.4988 -5810.62   374.26    58.89    58.84 |    94.00   1.3269 -5842.12   891.17    52.12    52.06 |    60.11   0.0845 -5907.75  1132.84     8.74     8.71
+New Trajectories
+[Condition 0] Cumulative Costs: [107.73916977679593, 102.96078670379622, 104.18776232486923, 107.27937310577255, 103.32526385850814], Mean Cumulative Cost: 105.0985
+[Condition 1] Cumulative Costs: [99.68551078228417, 99.7322481829595, 99.19017165637794, 99.79158228800131, 103.50835774979299], Mean Cumulative Cost: 100.3816
+[Condition 2] Cumulative Costs: [92.07855925800678, 87.9450217147938, 93.38886730264635, 93.95497435105247, 92.3160883015981], Mean Cumulative Cost: 91.9367
+[Condition 3] Cumulative Costs: [52.46046065975407, 55.00786566936773, 50.655113173635726, 51.74198450643692, 53.415636565506496], Mean Cumulative Cost: 52.6562
+[Condition 4] Cumulative Costs: [42.29886319774514, 39.951940200554255, 41.31064637343137, 43.063549206975026, 40.09271056136582], Mean Cumulative Cost: 41.3435
+[Condition 5] Cumulative Costs: [60.928215303557515, 59.95420794633697, 60.99345208351018, 65.38836302908973, 62.34846330966146], Mean Cumulative Cost: 61.9225
+[Condition 6] Cumulative Costs: [55.917500493123576, 56.43226833270946, 57.36218221660553, 57.30329048157953, 56.176154035464734], Mean Cumulative Cost: 56.6383
+[Condition 7] Cumulative Costs: [60.8446236998074, 61.64736994011411, 59.01343305510761, 60.137204568824856, 58.05048509931797], Mean Cumulative Cost: 59.9386
+[Condition 8] Cumulative Costs: [109.30998100987269, 100.30270317095051, 107.59920605540162, 103.37601114515783, 98.52190016715174], Mean Cumulative Cost: 103.8220
+[Condition 9] Cumulative Costs: [61.59012736161438, 60.8978388748001, 62.15234758064311, 65.85765657605138, 59.86526132153879], Mean Cumulative Cost: 62.0726
+New Trajectories
+[Condition 0] Cumulative Costs: [103.77920075540841, 105.0242981890727, 111.26331504628867, 100.3577537297372, 98.33133381233678], Mean Cumulative Cost: 103.7512
+[Condition 1] Cumulative Costs: [101.48275746829134, 110.3087071368364, 100.10055908858256, 96.54775205412206, 106.88616630838051], Mean Cumulative Cost: 103.0652
+[Condition 2] Cumulative Costs: [86.70985354620147, 87.77147966470108, 89.8901310419139, 88.31393588322459, 92.24927440087752], Mean Cumulative Cost: 88.9869
+[Condition 3] Cumulative Costs: [54.731354765147245, 53.86505983059785, 56.63093537948559, 52.77991753630027, 53.571509171312634], Mean Cumulative Cost: 54.3158
+[Condition 4] Cumulative Costs: [39.302385462230944, 40.548357114153106, 39.802421818074606, 39.483742773138374, 40.29032605117262], Mean Cumulative Cost: 39.8854
+[Condition 5] Cumulative Costs: [63.94302862912075, 61.475832014299556, 62.63305068682158, 61.154207359595944, 62.9471920023378], Mean Cumulative Cost: 62.4307
+[Condition 6] Cumulative Costs: [55.47444754489247, 55.710314530807, 57.32592224093955, 56.362709090281214, 58.57691443139261], Mean Cumulative Cost: 56.6901
+[Condition 7] Cumulative Costs: [60.84151421254459, 59.887070968149814, 58.08427955641339, 58.47705137048946, 62.38093981894767], Mean Cumulative Cost: 59.9342
+[Condition 8] Cumulative Costs: [106.5824786431945, 103.9338355601551, 105.78649174969128, 107.63158949803984, 104.5109302178524], Mean Cumulative Cost: 105.6891
+[Condition 9] Cumulative Costs: [60.55226093648533, 64.15298852585735, 61.24929049526787, 61.89992357860532, 64.88458930547932], Mean Cumulative Cost: 62.5478
+New Trajectories
+[Condition 0] Cumulative Costs: [100.99311747951977, 105.61030603125086, 104.75759540226272, 101.22588685379182, 105.26896559723767], Mean Cumulative Cost: 103.5712
+[Condition 1] Cumulative Costs: [97.83885008104238, 96.12212771064354, 99.97891377623093, 102.0372004857935, 103.74510343562663], Mean Cumulative Cost: 99.9444
+[Condition 2] Cumulative Costs: [90.30527318107453, 89.05183711419592, 88.54943633780893, 86.37287336172562, 87.86690837022714], Mean Cumulative Cost: 88.4293
+[Condition 3] Cumulative Costs: [51.50438033375882, 54.063014626670096, 52.08798359142604, 52.57200383292517, 50.199193657909895], Mean Cumulative Cost: 52.0853
+[Condition 4] Cumulative Costs: [41.52112558169229, 40.63991024049113, 41.4986469683449, 40.969261989364554, 40.57111863595546], Mean Cumulative Cost: 41.0400
+[Condition 5] Cumulative Costs: [65.65222364341142, 64.5660907738589, 61.867120517437904, 61.90261483619921, 61.27157947117774], Mean Cumulative Cost: 63.0519
+[Condition 6] Cumulative Costs: [54.01421472564914, 53.92486539641656, 58.02729169474025, 58.59423673551031, 57.898610868334316], Mean Cumulative Cost: 56.4918
+[Condition 7] Cumulative Costs: [63.26871221979811, 58.8302100975186, 61.61357303479516, 57.71730545791731, 58.392197494791596], Mean Cumulative Cost: 59.9644
+[Condition 8] Cumulative Costs: [108.3932894908396, 105.46625759495757, 102.36902934991019, 104.41763021175275, 103.71578947633408], Mean Cumulative Cost: 104.8724
+[Condition 9] Cumulative Costs: [62.149861761362686, 63.264899619010826, 62.20338075805167, 61.28633809564188, 65.10955118907341], Mean Cumulative Cost: 62.8028
+New Trajectories
+[Condition 0] Cumulative Costs: [105.45366514978024, 103.90867933854508, 108.01093492247615, 102.4372324732261, 103.38520480024061], Mean Cumulative Cost: 104.6391
+[Condition 1] Cumulative Costs: [104.621333842657, 99.62305714632748, 99.58272312497746, 100.34033545359856, 98.04679050297857], Mean Cumulative Cost: 100.4428
+[Condition 2] Cumulative Costs: [85.0700279295589, 87.91888931049976, 92.6819652172842, 94.54781988134366, 86.92821168196168], Mean Cumulative Cost: 89.4294
+[Condition 3] Cumulative Costs: [54.01346230032749, 53.563578598110034, 54.994628251254944, 54.19452386991008, 52.47818473684225], Mean Cumulative Cost: 53.8489
+[Condition 4] Cumulative Costs: [41.10720054193197, 40.614082959209604, 40.2845075879781, 39.692164624074934, 41.631985013519454], Mean Cumulative Cost: 40.6660
+[Condition 5] Cumulative Costs: [62.06528456259223, 61.287158852543094, 60.98468138169852, 63.380100362082636, 62.96836090168341], Mean Cumulative Cost: 62.1371
+[Condition 6] Cumulative Costs: [56.74634822874146, 57.00827042898197, 58.07896011561697, 57.182919378005636, 54.26347652247891], Mean Cumulative Cost: 56.6560
+[Condition 7] Cumulative Costs: [62.973087063326474, 57.553084257084436, 58.710715671668524, 59.98945667750461, 58.90797197473362], Mean Cumulative Cost: 59.6269
+[Condition 8] Cumulative Costs: [106.74306601725917, 104.24452177931184, 102.86731330801666, 105.86591544379905, 106.17258182627221], Mean Cumulative Cost: 105.1787
+[Condition 9] Cumulative Costs: [63.964947176208184, 63.889145003283765, 63.46068705088199, 65.37024861863664, 64.94487105411261], Mean Cumulative Cost: 64.3260
+New Trajectories
+[Condition 0] Cumulative Costs: [105.15572048016065, 108.0867499155737, 96.96731740303744, 102.60348836859622, 101.70158789155106], Mean Cumulative Cost: 102.9030
+[Condition 1] Cumulative Costs: [97.49244324764165, 104.14690396300497, 99.42635824366054, 107.43588452292231, 101.1413107721197], Mean Cumulative Cost: 101.9286
+[Condition 2] Cumulative Costs: [92.48316946060746, 92.9057894793141, 89.94125298547209, 86.51442510759988, 89.6823548906997], Mean Cumulative Cost: 90.3054
+[Condition 3] Cumulative Costs: [52.11132861868521, 55.801672225684044, 52.12871264458738, 52.526912839043845, 54.22214539644168], Mean Cumulative Cost: 53.3582
+[Condition 4] Cumulative Costs: [40.92052875529013, 40.128262955672824, 40.65565719317906, 39.456787072665634, 39.9787028980351], Mean Cumulative Cost: 40.2280
+[Condition 5] Cumulative Costs: [64.03633269744748, 63.228587242704776, 60.78036901913363, 63.3598911037677, 61.918973646734266], Mean Cumulative Cost: 62.6648
+[Condition 6] Cumulative Costs: [56.9797944058578, 55.93682110345635, 56.45074983539945, 56.74882673781441, 56.990928616221076], Mean Cumulative Cost: 56.6214
+[Condition 7] Cumulative Costs: [58.86820335329314, 56.276053368321925, 59.34664014115984, 63.04400635655854, 56.94315329076246], Mean Cumulative Cost: 58.8956
+[Condition 8] Cumulative Costs: [108.46478923809106, 100.68162720403755, 102.12445647981329, 102.72174222484202, 103.06440143345073], Mean Cumulative Cost: 103.4114
+[Condition 9] Cumulative Costs: [63.79776770284777, 63.27297448422648, 63.57633279717024, 64.32351104064439, 59.77353483745882], Mean Cumulative Cost: 62.9488
+New Trajectories
+[Condition 0] Cumulative Costs: [108.0257656339952, 100.8069162816878, 101.81579802699721, 106.42671127418654, 102.19630383415151], Mean Cumulative Cost: 103.8543
+[Condition 1] Cumulative Costs: [102.68823500573522, 99.85618273141516, 102.1613848739839, 105.54186670274046, 103.93736964929714], Mean Cumulative Cost: 102.8370
+[Condition 2] Cumulative Costs: [92.78408483163793, 88.26833806978497, 89.05590124715187, 94.7066114358331, 90.7505772987132], Mean Cumulative Cost: 91.1131
+[Condition 3] Cumulative Costs: [53.83658052869629, 53.8189405542493, 54.517047862915014, 54.66772348014396, 54.35264892517973], Mean Cumulative Cost: 54.2386
+[Condition 4] Cumulative Costs: [42.64588799428262, 41.40889007467825, 41.12576251069407, 41.14306459273402, 39.972231514901424], Mean Cumulative Cost: 41.2592
+[Condition 5] Cumulative Costs: [62.594116730760675, 63.13533118637265, 63.02762126399549, 58.8589318506892, 64.26472664466365], Mean Cumulative Cost: 62.3761
+[Condition 6] Cumulative Costs: [55.002994748765374, 59.4107652525028, 53.26529109663455, 56.360965750664114, 57.131084212952615], Mean Cumulative Cost: 56.2342
+[Condition 7] Cumulative Costs: [59.08903036934401, 61.12092529750045, 59.4309587510126, 58.517581309763955, 59.45382308048876], Mean Cumulative Cost: 59.5225
+[Condition 8] Cumulative Costs: [106.66030132725751, 101.35121567176895, 105.32666857478138, 102.0470817545057, 103.06217043521563], Mean Cumulative Cost: 103.6895
+[Condition 9] Cumulative Costs: [62.2930259494393, 62.85777144107745, 63.203359102355336, 65.39053182624228, 61.26412539561953], Mean Cumulative Cost: 63.0018
+New Trajectories
+[Condition 0] Cumulative Costs: [105.33288587048688, 104.52453010242878, 108.25698356692659, 108.67585735378094, 103.76781808450701], Mean Cumulative Cost: 106.1116
+[Condition 1] Cumulative Costs: [103.216272737087, 101.15731283437198, 101.3207050940834, 101.69817871643417, 100.24712803705263], Mean Cumulative Cost: 101.5279
+[Condition 2] Cumulative Costs: [92.52184056674663, 89.73743281989131, 90.90721353123185, 88.90025196671948, 94.86457678890262], Mean Cumulative Cost: 91.3863
+[Condition 3] Cumulative Costs: [52.45293590190279, 54.840557901641006, 53.87155413476679, 57.41401836810492, 54.86297593496346], Mean Cumulative Cost: 54.6884
+[Condition 4] Cumulative Costs: [39.15944701303417, 41.8536533038772, 40.977433633890854, 41.02849025490865, 41.058933960200164], Mean Cumulative Cost: 40.8156
+[Condition 5] Cumulative Costs: [58.32838510409337, 62.16297089550139, 62.032603021715275, 61.74931418077532, 63.18168753132637], Mean Cumulative Cost: 61.4910
+[Condition 6] Cumulative Costs: [57.200032481982326, 56.25875804405367, 59.11743206254164, 55.68480949524809, 55.67844998314171], Mean Cumulative Cost: 56.7879
+[Condition 7] Cumulative Costs: [58.97716408678991, 61.97987566769925, 61.963116836376734, 62.18016723513453, 56.78565993761822], Mean Cumulative Cost: 60.3772
+[Condition 8] Cumulative Costs: [109.04781960859376, 103.72827074071444, 98.31585389736068, 109.95064169981423, 100.93999945920284], Mean Cumulative Cost: 104.3965
+[Condition 9] Cumulative Costs: [63.70739671553071, 61.99845859589757, 59.59685723698601, 62.74632296234956, 62.33910210033083], Mean Cumulative Cost: 62.0776
+New Trajectories
+[Condition 0] Cumulative Costs: [102.23703735589665, 104.42953928508217, 101.05900699397375, 105.14730117081771, 101.14003785303], Mean Cumulative Cost: 102.8026
+[Condition 1] Cumulative Costs: [102.48462981035975, 102.31762785455517, 102.6440967168851, 100.77768402962555, 99.46510646490316], Mean Cumulative Cost: 101.5378
+[Condition 2] Cumulative Costs: [92.0865585100515, 88.5004232088125, 93.67375559809925, 88.7198329639626, 87.90304728710623], Mean Cumulative Cost: 90.1767
+[Condition 3] Cumulative Costs: [54.770990543813525, 51.69349424853725, 54.04950353586238, 53.6381842098364, 54.013757692454845], Mean Cumulative Cost: 53.6332
+[Condition 4] Cumulative Costs: [40.701228584968575, 41.622706097408134, 42.86624536349437, 39.72622547766656, 38.51271376496284], Mean Cumulative Cost: 40.6858
+[Condition 5] Cumulative Costs: [60.975948726508825, 64.66217898513594, 65.33602642029682, 61.94341065929913, 63.466329931786944], Mean Cumulative Cost: 63.2768
+[Condition 6] Cumulative Costs: [54.48918069190595, 52.46060747882274, 58.18778330813069, 56.96062747057096, 58.638223365972124], Mean Cumulative Cost: 56.1473
+[Condition 7] Cumulative Costs: [60.922748678605956, 62.687387152856985, 60.7516413785416, 57.327028412039546, 61.474767663739186], Mean Cumulative Cost: 60.6327
+[Condition 8] Cumulative Costs: [102.8539959116228, 106.37176103723296, 106.88788159411237, 104.81472382243068, 103.73072203714074], Mean Cumulative Cost: 104.9318
+[Condition 9] Cumulative Costs: [63.59048199083565, 63.09113431258539, 63.315510706597486, 67.58356237491603, 62.87326989922051], Mean Cumulative Cost: 64.0908
+New Trajectories
+[Condition 0] Cumulative Costs: [107.07030770190423, 104.54648196126837, 97.09798384339571, 103.49583471339656, 103.77570948714828], Mean Cumulative Cost: 103.1973
+[Condition 1] Cumulative Costs: [101.84822001640316, 103.0066182691106, 100.04457377784907, 99.55464397692214, 97.59225578820438], Mean Cumulative Cost: 100.4093
+[Condition 2] Cumulative Costs: [85.97220500388823, 87.3183494468212, 88.46963128699896, 89.40567207398026, 95.55260577235943], Mean Cumulative Cost: 89.3437
+[Condition 3] Cumulative Costs: [54.469149470768045, 53.721500415362584, 54.568083788745014, 54.471119980694176, 58.053374666113946], Mean Cumulative Cost: 55.0566
+[Condition 4] Cumulative Costs: [41.73079155447569, 40.28721331842028, 40.898122655877344, 40.820760393034035, 42.21637789765908], Mean Cumulative Cost: 41.1907
+[Condition 5] Cumulative Costs: [57.62150798248427, 62.51374950150833, 65.37159841270716, 64.75406424724945, 62.30963179008139], Mean Cumulative Cost: 62.5141
+[Condition 6] Cumulative Costs: [55.18369416709791, 54.69087816727791, 55.424742743079484, 54.82924538456094, 56.496834180761084], Mean Cumulative Cost: 55.3251
+[Condition 7] Cumulative Costs: [60.001170487807094, 64.35583570984092, 61.61415826825768, 57.63548451204263, 62.80065216278385], Mean Cumulative Cost: 61.2815
+[Condition 8] Cumulative Costs: [103.51632116772143, 101.21653969187139, 103.19797807415321, 103.86937133822182, 107.68916985675018], Mean Cumulative Cost: 103.8979
+[Condition 9] Cumulative Costs: [65.07648020081193, 62.41414612004736, 62.41105619045824, 59.66186789070009, 62.4968274906088], Mean Cumulative Cost: 62.4121
+New Trajectories
+[Condition 0] Cumulative Costs: [101.80139126852092, 106.29691648226397, 105.58126688335182, 105.19783356988442, 100.00750395473311], Mean Cumulative Cost: 103.7770
+[Condition 1] Cumulative Costs: [100.20454735735359, 105.6044891378885, 99.25218222195436, 104.23210452142577, 102.39173981180085], Mean Cumulative Cost: 102.3370
+[Condition 2] Cumulative Costs: [92.4420587600037, 88.7601814749653, 92.11993379733518, 88.98339873589104, 89.06514687097578], Mean Cumulative Cost: 90.2741
+[Condition 3] Cumulative Costs: [54.561658510962374, 53.44558802607849, 54.206369099151566, 53.77796359626098, 51.47387657113697], Mean Cumulative Cost: 53.4931
+[Condition 4] Cumulative Costs: [40.83678500738812, 40.52076117312437, 42.075803154116834, 38.25833157324519, 42.69167533155039], Mean Cumulative Cost: 40.8767
+[Condition 5] Cumulative Costs: [63.10564943497992, 64.47967932748972, 60.09420018313466, 63.54127438603133, 62.325154155925], Mean Cumulative Cost: 62.7092
+[Condition 6] Cumulative Costs: [56.89239745373068, 57.61341989060768, 56.571692928925145, 55.07762763118341, 57.662753006051474], Mean Cumulative Cost: 56.7636
+[Condition 7] Cumulative Costs: [59.71426135738896, 60.184652928438034, 60.15190213264918, 56.32814966641049, 59.08731456291047], Mean Cumulative Cost: 59.0933
+[Condition 8] Cumulative Costs: [105.25953309284381, 99.508801988776, 105.57637906092808, 104.68400113550983, 102.19689851960905], Mean Cumulative Cost: 103.4451
+[Condition 9] Cumulative Costs: [64.33130691210243, 64.15437064482984, 64.17756205686729, 60.499203123466394, 63.78497541043694], Mean Cumulative Cost: 63.3895
+  7 |    70.50       707.64 |    99.46   0.6349 -5804.33   613.29   117.75   117.93 |    96.61   0.2379 -5878.21  1349.21    15.41    16.53 |    84.22   0.5834 -5797.64   540.51    98.86    99.13 |    53.47   0.0056 -5903.41   712.91     9.18     9.99 |    39.20   0.2196 -5837.66   298.46    38.18    38.55 |    60.55   0.0297 -5895.01   644.85    15.61    16.42 |    54.97   0.0222 -5849.85   581.06    13.50    14.30 |    58.31   0.3337 -5812.24   350.82    60.05    60.28 |    96.78   1.3141 -5845.85   922.82    50.80    51.73 |    61.46   0.0134 -5909.08  1062.47     8.19     9.22
+New Trajectories
+[Condition 0] Cumulative Costs: [106.59224346234134, 102.19837439765755, 104.88071320175145, 106.21140372987686, 109.97684887848041], Mean Cumulative Cost: 105.9719
+[Condition 1] Cumulative Costs: [103.74764130651853, 101.92636741714475, 102.09265854156162, 106.45302285196173, 105.29437895879973], Mean Cumulative Cost: 103.9028
+[Condition 2] Cumulative Costs: [90.67682307684613, 90.2448028616333, 97.25728808870406, 90.00429546048089, 90.08973257605805], Mean Cumulative Cost: 91.6546
+[Condition 3] Cumulative Costs: [53.583669358804556, 56.62008184189439, 51.94706277990305, 54.49056580359739, 54.80890402369876], Mean Cumulative Cost: 54.2901
+[Condition 4] Cumulative Costs: [44.409984105218484, 40.37586570408004, 38.419255031026864, 41.78204225673221, 40.595375684430145], Mean Cumulative Cost: 41.1165
+[Condition 5] Cumulative Costs: [62.17335435359251, 63.48759320175407, 64.35304679499787, 63.376020223002456, 63.081205088000466], Mean Cumulative Cost: 63.2942
+[Condition 6] Cumulative Costs: [57.18102292907363, 56.88510080834848, 58.4657639660133, 59.14219303043252, 57.88523732373905], Mean Cumulative Cost: 57.9119
+[Condition 7] Cumulative Costs: [63.9966624280291, 65.14164535721785, 61.35517692043716, 63.200562093903855, 59.69495769882593], Mean Cumulative Cost: 62.6778
+[Condition 8] Cumulative Costs: [110.81428305805436, 111.19776987295165, 109.11538162286584, 110.57145183758279, 109.02758642544848], Mean Cumulative Cost: 110.1453
+[Condition 9] Cumulative Costs: [66.2753672724427, 62.57861392300557, 60.58765466231537, 62.856502092654736, 62.22705123974752], Mean Cumulative Cost: 62.9050
+New Trajectories
+[Condition 0] Cumulative Costs: [105.10031723185628, 105.31022472292516, 108.80936483626994, 109.68782987005233, 101.80537915420868], Mean Cumulative Cost: 106.1426
+[Condition 1] Cumulative Costs: [109.16353864405548, 106.92418110325923, 101.48369127699944, 104.95516403543647, 107.33784760632034], Mean Cumulative Cost: 105.9729
+[Condition 2] Cumulative Costs: [88.91719273773371, 98.6232193404491, 97.4802025067176, 91.64750733097804, 96.69301017040888], Mean Cumulative Cost: 94.6722
+[Condition 3] Cumulative Costs: [53.743990075078244, 55.95872610598336, 54.40773688691963, 52.56505486935122, 52.84676912135159], Mean Cumulative Cost: 53.9045
+[Condition 4] Cumulative Costs: [43.6728905887479, 42.03453518542088, 40.28384603280771, 41.90086612683268, 40.98307605018886], Mean Cumulative Cost: 41.7750
+[Condition 5] Cumulative Costs: [64.1370904105338, 67.5146049866944, 60.10405970134038, 62.178496986960226, 62.558165934478446], Mean Cumulative Cost: 63.2985
+[Condition 6] Cumulative Costs: [56.28936639599406, 58.351134223990215, 57.062939927087264, 56.75971235486578, 56.85456056275674], Mean Cumulative Cost: 57.0635
+[Condition 7] Cumulative Costs: [63.55858019601909, 64.29879649286634, 63.4328906814218, 64.48233037943486, 64.12771138355069], Mean Cumulative Cost: 63.9801
+[Condition 8] Cumulative Costs: [110.57334933605458, 110.87467290430403, 116.2559524060984, 107.12780154644182, 109.00183858953643], Mean Cumulative Cost: 110.7667
+[Condition 9] Cumulative Costs: [64.79597858056874, 61.89545656658002, 61.89818841322814, 64.44568708780889, 62.424080276129416], Mean Cumulative Cost: 63.0919
+New Trajectories
+[Condition 0] Cumulative Costs: [104.92833973132659, 104.25109191290404, 108.49790654354771, 106.11896718445232, 108.61197039637293], Mean Cumulative Cost: 106.4817
+[Condition 1] Cumulative Costs: [108.56138522411746, 108.81196637537019, 106.3735796787857, 104.2850427763451, 102.34139274886033], Mean Cumulative Cost: 106.0747
+[Condition 2] Cumulative Costs: [95.3380724428371, 95.06955761373814, 94.51821099111444, 87.73359934864213, 100.81969590023876], Mean Cumulative Cost: 94.6958
+[Condition 3] Cumulative Costs: [53.85481017519651, 52.10887803288971, 55.4561243761271, 51.828051625665495, 53.09689972163808], Mean Cumulative Cost: 53.2690
+[Condition 4] Cumulative Costs: [43.75404197705417, 41.021822310059605, 40.31081302417097, 40.322139462539006, 41.19007211837033], Mean Cumulative Cost: 41.3198
+[Condition 5] Cumulative Costs: [63.312475131945945, 61.944558336395644, 64.48698762355994, 61.678800584773256, 61.555188140560205], Mean Cumulative Cost: 62.5956
+[Condition 6] Cumulative Costs: [57.9448147552346, 57.661064838263854, 57.12912597475715, 56.14032288054957, 54.05269623745157], Mean Cumulative Cost: 56.5856
+[Condition 7] Cumulative Costs: [62.332028691305005, 59.82741432008902, 61.04555355160244, 62.98844267906972, 60.985080644002856], Mean Cumulative Cost: 61.4357
+[Condition 8] Cumulative Costs: [108.84386907148097, 107.11420612470219, 105.62493826358667, 103.05127577628969, 109.10085760358326], Mean Cumulative Cost: 106.7470
+[Condition 9] Cumulative Costs: [63.22809655011102, 60.39689694606269, 60.30098075103988, 65.13841824797942, 63.90362361781295], Mean Cumulative Cost: 62.5936
+New Trajectories
+[Condition 0] Cumulative Costs: [109.58617238171306, 107.70438698926738, 108.67146880715464, 100.86607551125165, 101.11754654094973], Mean Cumulative Cost: 105.5891
+[Condition 1] Cumulative Costs: [104.42947882634778, 108.12762401830744, 103.60278869448254, 104.932003014241, 106.49835381066401], Mean Cumulative Cost: 105.5180
+[Condition 2] Cumulative Costs: [96.3563908013126, 93.02245253848274, 98.32063746104082, 91.35237914383954, 99.87889783669982], Mean Cumulative Cost: 95.7862
+[Condition 3] Cumulative Costs: [53.65293132728825, 53.252639340897204, 51.663025940511666, 54.296361196182595, 54.19924443571663], Mean Cumulative Cost: 53.4128
+[Condition 4] Cumulative Costs: [44.41920893028321, 42.01069491311583, 41.671702605051685, 40.278046624459456, 40.16908947753563], Mean Cumulative Cost: 41.7097
+[Condition 5] Cumulative Costs: [64.23085160334914, 60.86438669450941, 62.074621338164874, 63.87732940586659, 62.59303391641408], Mean Cumulative Cost: 62.7280
+[Condition 6] Cumulative Costs: [55.99165530491251, 60.71995266314029, 56.36744124292013, 56.142444368719346, 58.605044869624194], Mean Cumulative Cost: 57.5653
+[Condition 7] Cumulative Costs: [64.73797541479216, 64.94153973548137, 60.39510460241708, 61.25444763180479, 60.44917541656987], Mean Cumulative Cost: 62.3556
+[Condition 8] Cumulative Costs: [107.07419928780351, 108.3386599371065, 110.9885969351101, 106.30744535986513, 108.7341460460938], Mean Cumulative Cost: 108.2886
+[Condition 9] Cumulative Costs: [65.35442279577317, 63.90275201781692, 61.48483452069463, 64.17637617834835, 62.23548507479046], Mean Cumulative Cost: 63.4308
+New Trajectories
+[Condition 0] Cumulative Costs: [105.5003393898785, 110.60806307605817, 108.56316482037363, 107.09178646460818, 104.551635754326], Mean Cumulative Cost: 107.2630
+[Condition 1] Cumulative Costs: [100.5722934437268, 108.65570859466835, 104.31420263734402, 104.90754793357262, 108.09269023480032], Mean Cumulative Cost: 105.3085
+[Condition 2] Cumulative Costs: [92.02255000873696, 94.01653153148087, 96.71554510395501, 95.00697070707986, 94.3409872300942], Mean Cumulative Cost: 94.4205
+[Condition 3] Cumulative Costs: [53.62678292221688, 55.27521547022383, 55.963227320746164, 52.259356072018115, 55.18777087960568], Mean Cumulative Cost: 54.4625
+[Condition 4] Cumulative Costs: [40.630114472236734, 41.64345984416494, 42.157444874169485, 43.04414655795298, 39.55824828310688], Mean Cumulative Cost: 41.4067
+[Condition 5] Cumulative Costs: [64.07407142383722, 62.20429173401332, 62.905310120811336, 63.85800271605909, 60.97606711830934], Mean Cumulative Cost: 62.8035
+[Condition 6] Cumulative Costs: [57.21405737820177, 54.09266406647181, 57.21672960573625, 55.73794002609151, 56.090420162991485], Mean Cumulative Cost: 56.0704
+[Condition 7] Cumulative Costs: [64.24795671235805, 63.98190976013147, 61.26090999047058, 61.8387365130701, 61.80354077320827], Mean Cumulative Cost: 62.6266
+[Condition 8] Cumulative Costs: [105.49308868931806, 106.79440889169452, 108.1399802504849, 104.5187084148251, 108.29170331084401], Mean Cumulative Cost: 106.6476
+[Condition 9] Cumulative Costs: [65.52601294024407, 67.57291852840046, 65.31745789996117, 64.65311603767411, 62.1104201383715], Mean Cumulative Cost: 65.0360
+New Trajectories
+[Condition 0] Cumulative Costs: [103.1077272657639, 111.24516416128176, 104.65366303569782, 102.42891024045333, 111.8386156326127], Mean Cumulative Cost: 106.6548
+[Condition 1] Cumulative Costs: [105.30048314377451, 107.05064364099835, 108.80049562787036, 105.80913220106336, 103.04411115796819], Mean Cumulative Cost: 106.0010
+[Condition 2] Cumulative Costs: [89.00605273443843, 91.66838970985992, 95.60436121652646, 95.13301250775189, 90.7749656047191], Mean Cumulative Cost: 92.4374
+[Condition 3] Cumulative Costs: [55.151720158991395, 54.828680953843374, 55.835780216212854, 54.91106757747527, 54.43813204827875], Mean Cumulative Cost: 55.0331
+[Condition 4] Cumulative Costs: [42.22212355594534, 40.03586403919767, 40.31631140250386, 43.49094271275459, 40.943886605555576], Mean Cumulative Cost: 41.4018
+[Condition 5] Cumulative Costs: [62.982064288208775, 63.94477643590226, 63.625440103391725, 62.2981031723209, 64.92322646097072], Mean Cumulative Cost: 63.5547
+[Condition 6] Cumulative Costs: [56.216823520638535, 56.37330349064919, 53.50388927016613, 58.69361639486783, 57.16226508550313], Mean Cumulative Cost: 56.3900
+[Condition 7] Cumulative Costs: [62.02429561811747, 63.982873396590485, 63.072350194682194, 62.86419766535122, 63.04549044569762], Mean Cumulative Cost: 62.9978
+[Condition 8] Cumulative Costs: [112.8368339855596, 110.37207038679043, 109.343318866756, 111.33533316482938, 105.3206235521584], Mean Cumulative Cost: 109.8416
+[Condition 9] Cumulative Costs: [64.94557081577004, 63.93962895292585, 65.32551437782787, 63.473961326532084, 60.92311057285185], Mean Cumulative Cost: 63.7216
+New Trajectories
+[Condition 0] Cumulative Costs: [104.93336584586973, 104.56816026476712, 104.0419677651358, 109.78506187204772, 101.97068339021007], Mean Cumulative Cost: 105.0598
+[Condition 1] Cumulative Costs: [108.25672702128122, 106.39573905562328, 102.88805883415108, 106.14981569607322, 113.2785305475975], Mean Cumulative Cost: 107.3938
+[Condition 2] Cumulative Costs: [91.52446859369905, 90.27934486023425, 90.92583693405919, 92.17510261088233, 91.62537456817742], Mean Cumulative Cost: 91.3060
+[Condition 3] Cumulative Costs: [55.55033822974969, 53.07087787787528, 56.33594826855482, 55.396019774544065, 54.69083858418926], Mean Cumulative Cost: 55.0088
+[Condition 4] Cumulative Costs: [42.55673996383979, 42.523172744453504, 44.12050647838154, 39.80563289238209, 42.13614536306216], Mean Cumulative Cost: 42.2284
+[Condition 5] Cumulative Costs: [62.88961835036774, 64.51976833646975, 66.10893917273188, 64.04856021961454, 66.06157513987486], Mean Cumulative Cost: 64.7257
+[Condition 6] Cumulative Costs: [56.15751118951239, 59.41995948651133, 59.41660875524656, 59.00433464507092, 56.41606640717892], Mean Cumulative Cost: 58.0829
+[Condition 7] Cumulative Costs: [62.04129201797125, 59.00429615511948, 60.4534977476647, 59.9421444809317, 61.63560567055034], Mean Cumulative Cost: 60.6154
+[Condition 8] Cumulative Costs: [111.34634435627235, 107.82771960743648, 108.18173446190598, 110.17156181268287, 110.46221260573563], Mean Cumulative Cost: 109.5979
+[Condition 9] Cumulative Costs: [63.13486238886199, 63.67283962531141, 67.06509685053489, 64.35099024667034, 64.02126603134661], Mean Cumulative Cost: 64.4490
+New Trajectories
+[Condition 0] Cumulative Costs: [104.55693185140616, 109.19997007828503, 104.64908500021926, 107.87513858931412, 106.50747194312561], Mean Cumulative Cost: 106.5577
+[Condition 1] Cumulative Costs: [104.26193857847356, 100.76029964513509, 104.37458200406657, 111.56428446156004, 107.2414524856252], Mean Cumulative Cost: 105.6405
+[Condition 2] Cumulative Costs: [93.45227547272613, 89.76334068969103, 97.22767615093836, 90.37383780743878, 91.94717381968273], Mean Cumulative Cost: 92.5529
+[Condition 3] Cumulative Costs: [54.59261724553772, 54.15476946870661, 53.36308513616946, 55.032870249282524, 53.57431417009695], Mean Cumulative Cost: 54.1435
+[Condition 4] Cumulative Costs: [39.569256717459616, 41.87650727232324, 41.98769639289181, 41.695514218512095, 41.88223078796761], Mean Cumulative Cost: 41.4022
+[Condition 5] Cumulative Costs: [64.73062168755993, 63.747876290064184, 62.37278560164556, 62.53591252620493, 62.2122422492045], Mean Cumulative Cost: 63.1199
+[Condition 6] Cumulative Costs: [56.49633815828483, 58.494865224185595, 56.680511983260764, 55.33224172375259, 55.95881877976069], Mean Cumulative Cost: 56.5926
+[Condition 7] Cumulative Costs: [61.03611546430042, 61.35327667501724, 62.34653007081353, 62.107537207348486, 60.913606280289116], Mean Cumulative Cost: 61.5514
+[Condition 8] Cumulative Costs: [106.25023933018389, 105.73892821130114, 111.39880081318596, 108.13110015193156, 105.33533332265675], Mean Cumulative Cost: 107.3709
+[Condition 9] Cumulative Costs: [63.58573217042014, 63.4749429583957, 63.48343420897415, 64.73153679335661, 61.41482210591846], Mean Cumulative Cost: 63.3381
+New Trajectories
+[Condition 0] Cumulative Costs: [106.97472958987233, 107.43392116924103, 113.79872290673819, 114.22854408456685, 105.50404352710565], Mean Cumulative Cost: 109.5880
+[Condition 1] Cumulative Costs: [100.18390701986061, 108.61319429774625, 101.65843567452816, 106.31200408300236, 104.74336429711578], Mean Cumulative Cost: 104.3022
+[Condition 2] Cumulative Costs: [92.82415851431685, 94.60470452354606, 97.13497746204484, 101.02444968998505, 93.1342687037595], Mean Cumulative Cost: 95.7445
+[Condition 3] Cumulative Costs: [54.74601364726855, 55.548506080548634, 54.58070404458497, 53.4318708731798, 53.60188220622025], Mean Cumulative Cost: 54.3818
+[Condition 4] Cumulative Costs: [41.667926544558455, 41.14030501459924, 39.97370912019238, 43.74202469909251, 40.45923790059762], Mean Cumulative Cost: 41.3966
+[Condition 5] Cumulative Costs: [64.26540065077766, 60.86553920010923, 65.1003773658935, 63.189408774408115, 62.894773079727095], Mean Cumulative Cost: 63.2631
+[Condition 6] Cumulative Costs: [57.24778631883072, 52.785219942546924, 56.03668283393311, 56.27733796034138, 57.26124554096565], Mean Cumulative Cost: 55.9217
+[Condition 7] Cumulative Costs: [60.42126694210652, 59.97643882725722, 63.47306757829144, 64.14302057673484, 62.48008592294834], Mean Cumulative Cost: 62.0988
+[Condition 8] Cumulative Costs: [111.29931974722952, 106.35189862180506, 105.10555549123097, 109.86722207980092, 113.68281769055966], Mean Cumulative Cost: 109.2614
+[Condition 9] Cumulative Costs: [60.2315586174995, 65.32224963369796, 64.98554969310634, 61.36121586591633, 66.44227832501437], Mean Cumulative Cost: 63.6686
+New Trajectories
+[Condition 0] Cumulative Costs: [109.46736030614245, 106.82511630536513, 110.49521978067759, 105.965533296738, 101.48322477035725], Mean Cumulative Cost: 106.8473
+[Condition 1] Cumulative Costs: [108.86468321237203, 111.4622696100602, 103.74437389094068, 102.97798852095538, 107.95208424353706], Mean Cumulative Cost: 107.0003
+[Condition 2] Cumulative Costs: [94.8399912698073, 92.40160395475975, 84.82166019504663, 93.79787539201502, 94.03992981726802], Mean Cumulative Cost: 91.9802
+[Condition 3] Cumulative Costs: [52.586083802267055, 51.89900735935537, 52.74647708488807, 54.66566391425173, 54.956748584186116], Mean Cumulative Cost: 53.3708
+[Condition 4] Cumulative Costs: [41.36384826643798, 41.77190939749983, 43.880748767590944, 43.58941283378151, 41.54121475684419], Mean Cumulative Cost: 42.4294
+[Condition 5] Cumulative Costs: [61.79950656740039, 60.22621888012626, 66.42941404223637, 63.58009929244587, 64.47000905249735], Mean Cumulative Cost: 63.3010
+[Condition 6] Cumulative Costs: [55.32224995284346, 58.25440642904229, 58.39689939920761, 57.926394016553694, 56.857003377723515], Mean Cumulative Cost: 57.3514
+[Condition 7] Cumulative Costs: [63.01043966607366, 64.65875185184976, 59.19262071479387, 62.562726233924394, 61.31550597787365], Mean Cumulative Cost: 62.1480
+[Condition 8] Cumulative Costs: [108.0468569860896, 109.88926447602697, 110.82368588232292, 105.12924641892917, 109.187462775597], Mean Cumulative Cost: 108.6153
+[Condition 9] Cumulative Costs: [64.5936253694376, 62.87286726819873, 64.08440004612835, 63.05000995443819, 61.08338714187068], Mean Cumulative Cost: 63.1369
+  8 |    73.25       721.95 |   101.43   0.5475 -5805.25   647.11   117.84   119.18 |   100.93   0.1169 -5878.18  1381.68    16.37    19.20 |    90.97   0.3609 -5798.64   529.13   106.20   107.67 |    54.08   0.0023 -5903.31   794.90    10.09    12.42 |    40.21   0.1518 -5838.07   300.96    38.85    40.51 |    62.95   0.0078 -5894.84   684.39    17.06    19.39 |    56.13   0.0093 -5849.83   573.74    14.30    16.56 |    60.12   0.2543 -5812.87   368.20    61.13    62.55 |   103.33   0.9208 -5847.25   873.27    53.73    56.21 |    62.36   0.0033 -5909.09  1066.11     9.10    11.75
+New Trajectories
+[Condition 0] Cumulative Costs: [119.82335649382854, 110.21937162506286, 107.86024598977136, 115.83102011519533, 110.97203222606227], Mean Cumulative Cost: 112.9412
+[Condition 1] Cumulative Costs: [109.43680876755498, 110.08124717340161, 106.84974756606552, 114.29746766496045, 109.41888959017612], Mean Cumulative Cost: 110.0168
+[Condition 2] Cumulative Costs: [99.3030082577824, 98.7993341466838, 103.24187301695731, 95.32143470316983, 91.05966764091407], Mean Cumulative Cost: 97.5451
+[Condition 3] Cumulative Costs: [54.908899759466614, 55.271413672593326, 54.805002726151265, 50.195979604333644, 56.49043318878967], Mean Cumulative Cost: 54.3343
+[Condition 4] Cumulative Costs: [40.87914689967061, 43.36099316933148, 44.32622924743047, 46.017752304484894, 43.700210714975604], Mean Cumulative Cost: 43.6569
+[Condition 5] Cumulative Costs: [62.928152340273726, 63.11738174323338, 65.49917282161722, 66.99626585419878, 61.808490197141936], Mean Cumulative Cost: 64.0699
+[Condition 6] Cumulative Costs: [55.598535524743816, 57.82163460368377, 58.7257866043591, 59.1136799989517, 57.532672366806665], Mean Cumulative Cost: 57.7585
+[Condition 7] Cumulative Costs: [64.0879083345606, 62.664276176707375, 62.27633815696259, 67.98971010767376, 62.478768108703086], Mean Cumulative Cost: 63.8994
+[Condition 8] Cumulative Costs: [110.68175907286704, 119.0120582364645, 119.87147737627306, 117.15160296435224, 114.23861323453116], Mean Cumulative Cost: 116.1911
+[Condition 9] Cumulative Costs: [63.18067931679533, 63.790212599121865, 66.50474962267083, 67.5051479134619, 63.63773821991138], Mean Cumulative Cost: 64.9237
+New Trajectories
+[Condition 0] Cumulative Costs: [109.87508290152799, 113.86507423449221, 114.11693778435124, 115.87339264962087, 108.10600578319772], Mean Cumulative Cost: 112.3673
+[Condition 1] Cumulative Costs: [109.37656286962185, 106.25607382111565, 110.33586391430441, 112.29074121215454, 107.81380851481705], Mean Cumulative Cost: 109.2146
+[Condition 2] Cumulative Costs: [97.2935670126518, 103.00020616213747, 98.8308359143213, 95.47717887007832, 94.61883824427197], Mean Cumulative Cost: 97.8441
+[Condition 3] Cumulative Costs: [54.875801704962896, 52.75199257209028, 57.81873823173828, 55.38007083292249, 56.5186064945025], Mean Cumulative Cost: 55.4690
+[Condition 4] Cumulative Costs: [42.0529319588999, 40.33272472989519, 38.94551130752059, 42.286649379964594, 42.75369089123506], Mean Cumulative Cost: 41.2743
+[Condition 5] Cumulative Costs: [66.38615921572018, 63.748062528893016, 64.17401633281249, 65.14439422697878, 64.94877793820241], Mean Cumulative Cost: 64.8803
+[Condition 6] Cumulative Costs: [56.92944229799811, 57.68343938283158, 59.20738590976239, 59.07709926098372, 56.17513465617282], Mean Cumulative Cost: 57.8145
+[Condition 7] Cumulative Costs: [66.45450940399225, 64.52683547889588, 61.33517292912197, 65.08606628314624, 65.79165359779162], Mean Cumulative Cost: 64.6388
+[Condition 8] Cumulative Costs: [115.71120588487818, 117.65649556263546, 115.77176560193956, 111.38498994576759, 115.73702063831512], Mean Cumulative Cost: 115.2523
+[Condition 9] Cumulative Costs: [64.14352814069541, 62.186908517336484, 63.67934011597125, 62.66959551799069, 64.85242747986405], Mean Cumulative Cost: 63.5064
+New Trajectories
+[Condition 0] Cumulative Costs: [113.81478460527751, 112.89997779762571, 108.16054252334911, 114.16702347741533, 117.84698174618141], Mean Cumulative Cost: 113.3779
+[Condition 1] Cumulative Costs: [111.08285429742463, 105.76137962530488, 106.66150466279547, 112.43677943532293, 105.85058854098656], Mean Cumulative Cost: 108.3586
+[Condition 2] Cumulative Costs: [91.36880597217534, 95.75195668922737, 96.02183985052514, 97.39079244167077, 93.34085930337127], Mean Cumulative Cost: 94.7749
+[Condition 3] Cumulative Costs: [52.47040775447622, 56.06144894141707, 55.90356265240405, 54.93332643192708, 55.012139765393904], Mean Cumulative Cost: 54.8762
+[Condition 4] Cumulative Costs: [40.08897090951561, 41.62252519659932, 44.129097445304474, 41.67560637085763, 43.43263465197328], Mean Cumulative Cost: 42.1898
+[Condition 5] Cumulative Costs: [65.724364340398, 62.86299393370459, 67.53632882919143, 62.57217172545977, 66.25821872449094], Mean Cumulative Cost: 64.9908
+[Condition 6] Cumulative Costs: [59.488448013647364, 58.72948964588949, 56.58893483867105, 59.32147958016501, 60.7457411089061], Mean Cumulative Cost: 58.9748
+[Condition 7] Cumulative Costs: [62.368581245687594, 60.678447062491344, 64.47523407729678, 63.912034345036524, 64.47728134682264], Mean Cumulative Cost: 63.1823
+[Condition 8] Cumulative Costs: [110.66211936546773, 122.36789082555397, 114.0251759040786, 114.3380298312198, 117.09938832788355], Mean Cumulative Cost: 115.6985
+[Condition 9] Cumulative Costs: [63.821536227307405, 65.86829353947104, 65.25704369731332, 61.02767613714158, 64.67585741451117], Mean Cumulative Cost: 64.1301
+New Trajectories
+[Condition 0] Cumulative Costs: [113.30636168436953, 109.31120983923887, 107.9500667245535, 116.77874846189009, 113.59899547504408], Mean Cumulative Cost: 112.1891
+[Condition 1] Cumulative Costs: [117.50569419167904, 108.11305477388944, 110.70764293333211, 108.4185109123831, 108.59349215477476], Mean Cumulative Cost: 110.6677
+[Condition 2] Cumulative Costs: [96.84205957927537, 97.5798969742646, 98.51347570538657, 95.92751762671762, 94.62603502466844], Mean Cumulative Cost: 96.6978
+[Condition 3] Cumulative Costs: [54.940197355746875, 54.67434211095309, 56.76142111269841, 54.39700980749206, 54.69243527020638], Mean Cumulative Cost: 55.0931
+[Condition 4] Cumulative Costs: [40.48794422918244, 43.50859690922401, 42.78519008379026, 41.65410172330469, 43.19735417290292], Mean Cumulative Cost: 42.3266
+[Condition 5] Cumulative Costs: [64.96363434230129, 63.46163264276466, 67.92722313128174, 62.93440549296731, 64.21300202971209], Mean Cumulative Cost: 64.7000
+[Condition 6] Cumulative Costs: [54.953985937493755, 59.1631380372897, 58.827513992547644, 57.07101317851996, 60.06985128185853], Mean Cumulative Cost: 58.0171
+[Condition 7] Cumulative Costs: [62.879990845834726, 62.7551480337871, 63.40140603808421, 64.33131470023157, 62.37019097434779], Mean Cumulative Cost: 63.1476
+[Condition 8] Cumulative Costs: [121.77793477844747, 115.14689190852513, 114.40543072521996, 115.0004967884148, 112.04509574140805], Mean Cumulative Cost: 115.6752
+[Condition 9] Cumulative Costs: [62.35660341054124, 62.66183491345504, 67.45041131185361, 64.3546139751922, 60.35612557329824], Mean Cumulative Cost: 63.4359
+New Trajectories
+[Condition 0] Cumulative Costs: [113.67879025020932, 116.20176989495671, 115.4468202986234, 114.73158641180977, 111.20162132725365], Mean Cumulative Cost: 114.2521
+[Condition 1] Cumulative Costs: [107.8641361903366, 109.47309300505898, 113.53005397798708, 103.25077918676864, 106.81657705550904], Mean Cumulative Cost: 108.1869
+[Condition 2] Cumulative Costs: [95.97594615895173, 95.14886116557359, 98.21387202795069, 96.99071306855458, 98.03636515366657], Mean Cumulative Cost: 96.8732
+[Condition 3] Cumulative Costs: [55.964576158376026, 56.88127528462077, 54.8360783890078, 56.09067021402026, 57.65945991172246], Mean Cumulative Cost: 56.2864
+[Condition 4] Cumulative Costs: [43.038445449388675, 42.441600414533994, 42.98036739641527, 42.169412897301555, 40.376479490622124], Mean Cumulative Cost: 42.2013
+[Condition 5] Cumulative Costs: [66.58129604637901, 63.64270741889121, 67.48614799472102, 62.91719360144007, 64.45175592377588], Mean Cumulative Cost: 65.0158
+[Condition 6] Cumulative Costs: [57.449043183877315, 58.85202971224222, 58.41514768912037, 62.02747527484887, 55.867807465857695], Mean Cumulative Cost: 58.5223
+[Condition 7] Cumulative Costs: [62.865645081859014, 64.053013965444, 61.93044897779389, 63.62365192602945, 62.853489231841664], Mean Cumulative Cost: 63.0652
+[Condition 8] Cumulative Costs: [116.49158475429878, 114.39177493848047, 114.21255269275957, 113.61243625958289, 115.3787694053098], Mean Cumulative Cost: 114.8174
+[Condition 9] Cumulative Costs: [65.64729225578128, 61.24519839118179, 62.22411059900726, 63.47531375459958, 62.84290094851513], Mean Cumulative Cost: 63.0870
+New Trajectories
+[Condition 0] Cumulative Costs: [111.2791605482736, 113.249106848526, 113.20442741470367, 109.45590451401205, 120.64627083616793], Mean Cumulative Cost: 113.5670
+[Condition 1] Cumulative Costs: [107.91754439036885, 105.10570925994698, 107.84815312936502, 110.91172026717192, 109.14676040721167], Mean Cumulative Cost: 108.1860
+[Condition 2] Cumulative Costs: [96.58406800195483, 92.6313226314945, 100.13047755814092, 93.39053567367928, 99.34234385850229], Mean Cumulative Cost: 96.4157
+[Condition 3] Cumulative Costs: [52.98825039825511, 56.17462934413926, 53.45659502473779, 57.902398559212216, 55.379193345254386], Mean Cumulative Cost: 55.1802
+[Condition 4] Cumulative Costs: [41.91025838139236, 41.820086881170255, 40.94050775617291, 42.86213855282622, 39.70489138093734], Mean Cumulative Cost: 41.4476
+[Condition 5] Cumulative Costs: [67.12940998806195, 62.846783366348454, 65.44066254061144, 63.36025891072538, 65.51705971256509], Mean Cumulative Cost: 64.8588
+[Condition 6] Cumulative Costs: [57.69657054695153, 55.352508321384484, 58.39052949053973, 58.06702368771569, 59.29782195945781], Mean Cumulative Cost: 57.7609
+[Condition 7] Cumulative Costs: [64.30762454001267, 63.49168431389332, 60.058330395007765, 59.54283657336589, 63.039602630565284], Mean Cumulative Cost: 62.0880
+[Condition 8] Cumulative Costs: [115.11055527134596, 109.89268900221354, 113.86752419269904, 114.52858641316448, 105.0413845170387], Mean Cumulative Cost: 111.6881
+[Condition 9] Cumulative Costs: [64.10201064360048, 61.09021013031578, 63.89787645713831, 66.41674876340872, 63.30036471462829], Mean Cumulative Cost: 63.7614
+New Trajectories
+[Condition 0] Cumulative Costs: [115.04717617996847, 114.22100481523809, 113.92933797206331, 110.14709870876335, 112.45131770318704], Mean Cumulative Cost: 113.1592
+[Condition 1] Cumulative Costs: [113.41887462219944, 106.26406343722203, 108.96152054492721, 109.22150976453752, 108.22941363165695], Mean Cumulative Cost: 109.2191
+[Condition 2] Cumulative Costs: [100.89630486533656, 97.75167043350106, 99.2657772231028, 94.12212631585204, 95.61722046568859], Mean Cumulative Cost: 97.5306
+[Condition 3] Cumulative Costs: [57.15063547503379, 57.2735980778987, 52.60968647976236, 55.34927584470917, 57.52755418508407], Mean Cumulative Cost: 55.9822
+[Condition 4] Cumulative Costs: [42.7985356596736, 41.700179185004956, 41.1699322538266, 40.74188794722407, 41.596444150802434], Mean Cumulative Cost: 41.6014
+[Condition 5] Cumulative Costs: [65.08770730651071, 66.58766212205218, 64.40523113976843, 64.34406825272917, 65.41176468942338], Mean Cumulative Cost: 65.1673
+[Condition 6] Cumulative Costs: [55.40069178797782, 58.62139993266108, 59.8842682203322, 57.452484279236465, 59.21903969813094], Mean Cumulative Cost: 58.1156
+[Condition 7] Cumulative Costs: [67.17455906112602, 63.272760045563096, 68.661934772543, 64.58923461460651, 66.51341200012621], Mean Cumulative Cost: 66.0424
+[Condition 8] Cumulative Costs: [116.75969514854566, 116.78842778822988, 111.40824372478475, 113.1096953894279, 115.92478964979865], Mean Cumulative Cost: 114.7982
+[Condition 9] Cumulative Costs: [64.27612744347134, 64.48975278973838, 64.84787793688372, 65.0188187123059, 62.7318307827687], Mean Cumulative Cost: 64.2729
+New Trajectories
+[Condition 0] Cumulative Costs: [108.2709375577584, 110.45721168816601, 114.81484932903733, 104.22886325888713, 114.97605469087259], Mean Cumulative Cost: 110.5496
+[Condition 1] Cumulative Costs: [109.2509196713286, 112.10078690094971, 113.9681185140314, 109.45557933091837, 109.31299387133724], Mean Cumulative Cost: 110.8177
+[Condition 2] Cumulative Costs: [97.76544078694113, 91.16603075069224, 104.93726905485877, 95.69374797364665, 93.85178961688062], Mean Cumulative Cost: 96.6829
+[Condition 3] Cumulative Costs: [56.78327244251259, 57.528121732665596, 55.22230423658133, 55.36066475234265, 57.444466409504905], Mean Cumulative Cost: 56.4678
+[Condition 4] Cumulative Costs: [43.028582707383976, 39.95029424389202, 40.92436729388755, 41.53594204634005, 41.29251029320188], Mean Cumulative Cost: 41.3463
+[Condition 5] Cumulative Costs: [62.84465487117172, 66.55197401303425, 65.97301688683689, 64.82465607653882, 67.18813129353775], Mean Cumulative Cost: 65.4765
+[Condition 6] Cumulative Costs: [59.343342955800225, 61.5841436608401, 60.38638914231179, 56.660810384459104, 57.77321380073074], Mean Cumulative Cost: 59.1496
+[Condition 7] Cumulative Costs: [64.05603611187246, 65.31928207240605, 64.39499558501831, 63.490790857422944, 63.66635316771356], Mean Cumulative Cost: 64.1855
+[Condition 8] Cumulative Costs: [113.62460704381569, 113.71141366845362, 108.74127623589551, 116.37381854168741, 117.79426710471544], Mean Cumulative Cost: 114.0491
+[Condition 9] Cumulative Costs: [61.86745547144502, 65.11585704384811, 60.156015811969056, 63.373572016771504, 63.961713251959296], Mean Cumulative Cost: 62.8949
+New Trajectories
+[Condition 0] Cumulative Costs: [107.96009490597636, 110.41779378451297, 107.38598323245652, 114.41544171098447, 114.185175810232], Mean Cumulative Cost: 110.8729
+[Condition 1] Cumulative Costs: [106.72956730344613, 106.15971926846835, 105.16600697517788, 107.26243192024495, 109.12145557007047], Mean Cumulative Cost: 106.8878
+[Condition 2] Cumulative Costs: [96.78782761655168, 94.02636648766058, 95.82170392366635, 97.420918656731, 96.72834982103355], Mean Cumulative Cost: 96.1570
+[Condition 3] Cumulative Costs: [54.892371263852596, 54.44558528406924, 55.01489721816, 55.56759962676741, 55.89427393905826], Mean Cumulative Cost: 55.1629
+[Condition 4] Cumulative Costs: [41.77422694301491, 42.09996714031266, 42.39057804208611, 39.39326465077214, 41.62550986273637], Mean Cumulative Cost: 41.4567
+[Condition 5] Cumulative Costs: [61.4973970601937, 62.3489717617702, 63.69935489952436, 64.69010800687704, 63.80503008476968], Mean Cumulative Cost: 63.2082
+[Condition 6] Cumulative Costs: [59.07943303484436, 56.86032062896837, 58.26416275707055, 56.378212099205605, 57.643491233654025], Mean Cumulative Cost: 57.6451
+[Condition 7] Cumulative Costs: [62.144170277984436, 63.538354663875836, 65.48427289006652, 63.025437411418444, 61.511563482336925], Mean Cumulative Cost: 63.1408
+[Condition 8] Cumulative Costs: [115.67925692257958, 117.06092419947936, 116.35144437955047, 116.54792807668703, 116.13764829606934], Mean Cumulative Cost: 116.3554
+[Condition 9] Cumulative Costs: [63.27857596527148, 64.97700751421723, 63.99427877471481, 66.01932674571934, 63.88982128708301], Mean Cumulative Cost: 64.4318
+New Trajectories
+[Condition 0] Cumulative Costs: [110.58506808028345, 105.9815917596402, 105.15457712811592, 108.06463393231684, 112.98352271060895], Mean Cumulative Cost: 108.5539
+[Condition 1] Cumulative Costs: [114.49218661618596, 111.25767125241377, 105.34808458217988, 110.52890766513812, 111.51344058211713], Mean Cumulative Cost: 110.6281
+[Condition 2] Cumulative Costs: [99.39641414859271, 97.3789241423028, 94.40297470877304, 97.08479975610042, 94.71834085999902], Mean Cumulative Cost: 96.5963
+[Condition 3] Cumulative Costs: [56.128069492091825, 55.30459650549301, 53.67580195656954, 52.71756255076503, 57.12630530852518], Mean Cumulative Cost: 54.9905
+[Condition 4] Cumulative Costs: [41.873811601942066, 44.32023301707597, 41.574893253723225, 39.950448586601375, 43.38139300905535], Mean Cumulative Cost: 42.2202
+[Condition 5] Cumulative Costs: [64.58363660096745, 68.73166138489243, 64.28457687372516, 64.1254666319354, 60.855189200325015], Mean Cumulative Cost: 64.5161
+[Condition 6] Cumulative Costs: [58.621425566439235, 57.158816999687254, 56.73628589371754, 57.34496924332919, 55.501514421847254], Mean Cumulative Cost: 57.0726
+[Condition 7] Cumulative Costs: [67.32081622837305, 62.92860282640247, 65.41743795491347, 65.43342812654916, 63.065264744088076], Mean Cumulative Cost: 64.8331
+[Condition 8] Cumulative Costs: [116.33673322238393, 116.32097312835309, 120.6473770417428, 113.22317326753522, 111.87927585556], Mean Cumulative Cost: 115.6815
+[Condition 9] Cumulative Costs: [66.14054914654348, 65.75839037167083, 62.24607636921126, 63.89924969117922, 62.7705795110254], Mean Cumulative Cost: 64.1630
+  9 |    75.39       712.10 |   105.02   0.4446 -5805.71   638.87   122.43   120.95 |   107.32   0.0486 -5877.58  1333.42    19.81    17.15 |    93.71   0.3013 -5799.20   545.90   109.37   107.75 |    54.27   0.0113 -5903.17   737.57    12.29    10.06 |    41.57   0.1074 -5838.10   300.07    41.03    39.47 |    62.35   0.0350 -5894.62   667.19    19.14    16.92 |    57.42   0.0059 -5849.71   531.18    16.91    14.73 |    61.94   0.1852 -5813.12   367.26    64.22    62.76 |   107.58   0.9380 -5847.35   859.31    57.44    55.01 |    62.70   0.0020 -5909.03  1140.22    11.75     9.20
+New Trajectories
+[Condition 0] Cumulative Costs: [115.73136737934692, 113.51803860937042, 117.51873955464744, 118.11163113801769, 120.85268232986778], Mean Cumulative Cost: 117.1465
+[Condition 1] Cumulative Costs: [114.88665814551186, 120.16905944673518, 114.26895985427181, 117.21241315319114, 110.82604744011765], Mean Cumulative Cost: 115.4726
+[Condition 2] Cumulative Costs: [100.00092965114419, 102.46537193794124, 96.39891382604583, 101.21093542850308, 100.4839749946711], Mean Cumulative Cost: 100.1120
+[Condition 3] Cumulative Costs: [56.638627704146515, 55.9102335359087, 56.068766499786015, 58.50620624907588, 56.18844481407874], Mean Cumulative Cost: 56.6625
+[Condition 4] Cumulative Costs: [42.352486363041095, 42.31521089997841, 40.91603697831929, 42.586059887914416, 44.433361611563775], Mean Cumulative Cost: 42.5206
+[Condition 5] Cumulative Costs: [64.50897323190893, 64.46632756813528, 67.0905681866787, 66.8746108763239, 66.73223665221336], Mean Cumulative Cost: 65.9345
+[Condition 6] Cumulative Costs: [58.08027650701872, 56.982339438175885, 57.72137346922367, 62.216419208915234, 58.0387993914551], Mean Cumulative Cost: 58.6078
+[Condition 7] Cumulative Costs: [64.91121060657603, 66.26453741654021, 68.2697859478
