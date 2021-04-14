@@ -1,0 +1,101 @@
+WARNING:tensorflow:From /home/student/Documents/Qiyuan/tf2py2/lib/python2.7/site-packages/tensorflow_core/python/compat/v2_compat.py:65: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-12-08 02:57:29.135413: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-12-08 02:57:29.164635: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2020-12-08 02:57:29.164688: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: zinc
+2020-12-08 02:57:29.164700: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: zinc
+2020-12-08 02:57:29.164752: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 450.80.2
+2020-12-08 02:57:29.164794: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 450.80.2
+2020-12-08 02:57:29.164805: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 450.80.2
+2020-12-08 02:57:29.165129: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-12-08 02:57:29.174178: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3192565000 Hz
+2020-12-08 02:57:29.175998: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ca3b7646b0 executing computations on platform Host. Devices:
+2020-12-08 02:57:29.176014: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Dataset already exists. Loading from /home/student/Documents/Qiyuan/tf2py2/ltocode/experiments/eig1/trainset_eig.pkl. 
+Comparation of finding eigenvalues using different policies starts: 
+Log2(problem size) =  3.1699250014423126
+Real largest(norm) eigenvalue:  -1.0
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.716e+00 final cost:  2.716e+00  iteration_num:  50  eig1:  -0.0033543017334005157  eig:  -1.0  err:  0.0
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.716e+00 final cost:  2.689e+00  iteration_num:  50  eig1:  -0.04192138349784827  eig:  -1.0  err:  0.0
+Eigs have been found using MomentumPolicy,          initial cost:  2.716e+00 final cost:  2.709e+00  iteration_num:  50  eig1:  -0.013092973241284615  eig:  -1.0  err:  0.0
+Eigs have been found using Learned Policy 0,        initial cost:  2.716e+00 final cost:  6.578e-03  iteration_num:  50  eig1:  0.2014923198342849  eig:  -1.0  err:  0.0
+===================================== Done =======================================
+Log2(problem size) =  4.0
+Real largest(norm) eigenvalue:  -1.5
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.717e+00 final cost:  2.717e+00  iteration_num:  50  eig1:  -0.010103119111783099  eig:  -0.7057385318058202  err:  0.4880787134951918
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.717e+00 final cost:  2.715e+00  iteration_num:  50  eig1:  -0.019016838234558162  eig:  -0.8085365992310253  err:  0.4880692365280847
+Eigs have been found using MomentumPolicy,          initial cost:  2.717e+00 final cost:  2.716e+00  iteration_num:  50  eig1:  -0.012573362753005001  eig:  -0.7367296039464781  err:  0.49120840328921606
+Eigs have been found using Learned Policy 0,        initial cost:  2.717e+00 final cost:  1.496e+00  iteration_num:  50  eig1:  -1.1040029161782012  eig:  -1.4937725937722708  err:  0.03900063405997455
+===================================== Done =======================================
+Log2(problem size) =  4.0
+Real largest(norm) eigenvalue:  -1.5
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.717e+00 final cost:  2.717e+00  iteration_num:  50  eig1:  -0.010103119111783099  eig:  -0.7057385318058202  err:  0.4880787134951918
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.717e+00 final cost:  2.715e+00  iteration_num:  50  eig1:  -0.01901683823455817  eig:  -0.8085365992310253  err:  0.4880692365280847
+Eigs have been found using MomentumPolicy,          initial cost:  2.717e+00 final cost:  2.716e+00  iteration_num:  50  eig1:  -0.012573362753005001  eig:  -0.7367296039464781  err:  0.49120840328921606
+Eigs have been found using Learned Policy 0,        initial cost:  2.717e+00 final cost:  1.496e+00  iteration_num:  50  eig1:  -1.1040029161782017  eig:  -1.4937725937722706  err:  0.03900063405997457
+===================================== Done =======================================
+Log2(problem size) =  4.643856189774724
+Real largest(norm) eigenvalue:  -1.7071067811865481
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.003676006945865863  eig:  -0.6943248193206061  err:  0.5558710391285433
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.007812482392955738  eig:  -0.758835026853683  err:  0.5483881849668653
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.004840062612868707  eig:  -0.7132208951897193  err:  0.5543386325804647
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.689e+00  iteration_num:  50  eig1:  -0.10204144178136162  eig:  -1.4745459132938283  err:  0.2568129672569245
+===================================== Done =======================================
+Log2(problem size) =  5.169925001442312
+Real largest(norm) eigenvalue:  -1.8090169943749475
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.009336960602360557  eig:  -0.8827285968139039  err:  0.5150698360956246
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.011738750540901809  eig:  -0.9291042087766865  err:  0.5006548562131806
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.010016387644401903  eig:  -0.8964434699802007  err:  0.5109132384409559
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.713e+00  iteration_num:  50  eig1:  -0.0432596481580744  eig:  -1.2727222437007164  err:  0.45480067455506246
+===================================== Done =======================================
+Log2(problem size) =  5.169925001442312
+Real largest(norm) eigenvalue:  -1.8090169943749475
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.009336960602360557  eig:  -0.8827285968139039  err:  0.5150698360956246
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.011738750540901809  eig:  -0.9291042087766865  err:  0.5006548562131806
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.010016387644401903  eig:  -0.8964434699802007  err:  0.5109132384409559
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.713e+00  iteration_num:  50  eig1:  -0.0432596481580744  eig:  -1.2727222437007164  err:  0.45480067455506246
+===================================== Done =======================================
+Log2(problem size) =  6.0
+Real largest(norm) eigenvalue:  -1.9009688679024197
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.010798910495586261  eig:  -0.8753207934902367  err:  0.4915872267400927
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.012009916056347483  eig:  -0.8934411594306223  err:  0.4865760722877169
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.011146001811543543  eig:  -0.880625683095656  err:  0.49014154797817483
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.717e+00  iteration_num:  50  eig1:  -0.031544848541206934  eig:  -0.6175028110506706  err:  0.7117853926900264
+===================================== Done =======================================
+Log2(problem size) =  6.339850002884625
+Real largest(norm) eigenvalue:  (-1.9238795325112803+0j)
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.005141680287737276  eig:  -0.8494724341821909  err:  0.5383083037339524
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.006085653448625424  eig:  -0.8655044495636262  err:  0.5313699535192495
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.005413292175587955  eig:  -0.8541699462612203  err:  0.5362873789496009
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.717e+00  iteration_num:  50  eig1:  -0.028618996255752118  eig:  -0.5011562754576352  err:  0.744600105121013
+===================================== Done =======================================
+Log2(problem size) =  6.643856189774725
+Real largest(norm) eigenvalue:  -1.939692620785907
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.007815367655463024  eig:  -0.8109525976366909  err:  0.48426666574690713
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.008541044386704982  eig:  -0.8193504387172891  err:  0.4813325185636625
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.008025707031297041  eig:  -0.8134165955959068  err:  0.4834104214957007
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.036965437437152374  eig:  -0.3376126658477501  err:  0.798342806546155
+===================================== Done =======================================
+Log2(problem size) =  7.169925001442313
+Real largest(norm) eigenvalue:  -1.959492973614499
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.019616007145904273  eig:  -0.9368172150461914  err:  0.4412747007588679
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.02017184351332065  eig:  -0.9424657733056928  err:  0.43852238678227345
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.01977760874082183  eig:  -0.9384774950413295  err:  0.440467479783056
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.06224224931476485  eig:  -0.3044813739765553  err:  0.8367256757786635
+===================================== Done =======================================
+Log2(problem size) =  7.400879436282184
+Real largest(norm) eigenvalue:  (-1.965925826289084+0j)
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.007844078543390353  eig:  -0.9888068995787033  err:  0.4846024032117693
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.008384216924174966  eig:  -0.9954237883412679  err:  0.482124605765212
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.008000992400440464  eig:  -0.9907482252091266  err:  0.4838773233103889
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.05599717216773746  eig:  -0.3300281289100993  err:  0.8491138525557368
+===================================== Done =======================================
+Log2(problem size) =  8.0
+Real largest(norm) eigenvalue:  -1.9781476007338092
+Eigs have been found using GradientDescentPolicy,   initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.0240644948591578  eig:  -0.9242474029279825  err:  0.503766993729208
+Eigs have been found using ConjugateGradientPolicy, initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.024455302173622562  eig:  -0.92820241617081  err:  0.502351608830116
+Eigs have been found using MomentumPolicy,          initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.02417856547568063  eig:  -0.9254084550096319  err:  0.5033521985109644
+Eigs have been found using Learned Policy 0,        initial cost:  2.718e+00 final cost:  2.718e+00  iteration_num:  50  eig1:  -0.10904693930788806  eig:  -0.2640553810056001  err:  0.8665754057409678
+===================================== Done =======================================
+results saved as ./results.npy !

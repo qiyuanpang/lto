@@ -1,0 +1,109 @@
+WARNING:From /home/student/Documents/Qiyuan/tf2py2/lib/python2.7/site-packages/tensorflow_core/python/compat/v2_compat.py:65: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-11-30 12:20:48.780851: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-30 12:20:48.791385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-30 12:20:48.791720: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-30 12:20:48.793835: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-30 12:20:48.795719: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-30 12:20:48.796091: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-30 12:20:48.798884: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-30 12:20:48.800765: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-30 12:20:48.806338: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-30 12:20:48.810245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-30 12:20:48.810879: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-11-30 12:20:48.841488: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3192875000 Hz
+2020-11-30 12:20:48.848393: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56133f9291c0 executing computations on platform Host. Devices:
+2020-11-30 12:20:48.848463: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-11-30 12:20:49.039410: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56133f8ddcc0 executing computations on platform CUDA. Devices:
+2020-11-30 12:20:49.039500: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Quadro P6000, Compute Capability 6.1
+2020-11-30 12:20:49.041467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-30 12:20:49.041537: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-30 12:20:49.041559: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-30 12:20:49.041577: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-30 12:20:49.041594: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-30 12:20:49.041612: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-30 12:20:49.041629: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-30 12:20:49.041648: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-30 12:20:49.044822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-30 12:20:49.044880: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-30 12:20:49.046974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-30 12:20:49.047001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-30 12:20:49.047012: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-30 12:20:49.050319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22912 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2020-11-30 12:20:52.477655: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-30 12:24:13.931198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:04:00.0
+2020-11-30 12:24:13.931317: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-30 12:24:13.931333: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-30 12:24:13.931346: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-30 12:24:13.931359: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-30 12:24:13.931370: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-30 12:24:13.931382: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-30 12:24:13.931395: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-30 12:24:13.932508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-30 12:24:13.932550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-30 12:24:13.932557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-30 12:24:13.932563: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-30 12:24:13.933742: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22912 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:04:00.0, compute capability: 6.1)
+Dataset already exists. Loading from /home/student/Documents/Qiyuan/tf2py2/ltocode/experiments/eig1/trainset_eig.pkl. 
+Initial Trajectories
+[Condition 0] Cumulative Costs: [14.042392501969205, 15.928374752141643, 13.88171162588163, 14.050162046718548, 15.41415381373342], Mean Cumulative Cost: 14.6634
+[Condition 1] Cumulative Costs: [15.636406585273138, 12.672887372268535, 12.870332091567994, 12.041968979544121, 13.680116412609078], Mean Cumulative Cost: 13.3803
+[Condition 2] Cumulative Costs: [15.13418872305569, 14.000984705544322, 13.251207675143117, 14.939180814538854, 13.250572117865955], Mean Cumulative Cost: 14.1152
+[Condition 3] Cumulative Costs: [15.715092245039795, 14.132220202002625, 14.574111080821407, 13.40060347223848, 14.480676004346943], Mean Cumulative Cost: 14.4605
+[Condition 4] Cumulative Costs: [13.78626656039659, 15.462672172661659, 15.178716735088532, 14.658890019608958, 13.61294761591308], Mean Cumulative Cost: 14.5399
+[Condition 5] Cumulative Costs: [14.91801680498395, 14.01027202762561, 14.866249067960139, 14.142826432251471, 13.617325868559755], Mean Cumulative Cost: 14.3109
+[Condition 6] Cumulative Costs: [13.965232567062555, 14.045024253860898, 13.003374950310173, 14.37038013430455, 13.44772357060507], Mean Cumulative Cost: 13.7663
+[Condition 7] Cumulative Costs: [15.05244795464407, 15.531338553470734, 13.210003016398868, 13.801875775453055, 13.377487311510048], Mean Cumulative Cost: 14.1946
+[Condition 8] Cumulative Costs: [13.859314328683908, 15.545236628452276, 14.650724864264827, 14.304190952167467, 13.68166851219903], Mean Cumulative Cost: 14.4082
+[Condition 9] Cumulative Costs: [14.295179674640432, 14.33111876871736, 13.49127889521994, 14.904140792129786, 15.856949199063092], Mean Cumulative Cost: 14.5757
+New Trajectories
+[Condition 0] Cumulative Costs: [13.994431313938282, 12.884711910046645, 12.268799138288005, 12.986085665307229, 12.632622154189509], Mean Cumulative Cost: 12.9533
+[Condition 1] Cumulative Costs: [10.10453463621797, 9.139819478719822, 9.235778763067293, 9.027001211545631, 9.409023803386807], Mean Cumulative Cost: 9.3832
+[Condition 2] Cumulative Costs: [9.09615043342528, 9.738766800418992, 9.007333212464243, 10.587214129876262, 10.084405633874281], Mean Cumulative Cost: 9.7028
+[Condition 3] Cumulative Costs: [10.637640787074798, 8.670315657664931, 10.662518521194823, 10.413974418095979, 9.632813247503963], Mean Cumulative Cost: 10.0035
+[Condition 4] Cumulative Costs: [11.601593678088923, 10.372698661824604, 11.970504741021678, 11.912769037696672, 11.139487774664504], Mean Cumulative Cost: 11.3994
+[Condition 5] Cumulative Costs: [10.316312960006, 9.734244307916958, 10.686944630480095, 12.11040529962305, 10.088292967048345], Mean Cumulative Cost: 10.5872
+[Condition 6] Cumulative Costs: [10.985189335976159, 12.780829762042163, 12.461364477340261, 10.621400781797115, 13.299598677163177], Mean Cumulative Cost: 12.0297
+[Condition 7] Cumulative Costs: [10.749352282790282, 10.22541691147565, 10.00095829386582, 10.697573022164454, 10.187531335214194], Mean Cumulative Cost: 10.3722
+[Condition 8] Cumulative Costs: [9.483329068564764, 10.38690213365913, 9.812333963816661, 11.190611594073566, 9.806566805589762], Mean Cumulative Cost: 10.1359
+[Condition 9] Cumulative Costs: [12.21639973774913, 11.947937578726588, 11.056376326547975, 12.236116053143556, 9.637223090896974], Mean Cumulative Cost: 11.4188
+New Trajectories
+[Condition 0] Cumulative Costs: [13.670166579404702, 13.291777466145513, 14.577172369475143, 14.321381909121758, 12.503897376345181], Mean Cumulative Cost: 13.6729
+[Condition 1] Cumulative Costs: [11.49234392328458, 11.167273724699232, 9.289604823471553, 7.917876028106752, 10.34284464345998], Mean Cumulative Cost: 10.0420
+[Condition 2] Cumulative Costs: [9.62106742958133, 11.685049451059719, 9.503895239214035, 10.944035922877823, 10.03858740793443], Mean Cumulative Cost: 10.3585
+[Condition 3] Cumulative Costs: [12.559404851262258, 10.342999385062608, 10.653001084231319, 12.042982513762004, 11.47181195444627], Mean Cumulative Cost: 11.4140
+[Condition 4] Cumulative Costs: [12.146163273199404, 9.97811825317039, 11.195003602147015, 11.065398074381859, 10.80266647380517], Mean Cumulative Cost: 11.0375
+[Condition 5] Cumulative Costs: [10.893195606825671, 9.14844831295583, 11.046579618395349, 10.928588915050218, 10.471828561643086], Mean Cumulative Cost: 10.4977
+[Condition 6] Cumulative Costs: [11.6089181111117, 11.57032405210615, 11.359613084624037, 10.844509994770917, 10.621084041210528], Mean Cumulative Cost: 11.2009
+[Condition 7] Cumulative Costs: [12.264412754822557, 11.294249611366975, 9.840990821485393, 8.495544385732224, 9.138625388452809], Mean Cumulative Cost: 10.2068
+[Condition 8] Cumulative Costs: [9.888163177393109, 10.316107735653596, 11.149891581130857, 8.942777735585004, 10.618279173775122], Mean Cumulative Cost: 10.1830
+[Condition 9] Cumulative Costs: [11.044355487343228, 10.45942849275254, 10.767874129665728, 12.396327747823431, 11.885764175849824], Mean Cumulative Cost: 11.3108
+New Trajectories
+[Condition 0] Cumulative Costs: [13.88382671830058, 13.446876426273752, 12.847425876538036, 14.683146238622708, 12.888260513439922], Mean Cumulative Cost: 13.5499
+[Condition 1] Cumulative Costs: [10.597728334446224, 12.868716492177342, 10.414553867009696, 12.17218532273378, 10.337452178033702], Mean Cumulative Cost: 11.2781
+[Condition 2] Cumulative Costs: [10.984276852609154, 10.872695892668972, 10.625674167659236, 10.261873824739101, 10.190459208046581], Mean Cumulative Cost: 10.5870
+[Condition 3] Cumulative Costs: [9.988181965604076, 10.397599594487003, 11.01068801964551, 9.866692845955694, 8.691947558619418], Mean Cumulative Cost: 9.9910
+[Condition 4] Cumulative Costs: [9.464700088573341, 10.84991330754706, 10.561170689385717, 10.730033824435319, 10.383898231892372], Mean Cumulative Cost: 10.3979
+[Condition 5] Cumulative Costs: [8.926798668198694, 11.347369055432944, 11.137856228651653, 8.013195671578364, 12.219984773000522], Mean Cumulative Cost: 10.3290
+[Condition 6] Cumulative Costs: [10.352352285733504, 12.070485620691509, 11.514698978752012, 11.874920870277105, 12.128387026333138], Mean Cumulative Cost: 11.5882
+[Condition 7] Cumulative Costs: [10.04124925718692, 10.604427885643506, 9.250902943502645, 10.361997511507097, 10.65272036130798], Mean Cumulative Cost: 10.1823
+[Condition 8] Cumulative Costs: [8.670442789327957, 10.417844718130612, 10.248290394732713, 10.763101130610139, 12.09627874742427], Mean Cumulative Cost: 10.4392
+[Condition 9] Cumulative Costs: [11.141199313825274, 12.49311479243394, 11.324639337102731, 11.296914870369182, 10.89533086399346], Mean Cumulative Cost: 11.4302
+New Trajectories
+[Condition 0] Cumulative Costs: [13.252370477998625, 14.388476881105472, 13.539795877970489, 14.469129905307872, 13.358902367913274], Mean Cumulative Cost: 13.8017
+[Condition 1] Cumulative Costs: [8.74969614821319, 12.559145576978922, 10.137134043436795, 10.250776659595351, 12.84951031477252], Mean Cumulative Cost: 10.9093
+[Condition 2] Cumulative Costs: [10.819496789517833, 9.414595168287262, 10.906405913791541, 11.294985313224542, 11.504933067380215], Mean Cumulative Cost: 10.7881
+[Condition 3] Cumulative Costs: [9.619603460866232, 10.638522412861652, 9.326944621080274, 9.511964257627682, 10.191374003000504], Mean Cumulative Cost: 9.8577
+[Condition 4] Cumulative Costs: [10.021921833713003, 9.973570088382807, 11.190688202363699, 12.375130707959476, 10.168884991080564], Mean Cumulative Cost: 10.7460
+[Condition 5] Cumulative Costs: [10.983917705093326, 10.88859750769303, 9.440153575228825, 9.555945384354304, 9.335717748639254], Mean Cumulative Cost: 10.0409
+[Condition 6] Cumulative Costs: [11.268077210452608, 11.695090836632179, 12.518706566364871, 12.395155830137012, 9.425070443775155], Mean Cumulative Cost: 11.4604
+[Condition 7] Cumulative Costs: [9.121415291346667, 10.813996422915661, 10.023868635181513, 8.975525359487657, 10.599432270691826], Mean Cumulative Cost: 9.9068
+[Condition 8] Cumulative Costs: [9.894257966716344, 9.937505650918387, 10.875381351343686, 9.501455282537751, 9.370865782851897], Mean Cumulative Cost: 9.9159
+[Condition 9] Cumulative Costs: [10.58256534403755,
