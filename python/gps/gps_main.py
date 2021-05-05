@@ -112,8 +112,9 @@ def Train(exp_dir, config, times):
             del gps
         else:
             #gps = GPSMain(config)
+            dim = np.random.randint(12, 17, size=1)[0]
             session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
-            fcns, fcn_family = config['agent']['gen_fcns'](session)
+            fcns, fcn_family = config['agent']['gen_fcns'](session, dim, dim)
             config['agent']['fcns'] = fcns
             config['agent']['fcn_family'] = fcn_family
             for k in range(i):
@@ -121,8 +122,9 @@ def Train(exp_dir, config, times):
                 network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % (k*config['iterations']+1)) + '.pkl'
                 lr_pol = TfPolicy.load_policy(network_dir, 1, first_derivative_network, network_config=config['algorithm']['policy_opt']['network_params'])
                 for j in range(config['common']['conditions']):
-                    config['agent']['fcns'][j]['init_loc'] = np.expand_dims(gps.agent.sample(lr_pol, j, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1) 
+                    config['agent']['fcns'][j]['init_loc'] = np.expand_dims(Agent.sample(lr_pol, j, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1) 
             config['algorithm']['policy_opt']['policy_dict_path'] = network_dir
+            tf.reset_default_graph()
             gps = GPSMain(config)
             gps.run(i)
             gps.destroy()

@@ -58,7 +58,7 @@ def gen_fcns(interval1, interval2, max_dim_1, max_dim_2, num_fcns, session, gpu_
     param_dim = fcn_family.get_total_num_dim()
 
     fcn_objs = []
-    dims = np.random.randint(int(2*max_dim_1/3), max_dim_1, size=num_fcns)
+    dims = np.random.randint(max_dim_1, max_dim_1+1, size=num_fcns)
     #print('dims = ', dims, max_dim_1)
     init_locs = np.random.randn(param_dim,num_fcns*num_inits_per_fcn)
     if 1:
@@ -190,8 +190,8 @@ if os.path.isfile(dataset_file):
 else:
     print("Generating new dataset.")
     #fcns,fcn_family = gen_fcns(input_dim, num_fcns, session)
-    function = lambda sess: gen_fcns([0, a], [0, b], max_dim_1, max_dim_2, num_fcns, sess, gpu_id, num_inits_per_fcn = 1)
-    fcns,fcn_family = function(session)
+    function = lambda sess, max_dim_1, max_dim_2: gen_fcns([0, a], [0, b], max_dim_1, max_dim_1, num_fcns, sess, gpu_id, num_inits_per_fcn = 1)
+    fcns,fcn_family = function(session, max_dim_1, max_dim_2)
     with open(dataset_file, mode="wb") as f:
         pickle.dump((fcns,fcn_family), f)
     print("Saved to %s. " % (dataset_file))

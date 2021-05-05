@@ -15,8 +15,8 @@ import tensorflow.compat.v1 as tf
 from gps.algorithm.policy.tf_policy import TfPolicy
 from gps.algorithm.policy_opt.tf_utils import TfSolver
 
-from tf.python.framework import ops
-
+from tensorflow.python.framework import ops
+import pickle
 
 LOGGER = logging.getLogger(__name__)
 
@@ -56,8 +56,11 @@ class PolicyOpt(object):
             init_op = tf.global_variables_initializer()
             self.sess.run(init_op)
         else:
-            ops.reset_default_graph()  # we need to destroy the default graph before re_init or checkpoint won't restore.
+            policy_dict_path = self._hyperparams['policy_dict_path']
+            #ops.reset_default_graph()  # we need to destroy the default graph before re_init or checkpoint won't restore.
             pol_dict = pickle.load(open(policy_dict_path, "rb"), encoding='latin1')
+            init_op = tf.global_variables_initializer()
+            self.sess.run(init_op)
             saver = tf.train.Saver()
             check_file = '/'.join(str.split(policy_dict_path, '/')[:-1]) + '/' + str.split(pol_dict['checkpoint_path_tf'], '/')[-1]
             saver.restore(self.sess, check_file)
@@ -70,8 +73,7 @@ class PolicyOpt(object):
         tf_map_generator = self._hyperparams['network_model']
         #print('dO, dU = ', self._dO, self._dU)
         #print('self._hyperparams = ', self._hyperparams)
-        tf_map, self.solver_op, self.summary_op, self.avg_tower_loss, self.act_4prob = tf_map_generator(dim_input=self._dO, dim_output=self._dU, batch_size=self.batch_size,
-                                  network_config=self._hyperparams['network_params'])
+        tf_map, self.solver_op, self.summary_op, self.avg_tower_loss, self.act_4prob = tf_map_generator(dim_input=self._dO, dim_output=self._dU, batch_size=self.batch_size, network_config=self._hyperparams['network_params'])
         self.obs_tensor = tf_map.get_input_tensor()
         self.action_tensor = tf_map.get_target_output_tensor()
         self.precision_tensor = tf_map.get_precision_tensor()
