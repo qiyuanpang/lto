@@ -322,7 +322,7 @@ def first_derivative_network(dim_input, dim_output, batch_size=25, network_confi
                 #print(cur_top, top['slice_'+str(i)])
                 cur_top = tf.concat([cur_top, top['slice_'+str(i)]], axis = 1)
             if layer_step != n_layers - 1:
-                cur_top = tf.nn.relu(cur_top)
+                cur_top = cur_top
         #print(dim_output, param_dim)
         mlp_applied = cur_top
         return mlp_applied

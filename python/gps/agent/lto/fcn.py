@@ -110,7 +110,7 @@ class FcnFamily(object):
                 print("Warning: start_session is called with a different session than the one in use. Will keep using existing session. ")
         else:
             if session is None:
-                self.session = tf.Session()
+                self.session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
             else:
                 self.session = session
             
@@ -179,8 +179,9 @@ class FcnFamily(object):
     def destroy(self):
         if self.session is not None:
             self.session.close()
-            self.session = None
-    
+            #self.session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
+            self.session = None            
+
     # For pickling
     def __getstate__(self):
         if self.session is None:
@@ -201,7 +202,9 @@ class FcnFamily(object):
             tensor_names["hess"] = [[cur_hess_block.name for cur_hess_block in cur_hess_block_row] for cur_hess_block_row in self.hess_]
         
         return {"hyperparams": self.hyperparams, "options": {option_name: self.options[option_name] for option_name in self.options if option_name not in ["session", "graph_def", "start_session_manually"]}, "graph_def": graph_def_str, "tensor_names": tensor_names}
-
+        #print('session:', toreturn["options"]['session'])
+        #return toreturn
+        
     # For unpickling
     def __setstate__(self, state):
         kwargs = state["hyperparams"].copy()

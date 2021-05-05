@@ -1,6 +1,7 @@
 #import tensorflow as tf
 import tensorflow.compat.v1 as tf
 tf.disable_eager_execution()
+import os
 import os.path
 from datetime import datetime
 import numpy as np
@@ -157,12 +158,15 @@ def lto_on_exit(config):
     config['agent']['fcn_family'].destroy()
 
 gpu_id = 0
-gpu_ids = [0, 1]
+gpu_ids = [0, 1, 2, 3, 4, 5, 6, 8]
+#gpus = ''
+#for i in range(len(gpu_ids)): gpus += str(gpu_ids[i])
+#os.environ['CUDA_VISIBLE_DEVICES'] = gpus
 
 a = 0.1
 b = 0.1
-max_dim_1 = 32
-max_dim_2 = 32
+max_dim_1 = 12
+max_dim_2 = 12
 #dx = a/input_dim_1
 #dy = b/input_dim_2
 #x_pts = np.arange(0,a+dx/2,dx)
@@ -172,9 +176,7 @@ max_dim_2 = 32
 session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
 history_len = 10
 
-
-num_fcns = 20
-
+num_fcns = 5
 #input_dim = (input_dim_1-2)*(input_dim_2-2)
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
@@ -188,7 +190,8 @@ if os.path.isfile(dataset_file):
 else:
     print("Generating new dataset.")
     #fcns,fcn_family = gen_fcns(input_dim, num_fcns, session)
-    fcns,fcn_family = gen_fcns([0, a], [0, b], max_dim_1, max_dim_2, num_fcns, session, gpu_id, num_inits_per_fcn = 1)
+    function = lambda sess: gen_fcns([0, a], [0, b], max_dim_1, max_dim_2, num_fcns, sess, gpu_id, num_inits_per_fcn = 1)
+    fcns,fcn_family = function(session)
     with open(dataset_file, mode="wb") as f:
         pickle.dump((fcns,fcn_family), f)
     print("Saved to %s. " % (dataset_file))
@@ -228,12 +231,13 @@ if not os.path.exists(common['data_files_dir']):
     os.makedirs(common['data_files_dir'])
 
 agent = {
+    'gen_fcns': function,
     'type': AgentLTO,
     'world' : LTOWorld,
     'substeps': 1,
     'conditions': common['conditions'],
     'dt': 0.05,
-    'T': 50,
+    'T': 100,
     'sensor_dims': SENSOR_DIMS,
     'state_include': [CUR_LOC],
     'obs_include': [PAST_OBJ_VAL_DELTAS, PAST_GRADS, CUR_GRAD, PAST_LOC_DELTAS],
@@ -245,8 +249,8 @@ agent = {
 algorithm = {
     'type': Algorithm,
     'conditions': common['conditions'],
-    'iterations': 10,
-    'inner_iterations': 5,
+    'iterations': 2,
+    'inner_iterations': 2,
     'policy_dual_rate': 0.2, 
     'init_pol_wt': 0.01, 
     'ent_reg_schedule': 0.0, ## why set this to be 0 ?? this should not be zero, \mu_t actually.
@@ -297,7 +301,7 @@ algorithm['traj_opt'] = {
 algorithm['policy_opt'] = {
     'type': PolicyOpt,
     'network_model': first_derivative_network,
-    'iterations': 50, 
+    'iterations': 5, 
     'init_var': 0.01, 
     'batch_size': 64*len(gpu_ids),
     'solver_type': 'adam',
@@ -339,7 +343,7 @@ algorithm['policy_prior'] = {
 
 config = {
     'iterations': algorithm['iterations'],
-    'num_samples': 15,
+    'num_samples': 4,
     'common': common,
     'agent': agent,
     'algorithm': algorithm,

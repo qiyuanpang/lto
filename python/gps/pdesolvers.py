@@ -195,7 +195,7 @@ def main():
     #input_dim = [2**i for i in range_dim]
     input_dim = [int(2**3.5), int(2**4), int(2**4.5), int(2**5), int(2**5.5), int(2**6)]
     itr = hyperparams.config['algorithm']['iterations']
-    pols = [0, 0, 1, 1]
+    pols = [1]
 
     print('Comparation of solving a PDE using different policies starts: ')
     for i in range(num):

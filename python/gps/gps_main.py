@@ -11,14 +11,17 @@ import time
 import numpy as np
 import random
 import cProfile
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 #logging.basicConfig(level=logging.DEBUG)
 # Add gps/python to path so that imports work.
 sys.path.append('/'.join(str.split(__file__, '/')[:-2]))
 import gps as gps_globals
 from gps.utility.display import Display
 from gps.sample.sample_list import SampleList
-
-os.environ['CUDA_VISIBLE_DEVICES']='0, 1'
+from gps.algorithm.policy.tf_policy import TfPolicy
+from gps.algorithm.policy_opt.lto_model import first_derivative_network, first_derivative_network_leaky_relu, first_derivative_network_swish
+#os.environ['CUDA_VISIBLE_DEVICES']='0, 1'
 
 class GPSMain(object):
     """ Main class to run algorithms and experiments. """
@@ -47,7 +50,7 @@ class GPSMain(object):
         config['algorithm']['agent'] = self.agent
         self.algorithm = config['algorithm']['type'](config['algorithm'])
 
-    def run(self):
+    def run(self, time):
         
         itr_start = 0
         
@@ -67,8 +70,9 @@ class GPSMain(object):
             pol_sample_lists = self._take_policy_samples(self._train_idx)
             
             self._prev_traj_costs, self._prev_pol_costs = self.disp.update(itr, self.algorithm, self.agent, traj_sample_lists, pol_sample_lists)
-            self.algorithm.policy_opt.policy.pickle_policy(self.algorithm.policy_opt._dO, self.algorithm.policy_opt._dU, self._data_files_dir + ('policy_itr_%02d' % itr))
+            self.algorithm.policy_opt.policy.pickle_policy(self.algorithm.policy_opt._dO, self.algorithm.policy_opt._dU, self._data_files_dir + ('policy_itr_%02d' % (itr+time*self._hyperparams['iterations'])))
         
+    def destroy(self):
         if 'on_exit' in self._hyperparams:
             self._hyperparams['on_exit'](self._hyperparams)
         #return cs
@@ -91,6 +95,40 @@ class GPSMain(object):
             for i in range(self._hyperparams['num_samples']):
                 pol_samples[cond].append(self.agent.sample(self.algorithm.policy_opt.policy, cond_list[cond], save=False))
         return [SampleList(samples) for samples in pol_samples]
+
+def Train(exp_dir, config, times):
+    
+    for i in range(times):
+        print('************************************************************************************')
+        print('******************** The ' + '%02d' % i + ' training starts *************************')
+        #print(config['agent']['fcns'][0]['init_loc'])
+        if config['common'].get('train_conditions'):
+            del config['common']['train_conditions']
+        if i == 0:
+           gps = GPSMain(config)
+           gps.run(i)
+           gps.destroy()
+           del gps
+        else:
+           #gps = GPSMain(config)
+           for k in range(i):
+               session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
+               session.reset()
+               fcns, fcn_family = config['agent']['gen_fcns'](session)
+               config['agent']['fcns'] = fcns
+               config['agent']['fcn_family'] = fcn_family
+               gps = GPSMain(config)
+               network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % (k*config['iterations']+1)) + '.pkl'
+               lr_pol = TfPolicy.load_policy(network_dir, first_derivative_network, network_config=config['algorithm']['policy_opt']['network_params'])
+               for j in range(config['common']['conditions']):
+                   config['agent']['fcns'][j]['init_loc'] = np.expand_dims(gps.agent.sample(lr_pol, j, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1) 
+               gps.destroy()
+               del gps
+           gps = GPSMain(config)
+           gps.run(i)
+        print(config['agent']['fcns'][0]['init_loc'])           
+        print('************************ This training ends ****************************************')
+    gps.destroy()
 
 def main():
     parser = argparse.ArgumentParser(description='Run the Guided Policy Search algorithm.')
@@ -121,10 +159,18 @@ def main():
     #print('====================================')
     #print(hyperparams.config)
     #print('====================================')
+    
+    gpu_ids = hyperparams.config['algorithm']['policy_opt']['gpu_ids']
+    gpus = str(gpu_ids)[1:-1]
+    os.environ['CUDA_VISIBLE_DEVICES'] = gpus
+    
 
-    gps = GPSMain(hyperparams.config)
+    #gps = GPSMain(hyperparams.config)
     #cProfile.run(gps.run())
-    gps.run()
+    #gps.run()
+    
+    times = 5
+    Train(exp_dir, hyperparams.config, times)
         
     if 'on_exit' in hyperparams.config:
         hyperparams.config['on_exit'](hyperparams.config)
