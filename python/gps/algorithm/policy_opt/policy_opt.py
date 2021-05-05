@@ -15,6 +15,8 @@ import tensorflow.compat.v1 as tf
 from gps.algorithm.policy.tf_policy import TfPolicy
 from gps.algorithm.policy_opt.tf_utils import TfSolver
 
+from tf.python.framework import ops
+
 
 LOGGER = logging.getLogger(__name__)
 
@@ -48,10 +50,20 @@ class PolicyOpt(object):
         self.var = self._hyperparams['init_var'] * np.ones(dU)
         #self.sess = tf.Session()
         self.sess = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
-        self.policy = TfPolicy(dU, self.obs_tensor, self.act_op, np.zeros(dU), self.sess, self.device_string)
         #init_op = tf.initialize_all_variables()
-        init_op = tf.global_variables_initializer()
-        self.sess.run(init_op)
+        self.policy = TfPolicy(dU, self.obs_tensor, self.act_op, np.zeros(dU), self.sess, self.device_string)
+        if self._hyperparams.get('policy_dict_path') is None:
+            init_op = tf.global_variables_initializer()
+            self.sess.run(init_op)
+        else:
+            ops.reset_default_graph()  # we need to destroy the default graph before re_init or checkpoint won't restore.
+            pol_dict = pickle.load(open(policy_dict_path, "rb"), encoding='latin1')
+            saver = tf.train.Saver()
+            check_file = '/'.join(str.split(policy_dict_path, '/')[:-1]) + '/' + str.split(pol_dict['checkpoint_path_tf'], '/')[-1]
+            saver.restore(self.sess, check_file)
+            self.policy.chol_pol_covar = pol_dict['chol_pol_covar']
+            self.policy.scale = pol_dict['scale']
+            self.policy.bias = pol_dict['bias']
 
     def init_network(self):
         """ Helper method to initialize the tf networks used """

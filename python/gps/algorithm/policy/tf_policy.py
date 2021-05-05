@@ -89,7 +89,7 @@ class TfPolicy(Policy):
         saver.save(self.sess, checkpoint_path + '_tf_data.ckpt')
 
     @classmethod
-    def load_policy(cls, policy_dict_path, tf_generator, network_config=None):
+    def load_policy(cls, policy_dict_path, batch_size, tf_generator, network_config=None):
         """
         For when we only need to load a policy for the forward pass. For instance, to run on the robot from
         a checkpointed policy.
@@ -103,7 +103,7 @@ class TfPolicy(Policy):
             pol_dict['deg_action'] = network_config['deg_action']
         
         tf_map,_,_,_,_ = tf_generator(dim_input=pol_dict['deg_obs'], dim_output=pol_dict['deg_action'],
-                              batch_size=1, network_config=network_config)
+                              batch_size=batch_size, network_config=network_config)
 
         #sess = tf.Session()
         sess = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))

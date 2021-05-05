@@ -21,6 +21,7 @@ from gps.utility.display import Display
 from gps.sample.sample_list import SampleList
 from gps.algorithm.policy.tf_policy import TfPolicy
 from gps.algorithm.policy_opt.lto_model import first_derivative_network, first_derivative_network_leaky_relu, first_derivative_network_swish
+from gps.agent.lto.agent_lto import AgentLTO
 #os.environ['CUDA_VISIBLE_DEVICES']='0, 1'
 
 class GPSMain(object):
@@ -105,31 +106,30 @@ def Train(exp_dir, config, times):
         if config['common'].get('train_conditions'):
             del config['common']['train_conditions']
         if i == 0:
-           gps = GPSMain(config)
-           gps.run(i)
-           gps.destroy()
-           del gps
+            gps = GPSMain(config)
+            gps.run(i)
+            gps.destroy()
+            del gps
         else:
-           #gps = GPSMain(config)
-           for k in range(i):
-               session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
-               session.reset()
-               fcns, fcn_family = config['agent']['gen_fcns'](session)
-               config['agent']['fcns'] = fcns
-               config['agent']['fcn_family'] = fcn_family
-               gps = GPSMain(config)
-               network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % (k*config['iterations']+1)) + '.pkl'
-               lr_pol = TfPolicy.load_policy(network_dir, first_derivative_network, network_config=config['algorithm']['policy_opt']['network_params'])
-               for j in range(config['common']['conditions']):
-                   config['agent']['fcns'][j]['init_loc'] = np.expand_dims(gps.agent.sample(lr_pol, j, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1) 
-               gps.destroy()
-               del gps
-           gps = GPSMain(config)
-           gps.run(i)
+            #gps = GPSMain(config)
+            session = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True), allow_soft_placement=True))
+            fcns, fcn_family = config['agent']['gen_fcns'](session)
+            config['agent']['fcns'] = fcns
+            config['agent']['fcn_family'] = fcn_family
+            for k in range(i):
+                Agent = AgentLTO(config['agent'])
+                network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % (k*config['iterations']+1)) + '.pkl'
+                lr_pol = TfPolicy.load_policy(network_dir, 1, first_derivative_network, network_config=config['algorithm']['policy_opt']['network_params'])
+                for j in range(config['common']['conditions']):
+                    config['agent']['fcns'][j]['init_loc'] = np.expand_dims(gps.agent.sample(lr_pol, j, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1) 
+            config['algorithm']['policy_opt']['policy_dict_path'] = network_dir
+            gps = GPSMain(config)
+            gps.run(i)
+            gps.destroy()
+            del gps
         print(config['agent']['fcns'][0]['init_loc'])           
         print('************************ This training ends ****************************************')
-    gps.destroy()
-
+        
 def main():
     parser = argparse.ArgumentParser(description='Run the Guided Policy Search algorithm.')
     parser.add_argument('experiment', type=str, help='experiment name')

@@ -313,6 +313,7 @@ algorithm['policy_opt'] = {
     'model_dir': EXP_DIR + 'logs/',
     'gpu_ids': gpu_ids,
     'weights_file_prefix': EXP_DIR + 'policy',
+    'policy_dict_path': None,
     'network_params': {
         'obs_include': agent['obs_include'],
         'sensor_dims': agent['sensor_dims'],

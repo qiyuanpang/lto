@@ -143,6 +143,7 @@ def pde_policy_comp(hyperparams, exp_dir, pols, input_dim_1 = 128, input_dim_2 =
     #agent_lbfgs = copy.deepcopy(agent)
     #agent_mm = copy.deepcopy(agent)
     #agent_lr = copy.deepcopy(agent)
+    batch_size = 1
     for i in range(len(pols)):
         
         agent['fcns'] = gd_fcns
@@ -160,7 +161,7 @@ def pde_policy_comp(hyperparams, exp_dir, pols, input_dim_1 = 128, input_dim_2 =
         agent['fcns'] = lr_fcns
         Agent_lr = AgentLTO(agent)
         network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % pols[i]) + '.pkl'
-        lr_pol = TfPolicy.load_policy(network_dir, first_derivative_network, network_config=network_config)
+        lr_pol = TfPolicy.load_policy(network_dir, batch_size, first_derivative_network, network_config=network_config)
 
         x_gd = np.expand_dims(Agent_gd.sample(gd_pol, 0, verbose=False, save=False, noisy=False, usescale=False).get_X()[-1], axis=1)
         gd_fcns[0]['init_loc'] = x_gd
