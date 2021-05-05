@@ -97,6 +97,21 @@ class GPSMain(object):
                 pol_samples[cond].append(self.agent.sample(self.algorithm.policy_opt.policy, cond_list[cond], save=False))
         return [SampleList(samples) for samples in pol_samples]
 
+def updateconfig(config, param_dim, history_len):
+    config['agent']['sensor_dims'][CUR_LOC] = param_dim
+    config['agent']['sensor_dims'][PAST_OBJ_VAL_DELTAS] = history_len
+    config['agent']['sensor_dims'][PAST_GRADS] = history_len*param_dim
+    config['agent']['sensor_dims'][PAST_LOC_DELTAS] = history_len*param_dim
+    config['agent']['sensor_dims'][CUR_GRAD] = param_dim
+    config['agent']['sensor_dims'][ACTION] = param_dim
+
+    config['agent']['state_include'] = [config['agent']['sensor_dims'][CUR_LOC]]
+    config['agent']['obs_include'] = [config['agent']['sensor_dims'][PAST_OBJ_VAL_DELTAS], config['agent']['sensor_dims'][PAST_GRADS], config['agent']['sensor_dims'][CUR_GRAD], config['agent']['sensor_dims'][PAST_LOC_DELTAS]]
+    config['agent']['history_len'] = history_len
+
+    config['algorithm']['policy_opt']['network_params']['param_dim'] = param_dim
+    config['algorithm']['policy_opt']['network_params']['history_len'] = history_len
+
 def Train(exp_dir, config, times):
     
     for i in range(times):
@@ -117,6 +132,7 @@ def Train(exp_dir, config, times):
             fcns, fcn_family = config['agent']['gen_fcns'](session, dim, dim)
             config['agent']['fcns'] = fcns
             config['agent']['fcn_family'] = fcn_family
+            updateconfig(config, fcns[0]['dim'], config['agent']['history_len'])
             for k in range(i):
                 Agent = AgentLTO(config['agent'])
                 network_dir = exp_dir + 'data_files_pde/' + ('policy_itr_%02d' % (k*config['iterations']+1)) + '.pkl'
@@ -130,7 +146,7 @@ def Train(exp_dir, config, times):
             gps.destroy()
             del gps
         print(config['agent']['fcns'][0]['init_loc'])           
-        print('************************ This training ends ****************************************')
+        print('******************************* This training ends ****************************************')
         
 def main():
     parser = argparse.ArgumentParser(description='Run the Guided Policy Search algorithm.')
